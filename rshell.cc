@@ -28,8 +28,9 @@ int main (int argc, char const *argv[])
         //TODO: Filter Input
         //TODO: Grab arguments
     
-        if(input == "exit")
-            break;
+        if(input == "exit") {
+            exit(1);
+        }
     
         //Main process thread
         pid_t i = fork();
@@ -45,7 +46,8 @@ int main (int argc, char const *argv[])
             if(com < 0)
                 perror("Error executing command.");
             */
-            cout << "Made it here" << endl;
+            cout << input << endl;
+            exit(1);
         }
         else { //Parent process
             wait(NULL); //Temp fix just to get child to run properly.
