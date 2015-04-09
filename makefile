@@ -5,4 +5,5 @@ DFLAGS = -Wall -Werror -ansi -pedantic
 all:
 	$(CXX) $(CPPFLAGS) $(DFLAGS) rshell.cc -o rshell
 
-rshell:
+rshell: rshell.cc
+	
