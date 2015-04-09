@@ -24,20 +24,31 @@ int main (int argc, char const *argv[])
 
         //Grab user input for bash prompt
         getline(cin,input);
+        
+        //TODO: Filter Input
+        //TODO: Grab arguments
     
-        if(argv[1] == "exit")
+        if(input == "exit")
             break;
     
         //Main process thread
         pid_t i = fork();
-        if(i == 0) 
-        {
-            char* arg[] = {"ls", "-l", NULL};
+        
+        if(i < 0) { //Error
+            perror("Failed to create child process");
+            break;
+        }
+        else if(i == 0) { //Child process
+            
+            //char* arg[] = {"ls", "-l", NULL};
             /*int com = execvp(arg[0], arg);
             if(com < 0)
                 perror("Error executing command.");
             */
             cout << "Made it here" << endl;
+        }
+        else { //Parent process
+            wait(NULL); //Temp fix just to get child to run properly.
         }
     
 	}
