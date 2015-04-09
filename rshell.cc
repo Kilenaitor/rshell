@@ -27,45 +27,57 @@ int main (int argc, char const *argv[])
         getline(cin,input);
         
         typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
-        boost::char_separator<char> sep(" ");
+        boost::char_separator<char> sep(" ", ";");
         tokenizer tok(input, sep);
         
-        string arg;
         list<string> ls;
         vector<char*> args;
+        vector<vector<char*> > commands;
         
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
-            ls.push_back(*it);
-            args.push_back(const_cast<char*>(ls.back().c_str()));
-        }
-        args.push_back(0);
-        
-        //TODO: Filter Input
-        //TODO: Grab arguments
-    
-        if(input == "exit") {
-            exit(0);
-        }
-    
-        //Main process thread
-        pid_t i = fork();
-        
-        if(i < 0) { //Error
-            perror("Failed to create child process");
-            break;
-        }
-        else if(i == 0) { //Child process
-            
-            int com = execvp(args[0], &args[0]);
-            if(com < 0)
-                perror("Error executing command");
+            if(*it == "#")
+                break;
+            if(*it == ";" || *it == "||" || *it == "&&") {
+                args.push_back(0);
+                commands.push_back(args);
+                args.clear();
+            }
             else {
-                exit(0);
+                ls.push_back(*it);
+                args.push_back(const_cast<char*>(ls.back().c_str()));
             }
         }
-        else { //Parent process
-            int *status = nullptr;
-            waitpid(i, status, 0); //Temp fix just to get child to run properly.
+        args.push_back(0);
+        commands.push_back(args);
+        
+        for(int x = 0; x < commands.size(); x++) {
+            
+            vector<char*> com = commands.at(x);
+            
+            if(strncmp(com[0], "exit", 4) == 0) {
+                exit(0);
+            }
+    
+            //Main process thread
+            pid_t i = fork();
+        
+            if(i < 0) { //Error
+                perror("Failed to create child process");
+                break;
+            }
+            else if(i == 0) { //Child process
+            
+                int result = execvp(com[0], &com[0]);
+                if(result < 0)
+                    perror("Error executing command");
+                else {
+                    exit(0);
+                }
+            }
+            else { //Parent process
+                int *status = nullptr;
+                waitpid(i, status, 0); //Temp fix just to get child to run properly.
+            }
         }
 	}
 }
