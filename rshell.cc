@@ -93,7 +93,9 @@ int main (int argc, char const *argv[])
             }
             else { //Parent process
                 int *status = nullptr;
-                waitpid(i, status, 0); //Temp fix just to get child to run properly.
+                int stat = waitpid(i, status, 0); //Temp fix just to get child to run properly.
+                if(stat < 0)
+                    perror("Error waiting for child process");
             }
         }
 	}
