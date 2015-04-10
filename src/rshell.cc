@@ -28,7 +28,7 @@ int main (int argc, char const *argv[])
         
         //Setting up a boost tokenizer. 
         typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
-        boost::char_separator<char> sep(" ", ";"); //' ' (space) as delmieter
+        boost::char_separator<char> sep("\" ", ";#|&"); //' ' (space) as delmieter
         tokenizer tok(input, sep);
         
         //ls is a temp list for storing the tokenized value
@@ -46,7 +46,7 @@ int main (int argc, char const *argv[])
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
             if(*it == "#")
                 break;
-            if(*it == ";" || *it == "||" || *it == "&&") {
+            else if(*it == ";" || *it == "||" || *it == "&&") {
                 args.push_back(0);
                 commands.push_back(args);
                 args.clear();
@@ -56,7 +56,8 @@ int main (int argc, char const *argv[])
                 args.push_back(const_cast<char*>(ls.back().c_str()));
             }
         }
-        args.push_back(0);
+        if(!args.empty())
+            args.push_back(0);
         commands.push_back(args);
         
         //Go through all of the commands
@@ -64,6 +65,8 @@ int main (int argc, char const *argv[])
             
             //Get the current command
             vector<char*> com = commands.at(x);
+            if(com.empty())
+                break;
             
             //Using string compare here since they're char * entries
             if(strncmp(com[0], "exit", 4) == 0) {
