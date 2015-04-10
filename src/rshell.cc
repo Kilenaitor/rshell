@@ -5,7 +5,9 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <iterator>
 #include "boost/tokenizer.hpp"
+#include "boost/algorithm/string.hpp"
 
 using namespace std;
 
@@ -17,6 +19,11 @@ int main (int argc, char const *argv[])
     
 	string input;
     
+    /*char* arg[] = {"sh", "-c", "echo \"This is true\" || echo \"This is false\""};
+    int result = execvp(arg[0], arg);
+    cout << result << endl;
+    exit(0);*/
+    
     while(true)
 	{
         //Terminal prompt display
@@ -25,10 +32,16 @@ int main (int argc, char const *argv[])
 
         //Grab user input for bash prompt
         getline(cin,input);
+        boost::trim(input);
         
-        //Setting up a boost tokenizer. 
-        typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
-        boost::char_separator<char> sep("\" ", ";#|&"); //' ' (space) as delmieter
+        //Setting up a boost tokenizer.
+        typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer; 
+//        typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
+//        boost::char_separator<char> sep(" ", ";#|&"); //' ' (space) and " as delimiters
+        string separator1("\\");
+        string separator2(" ;");
+        string separator3("\"\'");
+        boost::escaped_list_separator<char> sep(separator1,separator2,separator3);
         tokenizer tok(input, sep);
         
         //ls is a temp list for storing the tokenized value
@@ -44,9 +57,26 @@ int main (int argc, char const *argv[])
         Put all of these new commands in the commands vector.
         */
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
+            if(!string(*it).empty())
+                cout << *it << endl;
+            /*
             if(*it == "#")
                 break;
-            else if(*it == ";" || *it == "||" || *it == "&&") {
+            //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
+            else if( (*it == "|" && *next(it, 1) == "|" ) || (*it == "&" && *next(it, 1) == "&") ) {
+                if(*next(it, 2) == "#")
+                    break;
+                it++;
+                args.insert(args.begin(), const_cast<char*>(string("sh").c_str()));
+                args.insert(++args.begin(), const_cast<char*>(string("-c").c_str()));
+                args.push_back(const_cast<char*>(string("||").c_str()));
+                args.push_back(const_cast<char*>(string(*next(it,1)).c_str()));
+                args.push_back(0);
+                commands.push_back(args);
+                args.clear();
+                it++;it++;
+            }
+            else if(*it == ";") {
                 args.push_back(0);
                 commands.push_back(args);
                 args.clear();
@@ -55,10 +85,13 @@ int main (int argc, char const *argv[])
                 ls.push_back(*it);
                 args.push_back(const_cast<char*>(ls.back().c_str()));
             }
+            */
         }
-        if(!args.empty())
+        break;
+        if(!args.empty()) {
             args.push_back(0);
-        commands.push_back(args);
+            commands.push_back(args);
+        }
         
         //Go through all of the commands
         for(int x = 0; x < commands.size(); x++) {
@@ -81,7 +114,9 @@ int main (int argc, char const *argv[])
                 break;
             }
             else if(i == 0) { //Child process
-            
+                cout << com[0] << endl;
+                cout << com[1] << endl;
+                cout << com[2] << endl;
                 int result = execvp(com[0], &com[0]);
                 if(result < 0) {
                     char result[100];
