@@ -28,7 +28,7 @@ int main (int argc, char const *argv[])
         
         //Setting up a boost tokenizer. 
         typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
-        boost::char_separator<char> sep(" ", ";"); //' ' (space) as delmieter
+        boost::char_separator<char> sep(" ", ";#"); //' ' (space) as delmieter
         tokenizer tok(input, sep);
         
         //ls is a temp list for storing the tokenized value
@@ -64,6 +64,9 @@ int main (int argc, char const *argv[])
             
             //Get the current command
             vector<char*> com = commands.at(x);
+			cout << string(com[0]) << endl;
+			cout << commands.size() << endl;
+			cout << commands.at(2).at(0) << endl;
             
             //Using string compare here since they're char * entries
             if(strncmp(com[0], "exit", 4) == 0) {
