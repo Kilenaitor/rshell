@@ -74,6 +74,7 @@ int main (int argc, char const *argv[])
                     break;
                 //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
                 else if (*it == "||" ) {
+                    if(args.empty()) continue;
                     connectors.push_back("OR");
                     //Adds the connector to the vector and then terminates the current command
                     args.push_back(0);
@@ -81,6 +82,7 @@ int main (int argc, char const *argv[])
                     args.clear();
                 }
                 else if (*it == "&&") {
+                    if(args.empty()) continue;
                     connectors.push_back("AND");
                     //Adds the connector to the vector and then terminates the current command
                     args.push_back(0);
@@ -89,6 +91,7 @@ int main (int argc, char const *argv[])
                 }
                 //Checks to see if the last character (or only character) on the token is a semicolon
                 else if(strncmp(&it->back(), ";", 1) == 0) {
+                    if(args.empty()) continue;
                     string temp = it->substr(0, it->size()-1);
                     if(temp.size() > 1) {
                         //We only want to count this is a command if there is actually some command being executed
