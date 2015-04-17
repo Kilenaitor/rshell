@@ -19,17 +19,17 @@ using namespace std;
 static bool *pass;
 
 int main (int argc, char const *argv[])
-{   
+{
     char host[128];
     gethostname(host, sizeof(host));
     char * login = getlogin();
-    
+
 	string input;
 
     pass = (bool *)mmap(NULL, sizeof *pass, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANON, -1, 0);
-    
+
     *pass = false;
-    
+
     while(true)
 	{
         //Terminal prompt display
@@ -39,15 +39,15 @@ int main (int argc, char const *argv[])
         //Grab user input for bash prompt
         getline(cin,input);
         boost::trim(input);
-        
+
         //Setting up a boost tokenizer.
-        typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer; 
+        typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer;
         string separator1("");
         string separator2(" ");
         string separator3("\"\'");
         boost::escaped_list_separator<char> sep(separator1,separator2,separator3);
         tokenizer tok(input, sep);
-        
+
         //ls is a temp list for storing the tokenized value
         list<string> ls;
         //vector for storing a command and its arguments
@@ -56,7 +56,7 @@ int main (int argc, char const *argv[])
         vector<vector<char*> > commands;
         //vector for storing all of the connectors "AND" and "OR"
         vector<string> connectors;
-       
+
         /*
         Check for # and immediatly end parsing since anything after it is a comment.
         Check for ; or || or && to know if a new command needs to be created.
@@ -82,6 +82,7 @@ int main (int argc, char const *argv[])
                 else if(strncmp(&it->back(), ";", 1) == 0) {
                     string temp = it->substr(0, it->size()-1);
                     if(temp.size() > 1) {
+                        connectors.push_back(" ");
                         ls.push_back(temp);
                         args.push_back(const_cast<char*>(ls.back().c_str()));
                     }
@@ -96,26 +97,27 @@ int main (int argc, char const *argv[])
             }
         }
         if(!args.empty()) {
+            connectors.push_back(" ");
             args.push_back(0);
             commands.push_back(args);
         }
-        
+
         //Go through all of the commands
         for(unsigned x = 0; x < commands.size(); x++) {
-            
+
             //Get the current command
             vector<char*> com = commands.at(x);
             if(com.empty())
                 continue;
-            
+
             //Using string compare here since they're char * entries
             if(strncmp(com[0], "exit", 4) == 0) {
                 exit(0);
             }
-            
+
             //Main process thread
             pid_t i = fork();
-        
+
             if(i < 0) { //Error
                 perror("Failed to create child process");
                 *pass = false;
@@ -152,18 +154,18 @@ int main (int argc, char const *argv[])
 				}
                 else {
                     int estat = WEXITSTATUS(status);
-                    
+
                     if(estat == 0) {
                         *pass = true;
                     }
                     if(estat == 1) {
                         *pass = false;
                     }
-                    
+
                     /* was the child terminated by a signal? */
                     else if (WIFSIGNALED(status)) {
                         printf("%ld terminated because it didn't catch signal number %d\n", (long)i, WTERMSIG(status));
-                        *pass = false;   
+                        *pass = false;
                     }
                 }
             }
