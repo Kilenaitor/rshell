@@ -50,44 +50,32 @@ int main (int argc, char const *argv[])
         vector<char*> args;
         //vector for storing all of the commands that have been chained together
         vector<vector<char*> > commands;
-        
+       
         /*
         Check for # and immediatly end parsing since anything after it is a comment.
         Check for ; or || or && to know if a new command needs to be created.
         Put all of these new commands in the commands vector.
         */
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
-            if(!string(*it).empty())
+            if( !it->empty() ) {
                 cout << *it << endl;
-            /*
-            if(*it == "#")
-                break;
-            //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
-            else if( (*it == "|" && *next(it, 1) == "|" ) || (*it == "&" && *next(it, 1) == "&") ) {
-                if(*next(it, 2) == "#")
+                if(*it == "#")
                     break;
-                it++;
-                args.insert(args.begin(), const_cast<char*>(string("sh").c_str()));
-                args.insert(++args.begin(), const_cast<char*>(string("-c").c_str()));
-                args.push_back(const_cast<char*>(string("||").c_str()));
-                args.push_back(const_cast<char*>(string(*next(it,1)).c_str()));
-                args.push_back(0);
-                commands.push_back(args);
-                args.clear();
-                it++;it++;
+                //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
+                else if( (*it == "|" && *next(it, 1) == "|" ) || (*it == "&" && *next(it, 1) == "&") ) {
+                
+                }
+                else if(*it == ";") {
+                    args.push_back(0);
+                    commands.push_back(args);
+                    args.clear();
+                }
+                else {
+                    ls.push_back(*it);
+                    args.push_back(const_cast<char*>(ls.back().c_str()));
+                }
             }
-            else if(*it == ";") {
-                args.push_back(0);
-                commands.push_back(args);
-                args.clear();
-            }
-            else {
-                ls.push_back(*it);
-                args.push_back(const_cast<char*>(ls.back().c_str()));
-            }
-            */
         }
-        break;
         if(!args.empty()) {
             args.push_back(0);
             commands.push_back(args);
@@ -114,9 +102,6 @@ int main (int argc, char const *argv[])
                 break;
             }
             else if(i == 0) { //Child process
-                cout << com[0] << endl;
-                cout << com[1] << endl;
-                cout << com[2] << endl;
                 int result = execvp(com[0], &com[0]);
                 if(result < 0) {
                     char result[100];
