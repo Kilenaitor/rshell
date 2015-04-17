@@ -90,7 +90,6 @@ int main (int argc, char const *argv[])
                     args.clear();
                 }
                 else {
-                    connectors.push_back("");
                     ls.push_back(*it);
                     args.push_back(const_cast<char*>(ls.back().c_str()));
                 }
