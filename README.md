@@ -27,7 +27,7 @@ $ bin/rshell
 - Does not detect triple connectors like `|||` or `&&&`, they're just interpreted as another command
 - Will not prompt for more input if connector is the end. (e.g. `ls &&` just prints ls)
 - Does not support two connectors in a row (e.g. `echo test || || echo test` will fail)
-- Cannot start with a connector or else it will break
+- Cannot start with a connector or else it will break (e.g. `&& ls -lha` or `; ls -lha`)
 - Connectors cannot be touching other commands or parameters (e.g. `echo "this"|| echo "that"` will not work)
 - Cannot direct output. (e.g. `echo "this" > test.ext` will output 'this > test.txt')
 - No color output
