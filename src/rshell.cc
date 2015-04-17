@@ -18,6 +18,8 @@ int main (int argc, char const *argv[])
     char * login = getlogin();
     
 	string input;
+    vector<string> connectors;
+    bool pass = true;
     
     /*char* arg[] = {"sh", "-c", "echo \"This is true\" || echo \"This is false\""};
     int result = execvp(arg[0], arg);
@@ -39,7 +41,7 @@ int main (int argc, char const *argv[])
 //        typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
 //        boost::char_separator<char> sep(" ", ";#|&"); //' ' (space) and " as delimiters
         string separator1("\\");
-        string separator2(" ;");
+        string separator2(" ");
         string separator3("\"\'");
         boost::escaped_list_separator<char> sep(separator1,separator2,separator3);
         tokenizer tok(input, sep);
@@ -58,25 +60,41 @@ int main (int argc, char const *argv[])
         */
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
             if( !it->empty() ) {
-                cout << *it << endl;
                 if(*it == "#")
                     break;
                 //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
-                else if( (*it == "|" && *next(it, 1) == "|" ) || (*it == "&" && *next(it, 1) == "&") ) {
-                
-                }
-                else if(*it == ";") {
+                else if (*it == "||" ) {
+                    connectors.push_back("OR");
                     args.push_back(0);
                     commands.push_back(args);
                     args.clear();
                 }
+                else if (*it == "&&") {
+                    connectors.push_back("AND");
+                    args.push_back(0);
+                    commands.push_back(args);
+                    args.clear();
+                }
+                else if(strncmp(&it->back(), ";", 1) == 0) {
+                    string temp = it->substr(0, it->size()-1);
+                    if(temp.size() > 1) {
+                        ls.push_back(temp);
+                        args.push_back(const_cast<char*>(ls.back().c_str()));
+                    }
+                    args.push_back(0);
+                    commands.push_back(args);
+                    args.clear();
+                }
+
                 else {
+                    connectors.push_back(" ");
                     ls.push_back(*it);
                     args.push_back(const_cast<char*>(ls.back().c_str()));
                 }
             }
         }
         if(!args.empty()) {
+            connectors.push_back(" ");
             args.push_back(0);
             commands.push_back(args);
         }
@@ -87,7 +105,7 @@ int main (int argc, char const *argv[])
             //Get the current command
             vector<char*> com = commands.at(x);
             if(com.empty())
-                break;
+                continue;
             
             //Using string compare here since they're char * entries
             if(strncmp(com[0], "exit", 4) == 0) {
@@ -102,6 +120,12 @@ int main (int argc, char const *argv[])
                 break;
             }
             else if(i == 0) { //Child process
+/*                
+                if(connectors.at(x+1) == "OR" && pass)
+                    exit(0);
+                if(connectors.at(x+1) == "AND" && !pass)
+                    exit(0);
+*/
                 int result = execvp(com[0], &com[0]);
                 if(result < 0) {
                     char result[100];
@@ -120,8 +144,12 @@ int main (int argc, char const *argv[])
                 waitpid(i, status, 0); //Temp fix just to get child to run properly.
 				if(status < 0) {
 					perror("Error during child process");
+                    pass = false;
 					exit(1);
 				}
+                else {
+                    pass = true;
+                }
             }
         }
 	}
