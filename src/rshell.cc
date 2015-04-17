@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "errno.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <string>
 #include <vector>
 #include <list>
@@ -11,6 +16,8 @@
 
 using namespace std;
 
+static bool *pass;
+
 int main (int argc, char const *argv[])
 {   
     char host[128];
@@ -18,13 +25,10 @@ int main (int argc, char const *argv[])
     char * login = getlogin();
     
 	string input;
-    vector<string> connectors;
-    bool pass = true;
+
+    pass = (bool *)mmap(NULL, sizeof *pass, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANON, -1, 0);
     
-    /*char* arg[] = {"sh", "-c", "echo \"This is true\" || echo \"This is false\""};
-    int result = execvp(arg[0], arg);
-    cout << result << endl;
-    exit(0);*/
+    *pass = false;
     
     while(true)
 	{
@@ -38,9 +42,7 @@ int main (int argc, char const *argv[])
         
         //Setting up a boost tokenizer.
         typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer; 
-//        typedef boost::tokenizer<boost::char_separator<char> > tokenizer;
-//        boost::char_separator<char> sep(" ", ";#|&"); //' ' (space) and " as delimiters
-        string separator1("\\");
+        string separator1("");
         string separator2(" ");
         string separator3("\"\'");
         boost::escaped_list_separator<char> sep(separator1,separator2,separator3);
@@ -52,6 +54,8 @@ int main (int argc, char const *argv[])
         vector<char*> args;
         //vector for storing all of the commands that have been chained together
         vector<vector<char*> > commands;
+        //vector for storing all of the connectors "AND" and "OR"
+        vector<string> connectors;
        
         /*
         Check for # and immediatly end parsing since anything after it is a comment.
@@ -60,7 +64,7 @@ int main (int argc, char const *argv[])
         */
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
             if( !it->empty() ) {
-                if(*it == "#")
+                if(*it == "#" || strncmp(&it->at(0),"#",1) == 0)
                     break;
                 //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
                 else if (*it == "||" ) {
@@ -85,16 +89,13 @@ int main (int argc, char const *argv[])
                     commands.push_back(args);
                     args.clear();
                 }
-
                 else {
-                    connectors.push_back(" ");
                     ls.push_back(*it);
                     args.push_back(const_cast<char*>(ls.back().c_str()));
                 }
             }
         }
         if(!args.empty()) {
-            connectors.push_back(" ");
             args.push_back(0);
             commands.push_back(args);
         }
@@ -111,44 +112,59 @@ int main (int argc, char const *argv[])
             if(strncmp(com[0], "exit", 4) == 0) {
                 exit(0);
             }
-    
+            
             //Main process thread
             pid_t i = fork();
         
             if(i < 0) { //Error
                 perror("Failed to create child process");
+                *pass = false;
                 break;
             }
             else if(i == 0) { //Child process
-/*                
-                if(connectors.at(x+1) == "OR" && pass)
+                if(x > 0 && connectors.size() > 0 && connectors.at(x-1) == "OR" && *pass)
                     exit(0);
-                if(connectors.at(x+1) == "AND" && !pass)
+                else if(x > 0 && connectors.size() > 0 && connectors.at(x-1) == "AND" && !*pass)
                     exit(0);
-*/
-                int result = execvp(com[0], &com[0]);
-                if(result < 0) {
-                    char result[100];
-                    const char *error = "-rshell: ";
-                    strcpy(result, error);
-                    strcat(result, com[0]);
-                    perror(result);
-					exit(1);
-                }
                 else {
-                    exit(0);
+                    int result = execvp(com[0], &com[0]);
+                    if(result < 0) {
+                        *pass = false;
+                        char result[100];
+                        const char *error = "-rshell: ";
+                        strcpy(result, error);
+                        strcat(result, com[0]);
+                        perror(result);
+                        exit(1);
+                    }
+                    else {
+                        *pass = true;
+                        exit(0);
+                    }
                 }
             }
             else { //Parent process
-                int *status = nullptr;
-                waitpid(i, status, 0); //Temp fix just to get child to run properly.
-				if(status < 0) {
+                int status;
+				if(wait(&status) < 0) {
 					perror("Error during child process");
-                    pass = false;
+                    *pass = false;
 					exit(1);
 				}
                 else {
-                    pass = true;
+                    int estat = WEXITSTATUS(status);
+                    
+                    if(estat == 0) {
+                        *pass = true;
+                    }
+                    if(estat == 1) {
+                        *pass = false;
+                    }
+                    
+                    /* was the child terminated by a signal? */
+                    else if (WIFSIGNALED(status)) {
+                        printf("%ld terminated because it didn't catch signal number %d\n", (long)i, WTERMSIG(status));
+                        *pass = false;   
+                    }
                 }
             }
         }
