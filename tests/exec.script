@@ -1,0 +1,297 @@
+Script started on Fri Apr 17 10:14:45 2015
+[?1034h[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m r[Kbin/rss[K[K[K[K[K[K[Kbin [K[K[K[K../bin/rshell 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
+exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mkdir test
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
+exec.script [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo
+
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l
+total 8
+-rw-r--r--  1 Kilenaitor  staff  2382 Apr 17 10:15 exec.script
+drwxr-xr-x  2 Kilenaitor  staff    68 Apr 17 10:15 [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lh
+total 8
+-rw-r--r--  1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
+drwxr-xr-x  2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l -h
+total 8
+-rw-r--r--  1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
+drwxr-xr-x  2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
+total 8
+drwxr-xr-x   4 Kilenaitor  staff   136B Apr 17 10:15 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
+drwxr-xr-x   2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this"
+this
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echi   o this
+this
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm te	st    -rf test
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
+exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   3.5K Apr 17 10:16 exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0 -W @lhabCeFGiO
+6507151 [1m[36m.[39;49m[0m/           6040419 [1m[36m..[39;49m[0m/          6619380 exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
+exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ../bi	n/ls
+-rshell: ../bin/ls: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ../bin/rshell
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ps
+  PID TTY           TIME CMD
+36472 ttys000    0:00.59 -bash
+46057 ttys000    0:00.01 script exec.script
+46058 ttys001    0:00.01 /bin/bash -i
+46103 ttys001    0:00.01 ../bin/rshell
+46903 ttys001    0:00.00 ../bin/rshell
+46397 ttys002    0:00.21 -bash
+46488 ttys002    0:00.01 man ls
+46489 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46490 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46494 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46496 ttys002    0:00.01 /usr/bin/less -is
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls  ps
+  PID TTY           TIME CMD
+36472 ttys000    0:00.59 -bash
+46057 ttys000    0:00.02 script exec.script
+46058 ttys001    0:00.01 /bin/bash -i
+46103 ttys001    0:00.01 ../bin/rshell
+46397 ttys002    0:00.21 -bash
+46488 ttys002    0:00.01 man ls
+46489 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46490 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46494 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
+46496 ttys002    0:00.01 /usr/bin/less -is
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf
+-rshell: asdf: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ fasd
+-rshell: fasd: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ hajfds
+-rshell: hajfds: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echoo
+-rshell: echoo: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $            ls            -l          -a                l -h
+total 16
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   6.0K Apr 17 10:19 exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
+total 16
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   6.7K Apr 17 10:19 exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true"; echo "this is true"
+this is true
+this is true
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true" |||  echo "thisi    is false"
+this is true
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "ti his is true" && echo "this is false"
+this is true
+this is false
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "this is true" && ech o"this i         o "thisi s    is false"
+-rshell: asdf: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "thisis     is true" || echo "thisi s    is false"
+-rshell: asdf: No such file or directory
+this is false
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ech o"   o "T thisi    is 1" || echo "this is 2" || echo "this is 3" || echo "this is 4"
+this is 1
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo    ad "this is 1" || echo "this is 2" || ech o  o "thisi  is 3" || echo "this is 4"
+-rshell: ecad: No such file or directory
+this is 2
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ adf "this is 1" || asd "this is 2" || echo "this is 3" || echo "thisi  is 4"
+-rshell: adf: No such file or directory
+-rshell: asd: No such file or directory
+this is 3
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is1  1" && echo "this is 2" && echo "this is 3" && echo "this is 4"
+this is 1
+this is 2
+this is 3
+this is 4
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo    adf "this is 1" && echo "this is 2" echo "this is 3" && echo This      "this is 4"
+-rshell: ecadf: No such file or directory
+this is 4
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "this is 1" && echo "this is 2" && eadf "this is 3" && echo "this is 4"
+-rshell: asdf: No such file or directory
+-rshell: eadf: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls; ls -lha; ll l; echo 'this'; echo test
+exec.script
+total 24
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   8.7K Apr 17 10:23 exec.script
+-rshell: ll: No such file or directory
+this
+test
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls  echo "this"; echo "t no, this" || echo "no wait, this"
+this
+no, this
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this"; echo "no, this" && echo "no wait, this"
+this
+no, this
+no wait, this
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0l  -l||cat          ;            ls
+ls: illegal option -- |
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
+[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit -l
+[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ei xit -lha tet st
+[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #exit
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ # exit
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ " echo "this "  " 3 #  ; echo
+this
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l exit
+ls: exit: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l; ei xit
+total 24
+-rw-r--r--  1 Kilenaitor  staff  10557 Apr 17 10:26 exec.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ l s  s -l #this is a comment
+total 24
+-rw-r--r--  1 Kilenaitor  staff  11129 Apr 17 10:28 exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #this is interesting
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #woo comments
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0l  -l# this is a comment here
+ls: illegal option -- #
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha \#  ; echo "this is t an ex scaped comment"
+ls: \#: No such file or directory
+this is an escaped comment
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha; \# echo "this is also an ex scaped comment"
+total 24
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff    11K Apr 17 10:30 exec.script
+-rshell: \#: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ &&  | echo "this is true" ||| echo "this is false"
+this is true ||| echo this is false
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true' " &&& echo "this should be true"
+this is true &&& echo this should be true
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is the test case that was showin  n in the readme"
+this is the test case that was shown in the readme
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo hello
+hello
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mkdir test
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mr  ls-  -a
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm -rf te	st
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a; echo hello; mkdir test
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
+hello
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm -rf test
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls a;  -a; echo hello && mkdir test || echo world; git status
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
+hello
+On branch exec
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m./[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ssh kmins002@cs.ucr.e        hammer.cs.ucr.edu
+Last login: Fri Apr 17 10:16:12 2015 from ucrwpa3-3-219-218.bulk.ucr.edu
+~
+kmins002@hammer $ exit
+logout
+[H[2JConnection to hammer.cs.ucr.edu closed.
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "yeah. you can see  sh :)"
+yeah. you can ssh :)
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo a;sdkfaj;sldkfjasl;dkfj;as;ldkfja;sldkfja;slkgealsueblaisebliaseubgalsiegubaslieugbalseigubasliegubaslgiubasliegubasleigubasleigubasleigubalsgeiubaselgiuabsegliuasbegilasuebglaisubegalsiegubasliegubasliegubasegilubeluabsegilausbegliagubalsiegubaseligubaslegiubsagleiaubsgliausbglaisubgalsieugbasliuegbasileubgasilegubasligubasilgubasligeubasliegubasliugebaslieugbasliegubaliseugbasileugbaliseubglasieubg
+a;sdkfaj;sldkfjasl;dkfj;as;ldkfja;sldkfja;slkgealsueblaisebliaseubgalsiegubaslieugbalseigubasliegubaslgiubasliegubasleigubasleigubasleigubalsgeiubaselgiuabsegliuasbegilasuebglaisubegalsiegubasliegubasliegubasegilubeluabsegilausbegliagubalsiegubaseligubaslegiubsagleiaubsgliausbglaisubgalsieugbasliuegbasileubgasilegubasligubasilgubasligeubasliegubasliugebaslieugbasliegubaliseugbasileugbaliseubglasieubg
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "was trying to overflow input"
+was trying to overflow input
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ who
+Kilenaitor console  Apr 10 12:51 
+Kilenaitor ttys000  Apr 17 09:26 
+Kilenaitor ttys002  Apr 17 10:16 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ who am i     ami
+Kilenaitor
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "th le   lets try piping commands" > test.txt
+lets try piping commands > test.txt
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
+total 32
+drwxr-xr-x   4 Kilenaitor  staff   136B Apr 17 10:32 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff    16K Apr 17 10:35 exec.script
+drwxr-xr-x   2 Kilenaitor  staff    68B Apr 17 10:32 [1m[36mtest[39;49m[0m
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "      alias ll='ls -lha'
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ll
+-rshell: ll: No such file or directory
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "nope. doesn't store aliases' "
+nope. doesnt store aliases
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
+Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
+[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m exit
+exit
+
+Script done on Fri Apr 17 10:37:10 2015
