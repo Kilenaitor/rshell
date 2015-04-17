@@ -90,6 +90,7 @@ int main (int argc, char const *argv[])
                     args.clear();
                 }
                 else {
+                    connectors.push_back("");
                     ls.push_back(*it);
                     args.push_back(const_cast<char*>(ls.back().c_str()));
                 }
@@ -101,7 +102,7 @@ int main (int argc, char const *argv[])
         }
         
         //Go through all of the commands
-        for(int x = 0; x < commands.size(); x++) {
+        for(unsigned x = 0; x < commands.size(); x++) {
             
             //Get the current command
             vector<char*> com = commands.at(x);
