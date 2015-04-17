@@ -1,6 +1,6 @@
 CXX = g++
 CPPFLAGS = -std=c++11
-DFLAGS = -Wall -Werror -ansi -pedantic
+DFLAGS = -Wall -Werror -pedantic
 
 all: rshell
 
