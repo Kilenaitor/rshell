@@ -38,6 +38,9 @@ int main (int argc, char const *argv[])
 
     //mmap is used for preserving the variable (pass in this case) through the child processes
     pass = (bool *)mmap(NULL, sizeof *pass, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANON, -1, 0);
+    if(pass == MAP_FAILED) {
+        perror("Failed to save return state of process.");
+    }
 
     //Setting the initial value to false since no command has run
     *pass = false;
