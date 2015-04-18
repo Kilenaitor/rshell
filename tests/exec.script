@@ -1,297 +1,457 @@
-Script started on Fri Apr 17 10:14:45 2015
-[?1034h[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m r[Kbin/rss[K[K[K[K[K[K[Kbin [K[K[K[K../bin/rshell 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
-exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mkdir test
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
-exec.script [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo
+Script started on Fri Apr 17 18:14:57 2015
+[?1034h[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell/tests $[00m cd ../
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m make clean[K[K[K[K[K[K[K[K[K[Kecho "Run[K[K[KTesting simple commands"
+Testing simple commands
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls
+LICENSE   README.md [1m[36mbin[39;49m[0m       makefile  [1m[36msrc[39;49m[0m       [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo
 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ git
-usage: git [--version] [--help] [-C <path>] [-c name=value]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           <command> [<args>]
-
-The most commonly used git commands are:
-   add        Add file contents to the index
-   bisect     Find by binary search the change that introduced a bug
-   branch     List, create, or delete branches
-   checkout   Checkout a branch or paths to the working tree
-   clone      Clone a repository into a new directory
-   commit     Record changes to the repository
-   diff       Show changes between commits, commit and working tree, etc
-   fetch      Download objects and refs from another repository
-   grep       Print lines matching a pattern
-   init       Create an empty Git repository or reinitialize an existing one
-   log        Show commit logs
-   merge      Join two or more development histories together
-   mv         Move or rename a file, a directory, or a symlink
-   pull       Fetch from and integrate with another repository or a local branch
-   push       Update remote refs along with associated objects
-   rebase     Forward-port local commits to the updated upstream head
-   reset      Reset current HEAD to the specified state
-   rm         Remove files from the working tree and from the index
-   show       Show various types of objects
-   status     Show the working tree status
-   tag        Create, list, delete or verify a tag object signed with GPG
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l
-total 8
--rw-r--r--  1 Kilenaitor  staff  2382 Apr 17 10:15 exec.script
-drwxr-xr-x  2 Kilenaitor  staff    68 Apr 17 10:15 [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lh
-total 8
--rw-r--r--  1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
-drwxr-xr-x  2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l -h
-total 8
--rw-r--r--  1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
-drwxr-xr-x  2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
-total 8
-drwxr-xr-x   4 Kilenaitor  staff   136B Apr 17 10:15 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff   2.3K Apr 17 10:15 exec.script
-drwxr-xr-x   2 Kilenaitor  staff    68B Apr 17 10:15 [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this"
-this
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echi   o this
-this
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm te	st    -rf test
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
-exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
-total 8
-drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff   3.5K Apr 17 10:16 exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0 -W @lhabCeFGiO
-6507151 [1m[36m.[39;49m[0m/           6040419 [1m[36m..[39;49m[0m/          6619380 exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls
-exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ../bi	n/ls
--rshell: ../bin/ls: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ../bin/rshell
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ps
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ mkdir
+usage: mkdir [-pv] [-m mode] directory ...
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ps
   PID TTY           TIME CMD
-36472 ttys000    0:00.59 -bash
-46057 ttys000    0:00.01 script exec.script
-46058 ttys001    0:00.01 /bin/bash -i
-46103 ttys001    0:00.01 ../bin/rshell
-46903 ttys001    0:00.00 ../bin/rshell
-46397 ttys002    0:00.21 -bash
-46488 ttys002    0:00.01 man ls
-46489 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46490 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46494 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46496 ttys002    0:00.01 /usr/bin/less -is
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls  ps
-  PID TTY           TIME CMD
-36472 ttys000    0:00.59 -bash
-46057 ttys000    0:00.02 script exec.script
-46058 ttys001    0:00.01 /bin/bash -i
-46103 ttys001    0:00.01 ../bin/rshell
-46397 ttys002    0:00.21 -bash
-46488 ttys002    0:00.01 man ls
-46489 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46490 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46494 ttys002    0:00.00 sh -c (cd '/usr/share/man' && (echo ".ll 16.0i"; echo ".nr LL 16.0i"; /bin/cat '/usr/share/man/man1/ls.1') | /usr/bin/tbl | /usr/bin/groff -Wall -mtty-c
-46496 ttys002    0:00.01 /usr/bin/less -is
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf
--rshell: asdf: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ fasd
--rshell: fasd: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ hajfds
--rshell: hajfds: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echoo
--rshell: echoo: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $            ls            -l          -a                l -h
-total 16
-drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff   6.0K Apr 17 10:19 exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
-total 16
-drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff   6.7K Apr 17 10:19 exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true"; echo "this is true"
-this is true
-this is true
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true" |||  echo "thisi    is false"
-this is true
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "ti his is true" && echo "this is false"
-this is true
-this is false
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "this is true" && ech o"this i         o "thisi s    is false"
--rshell: asdf: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "thisis     is true" || echo "thisi s    is false"
--rshell: asdf: No such file or directory
-this is false
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ech o"   o "T thisi    is 1" || echo "this is 2" || echo "this is 3" || echo "this is 4"
-this is 1
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo    ad "this is 1" || echo "this is 2" || ech o  o "thisi  is 3" || echo "this is 4"
--rshell: ecad: No such file or directory
-this is 2
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ adf "this is 1" || asd "this is 2" || echo "this is 3" || echo "thisi  is 4"
--rshell: adf: No such file or directory
--rshell: asd: No such file or directory
-this is 3
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is1  1" && echo "this is 2" && echo "this is 3" && echo "this is 4"
-this is 1
-this is 2
-this is 3
-this is 4
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo    adf "this is 1" && echo "this is 2" echo "this is 3" && echo This      "this is 4"
--rshell: ecadf: No such file or directory
-this is 4
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ asdf "this is 1" && echo "this is 2" && eadf "this is 3" && echo "this is 4"
--rshell: asdf: No such file or directory
--rshell: eadf: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls; ls -lha; ll l; echo 'this'; echo test
-exec.script
+55662 ttys000    0:00.01 script exec.script
+67101 ttys000    0:02.16 -bash
+55663 ttys001    0:00.01 /bin/bash -i
+55680 ttys001    0:00.00 bin/rshell
+54538 ttys002    0:00.11 -bash
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ mv
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l
 total 24
-drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff   8.7K Apr 17 10:23 exec.script
--rshell: ll: No such file or directory
-this
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -a
+[1m[36m.[39;49m[0m          [1m[36m..[39;49m[0m         [1m[36m.git[39;49m[0m       .gitignore LICENSE    README.md  [1m[36mbin[39;49m[0m        makefile   [1m[36msrc[39;49m[0m        [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -la
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340 Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816 Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249 Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls 0l  -lha
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo test
 test
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls  echo "this"; echo "t no, this" || echo "no wait, this"
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this is a test"
+this is a test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "      ls -l -h -a
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l        -l
+total 24
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo this is such a really cool test wow it just keeps going on an d  d on and on
+this is such a really cool test wow it just keeps going on and on and on
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this is such a cool ytest"      test  : " "yeah it really is a cool test" "yeah this is awesome" "sup"    er  per" "sp uper" "super" "cool"
+this is such a cool test yeah it really is a cool test yeah this is awesome super super super cool
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls
+LICENSE   README.md [1m[36mbin[39;49m[0m       makefile  [1m[36msrc[39;49m[0m       [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -lha
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ rs  binrs   n/rshell          pwd
+/Users/Kilenaitor/Desktop/rshell
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ bin/rshell
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ps
+  PID TTY           TIME CMD
+55662 ttys000    0:00.02 script exec.script
+67101 ttys000    0:02.16 -bash
+55663 ttys001    0:00.01 /bin/bash -i
+55680 ttys001    0:00.01 bin/rshell
+55882 ttys001    0:00.00 bin/rshell
+54538 ttys002    0:00.11 -bash
+55753 ttys003    0:00.03 -bash
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ exit
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ps
+  PID TTY           TIME CMD
+55662 ttys000    0:00.02 script exec.script
+67101 ttys000    0:02.16 -bash
+55663 ttys001    0:00.01 /bin/bash -i
+55680 ttys001    0:00.01 bin/rshell
+54538 ttys002    0:00.11 -bash
+55753 ttys003    0:00.03 -bash
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ asdf
+-rshell: asdf: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ af
+-rshell: af: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ djk
+-rshell: djk: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $        ls       -        l     -h                   a -a
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $         ls                                   -l                      ;
+total 24
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Testing connectors"
+Testing connectors
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test"; echo          1"  ; echo "test 2"; echo "test 3"
+test 1
+test 2
+test 3
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test 1" || echo "test 2"
+test 1
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test 1" && echo "test 2"
+test 1
+test 2
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test1  1"               asdf "test 1" || echo "t  "first command failed"
+-rshell: asdf: No such file or directory
+first command failed
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ asdf "test 1" && echo "wont run because first command failed"
+-rshell: asdf: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ asdf "echo    test"; echo "test"
+-rshell: asdf: No such file or directory
+test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this      test 1" || echo "test 1"  2" || echo "test 3" || echo "test 4"
+test 1
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test 1" && echo "test 2" ||  ^^    && echo "test 4" ||  && echo "test 56 "
+test 1
+test 2
+test 4
+test 5
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test 1" || echo "test 1.5" && echo "test 2.5" || echo "here"
+test 1
+test 2.5
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "test 1"; echo "test 2" || echo "test 3" && echo "test 4" || asdf 4"  "4" && echo "nope"; ls -lha
+test 1
+test 2
+test 4
+nope
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this"||echo "that"
+this||echo that
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Can't do connectors without spaces between them."
+Cant do connectors without spaces between them.
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ || echo "test"
+test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ e && echo "ts est"
+test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this" || e || || || echo "that"
 this
-no, this
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this"; echo "no, this" && echo "no wait, this"
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "this  " Y&&   && && && && echo "that"
 this
-no, this
-no wait, this
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0l  -l||cat          ;            ls
-ls: illegal option -- |
-usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
-[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit -l
-[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ei xit -lha tet st
-[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #exit
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ # exit
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ " echo "this "  " 3 #  ; echo
-this
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l exit
+that
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Yeah you can chain commands ; :)"
+Yeah you can chain commands :)
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "I mean  , chain connectors***"
+I mean, chain connectors***
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Testing exists"    ts"
+Testing exits
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ exit
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ exit -lha
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ext -a    it -a -n "now         n h immediatly ely         iately
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l exit
 ls: exit: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -l; ei xit
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "exit"
+exit
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l; exit
 total 24
--rw-r--r--  1 Kilenaitor  staff  10557 Apr 17 10:26 exec.script
-[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m ../bin/rshell 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ l s  s -l #this is a comment
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Test  ing comments"
+Testing comments
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l " # this is a comment
 total 24
--rw-r--r--  1 Kilenaitor  staff  11129 Apr 17 10:28 exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #this is interesting
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ #woo comments
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls 0l  -l# this is a comment here
-ls: illegal option -- #
-usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha \#  ; echo "this is t an ex scaped comment"
-ls: \#: No such file or directory
-this is an escaped comment
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha; \# echo "this is also an ex scaped comment"
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ # th   thi sis w      s is what comments on the one line look lk ike
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -l# this is a comment
 total 24
-drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 10:16 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff    11K Apr 17 10:30 exec.script
--rshell: \#: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ &&  | echo "this is true" ||| echo "this is false"
-this is true ||| echo this is false
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is true' " &&& echo "this should be true"
-this is true &&& echo this should be true
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "this is the test case that was showin  n in the readme"
-this is the test case that was shown in the readme
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a
-[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo hello
-hello
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mkdir test
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ mr  ls-  -a
-[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm -rf te	st
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a; echo hello; mkdir test
-[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
-hello
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -a
-[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ rm -rf test
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls a;  -a; echo hello && mkdir test || echo world; git status
-[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script
-hello
-On branch exec
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31m./[m
-
-nothing added to commit but untracked files present (use "git add" to track)
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ssh kmins002@cs.ucr.e        hammer.cs.ucr.edu
-Last login: Fri Apr 17 10:16:12 2015 from ucrwpa3-3-219-218.bulk.ucr.edu
+-rw-r--r--@ 1 Kilenaitor  staff  1478 Apr  8 21:02 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1258 Apr 17 17:16 README.md
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   178 Apr 17 02:34 makefile
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -lha# yeah that works too :)
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ssh hammer      kmins002@ucr.    hammer.ucr.eu d      cs.ucr.edu
+kmins002@hammer.cs.ucr.edu's password: 
+Last login: Fri Apr 17 11:15:18 2015 from ucrwpa3-3-219-218.bulk.ucr.edu
+~
+kmins002@hammer $ echo "Yeah... you can ssh too :)"
+Yeah... you can ssh too :)
+~
+kmins002@hammer $ eixt
+-bash: eixt: command not found
 ~
 kmins002@hammer $ exit
 logout
 [H[2JConnection to hammer.cs.ucr.edu closed.
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "yeah. you can see  sh :)"
-yeah. you can ssh :)
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo a;sdkfaj;sldkfjasl;dkfj;as;ldkfja;sldkfja;slkgealsueblaisebliaseubgalsiegubaslieugbalseigubasliegubaslgiubasliegubasleigubasleigubasleigubalsgeiubaselgiuabsegliuasbegilasuebglaisubegalsiegubasliegubasliegubasegilubeluabsegilausbegliagubalsiegubaseligubaslegiubsagleiaubsgliausbglaisubgalsieugbasliuegbasileubgasilegubasligubasilgubasligeubasliegubasliugebaslieugbasliegubaliseugbasileugbaliseubglasieubg
-a;sdkfaj;sldkfjasl;dkfj;as;ldkfja;sldkfja;slkgealsueblaisebliaseubgalsiegubaslieugbalseigubasliegubaslgiubasliegubasleigubasleigubasleigubalsgeiubaselgiuabsegliuasbegilasuebglaisubegalsiegubasliegubasliegubasegilubeluabsegilausbegliagubalsiegubaseligubaslegiubsagleiaubsgliausbglaisubgalsieugbasliuegbasileubgasilegubasligubasilgubasligeubasliegubasliugebaslieugbasliegubaliseugbasileugbaliseubglasieubg
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "was trying to overflow input"
-was trying to overflow input
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ who
-Kilenaitor console  Apr 10 12:51 
-Kilenaitor ttys000  Apr 17 09:26 
-Kilenaitor ttys002  Apr 17 10:16 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ who am i     ami
-Kilenaitor
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "th le   lets try piping commands" > test.txt
-lets try piping commands > test.txt
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ls -lha
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -lha
 total 32
-drwxr-xr-x   4 Kilenaitor  staff   136B Apr 17 10:32 [1m[36m.[39;49m[0m
-drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 09:42 [1m[36m..[39;49m[0m
--rw-r--r--   1 Kilenaitor  staff    16K Apr 17 10:35 exec.script
-drwxr-xr-x   2 Kilenaitor  staff    68B Apr 17 10:32 [1m[36mtest[39;49m[0m
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "      alias ll='ls -lha'
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ ll
--rshell: ll: No such file or directory
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ echo "nope. doesn't store aliases' "
-nope. doesnt store aliases
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ 
-Kilenaitor@ucrwpa3-3-219-218.bulk.ucr.edu $ exit
-[01;37m0 [01;32m✓ [01;32mKilenaitor@ucrwpa3-3-219-218[01;34m ~/Desktop/rshell/tests $[00m exit
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:14 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ mkdir test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -lha
+total 32
+drwxr-xr-x  11 Kilenaitor  staff   374B Apr 17 18:27 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   2 Kilenaitor  staff    68B Apr 17 18:27 [1m[36mtest[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ rm -rf test
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ ls -lha
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340B Apr 17 18:27 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 24 Kilenaitor  staff   816B Apr 15 16:06 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510B Apr 17 17:37 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B Apr  9 22:01 .gitignore
+-rw-r--r--@  1 Kilenaitor  staff   1.4K Apr  8 21:02 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.2K Apr 17 17:16 README.md
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mbin[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   178B Apr 17 02:34 makefile
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 17:16 [1m[36msrc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102B Apr 17 18:14 [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ "ls"
+LICENSE   README.md [1m[36mbin[39;49m[0m       makefile  [1m[36msrc[39;49m[0m       [1m[36mtests[39;49m[0m
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ "ls -lha"
+-rshell: ls -lha: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ Y echo "yeah I built in quotes :)"
+yeah I built in quotes :)
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ vim
+[?1049h[?1h=[1;52r[?12;25h[?12l[?25h[27m[m[H[2J[>c[?25l[1;1H[38;5;130m  1 [m
+[94m~                                                                                                                                                                                                                                           [3;1H~                                                                                                                                                                                                                                           [4;1H~                                                                                                                                                                                                                                           [5;1H~                                                                                                                                                                                                                                           [6;1H~                                                                                                                                                                                                                                           [7;1H~                                                                                                                                                                                                                                           [8;1H~                                                                                                                                                                                                                                           [9;1H~                                                                                                                                                                                                                                           [10;1H~                                                                                                                                                                                                                                           [11;1H~                                                                                                                                                                                                                                           [12;1H~                                                                                                                                                                                                                                           [13;1H~                                                                                                                                                                                                                                           [14;1H~                                                                                                                                                                                                                                           [15;1H~                                                                                                                                                                                                                                           [16;1H~                                                                                                                                                                                                                                           [17;1H~                                                                                                                                                                                                                                           [18;1H~                                                                                                                                                                                                                                           [19;1H~                                                                                                                                                                                                                                           [20;1H~                                                                                                                                                                                                                                           [21;1H~                                                                                                                                                                                                                                           [22;1H~                                                                                                                                                                                                                                           [23;1H~                                                                                                                                                                                                                                           [24;1H~                                                                                                                                                                                                                                           [25;1H~                                                                                                                                                                                                                                           [26;1H~                                                                                                                                                                                                                                           [27;1H~                                                                                                                                                                                                                                           [28;1H~                                                                                                                                                                                                                                           [29;1H~                                                                                                                                                                                                                                           [30;1H~                                                                                                                                                                                                                                           [31;1H~                                                                                                                                                                                                                                           [32;1H~                                                                                                                                                                                                                                           [33;1H~                                                                                                                                                                                                                                           [34;1H~                                                                                                                                                                                                                                           [35;1H~                                                                                                                                                                                                                                           [36;1H~                                                                                                                                                                                                                                           [37;1H~                                                                                                                                                                                                                                           [38;1H~                                                                                                                                                                                                                                           [39;1H~                                                                                                                                                                                                                                           [40;1H~                                                                                                                                                                                                                                           [41;1H~                                                                                                                                                                                                                                           [42;1H~                                                                                                                                                                                                                                           [43;1H~                                                                                                                                                                                                                                           [44;1H~                                                                                                                                                                                                                                           [45;1H~                                                                                                                                                                                                                                           [46;1H~                                                                                                                                                                                                                                           [47;1H~                                                                                                                                                                                                                                           [48;1H~                                                                                                                                                                                                                                           [49;1H~                                                                                                                                                                                                                                           [50;1H~                                                                                                                                                                                                                                           [51;1H~                                                                                                                                                                                                                                           [m[21;110HVIM - Vi IMproved[23;113Hversion 7.3[24;107Hby Bram Moolenaar et al.[25;97HVim is open source and freely distributable[27;104HHelp poor children in Uganda![28;96Htype  :help iccf[34m<Enter>[m       for information [30;96Htype  :q[34m<Enter>[m               to exit         [31;96Htype  :help[34m<Enter>[m  or  [34m<F1>[m  for on-line help[32;96Htype  :help version7[34m<Enter>[m   for version info[1;5H[?12l[?25h[?25l[52;1HType  :quit<Enter>  to exit Vim[1;5H[?12l[?25h[?25l[52;1H[K[52;1H:[?12l[?25hq![?25l[52;3H[K[52;3H[?12l[?25h[?25l[52;2H[K[52;2H[?12l[?25h! echo "this is cool"[?25l[22C[?1l>[?12l[?25h[?1049l
+this is cool
+
+Press ENTER or type command to continue[?1049h[?1h=[27m[m[H[2J[?25l[1;1H[38;5;130m  1 [m
+[94m~                                                                                                                                                                                                                                           [3;1H~                                                                                                                                                                                                                                           [4;1H~                                                                                                                                                                                                                                           [5;1H~                                                                                                                                                                                                                                           [6;1H~                                                                                                                                                                                                                                           [7;1H~                                                                                                                                                                                                                                           [8;1H~                                                                                                                                                                                                                                           [9;1H~                                                                                                                                                                                                                                           [10;1H~                                                                                                                                                                                                                                           [11;1H~                                                                                                                                                                                                                                           [12;1H~                                                                                                                                                                                                                                           [13;1H~                                                                                                                                                                                                                                           [14;1H~                                                                                                                                                                                                                                           [15;1H~                                                                                                                                                                                                                                           [16;1H~                                                                                                                                                                                                                                           [17;1H~                                                                                                                                                                                                                                           [18;1H~                                                                                                                                                                                                                                           [19;1H~                                                                                                                                                                                                                                           [20;1H~                                                                                                                                                                                                                                           [21;1H~                                                                                                                                                                                                                                           [22;1H~                                                                                                                                                                                                                                           [23;1H~                                                                                                                                                                                                                                           [24;1H~                                                                                                                                                                                                                                           [25;1H~                                                                                                                                                                                                                                           [26;1H~                                                                                                                                                                                                                                           [27;1H~                                                                                                                                                                                                                                           [28;1H~                                                                                                                                                                                                                                           [29;1H~                                                                                                                                                                                                                                           [30;1H~                                                                                                                                                                                                                                           [31;1H~                                                                                                                                                                                                                                           [32;1H~                                                                                                                                                                                                                                           [33;1H~                                                                                                                                                                                                                                           [34;1H~                                                                                                                                                                                                                                           [35;1H~                                                                                                                                                                                                                                           [36;1H~                                                                                                                                                                                                                                           [37;1H~                                                                                                                                                                                                                                           [38;1H~                                                                                                                                                                                                                                           [39;1H~                                                                                                                                                                                                                                           [40;1H~                                                                                                                                                                                                                                           [41;1H~                                                                                                                                                                                                                                           [42;1H~                                                                                                                                                                                                                                           [43;1H~                                                                                                                                                                                                                                           [44;1H~                                                                                                                                                                                                                                           [45;1H~                                                                                                                                                                                                                                           [46;1H~                                                                                                                                                                                                                                           [47;1H~                                                                                                                                                                                                                                           [48;1H~                                                                                                                                                                                                                                           [49;1H~                                                                                                                                                                                                                                           [50;1H~                                                                                                                                                                                                                                           [51;1H~                                                                                                                                                                                                                                           [1;5H[?12l[?25h[?25l[52;1H[m:[?12l[?25hq![?25l[97m[41mError detected while processing BufWinLeave Auto commands for "*":[m
+[97m[41mE32: No file name[m[?1l>[?12l[?25h[?1049l
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Just had to throw that in there :)"
+Just had to throw that in there :)
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ =\ ]
+-rshell: =]: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Trying some really long o commands"
+Trying some really long commands
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo ' "Adolph Blaine Charles David Earl Frederick Gerald Hubert Irvin John Kenneth Lloyd Martin Nero Oliver Paul Quincy Randolph Sherman Thomas Uncas Victor William Xerxes Yancy Zeus Wolfe­schlegelstein­hausenberger­dorffvoraltern­waren­gewissenhaft­schaferswessen­schafewaren­wohlgepflege­und­sorgfaltigkeit­beschutzen­von­angreifen­durch­ihrraubgierigfeinde­welche­voraltern­zwolftausend­jahres­vorandieerscheinen­wander­ersteer­dem­enschderraumschiff­gebrauchlicht­als­sein­ursprung­von­kraftgestart­sein­lange­fahrt­hinzwischen­sternartigraum­auf­der­suchenach­diestern­welche­gehabt­bewohnbar­planeten­kreise­drehen­sich­und­wohin­der­neurasse­von­verstandigmen­schlichkeit­konnte­fortplanzen­und­sicher­freuen­anlebens­langlich­freude­und­ruhe­mit­nicht­ein­furcht­vor­angreifen­von­anderer­intelligent­geschopfs­von­hinzwischen­sternartigraum, Senior"
+Adolph Blaine Charles David Earl Frederick Gerald Hubert Irvin John Kenneth Lloyd Martin Nero Oliver Paul Quincy Randolph Sherman Thomas Uncas Victor William Xerxes Yancy Zeus Wolfe­schlegelstein­hausenberger­dorffvoraltern­waren­gewissenhaft­schaferswessen­schafewaren­wohlgepflege­und­sorgfaltigkeit­beschutzen­von­angreifen­durch­ihrraubgierigfeinde­welche­voraltern­zwolftausend­jahres­vorandieerscheinen­wander­ersteer­dem­enschderraumschiff­gebrauchlicht­als­sein­ursprung­von­kraftgestart­sein­lange­fahrt­hinzwischen­sternartigraum­auf­der­suchenach­diestern­welche­gehabt­bewohnbar­planeten­kreise­drehen­sich­und­wohin­der­neurasse­von­verstandigmen­schlichkeit­konnte­fortplanzen­und­sicher­freuen­anlebens­langlich­freude­und­ruhe­mit­nicht­ein­furcht­vor­angreifen­von­anderer­intelligent­geschopfs­von­hinzwischen­sternartigraum, Senior
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "It shouldn't ov  ever v overload, but just being safe"
+It shouldnt ever overload, but just being safe
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo echo echo echo
+echo echo echo
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ woo!
+-rshell: woo!: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ !e  eh cho "this is cool"
+this is cool
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ !echo
+-rshell: !echo: No such file or directory
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ echo "Okay cool. That should be it for tests."
+Okay cool. That should be it for tests.
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ 
+Kilenaitor@vpn-233-133.bulk.ucr.edu $ exit
+[01;37m0 [01;32m✓ [01;32mKilenaitor@vpn-233-133[01;34m ~/Desktop/rshell $[00m eixt[K[K[Kxit
 exit
 
-Script done on Fri Apr 17 10:37:10 2015
+Script done on Fri Apr 17 18:34:07 2015
