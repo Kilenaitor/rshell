@@ -45,7 +45,7 @@ int main (int argc, char const *argv[])
     while(true)
 	{
         //Terminal prompt display
-        if(h == 0 || !login)
+        if(h == 0 && login)
             cout << login << "@" << host << " $ ";
         else
             cout << " $ ";
