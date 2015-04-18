@@ -48,7 +48,7 @@ int main (int argc, char const *argv[])
         if(h == 0 && login)
             cout << login << "@" << host << " $ ";
         else
-            cout << " $ ";
+            cout << "$ ";
         cout.flush(); //Have to flush since no std::endl;
 
         //Grab user input for bash prompt
