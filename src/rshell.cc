@@ -72,7 +72,18 @@ int main (int argc, char const *argv[])
             if( !it->empty() ) {
                 if(*it == "#" || strncmp(&it->at(0),"#",1) == 0)
                     break;
-                //If the current element is the start of a connector, this checks to see if the following index contains the other half of the connector
+                else if(strncmp(&it->back(), "#", 1) == 0) {
+                    string temp = it->substr(0, it->size()-1);
+                    if(temp.size() > 1) {
+                        connectors.push_back(" ");
+                        ls.push_back(temp);
+                        args.push_back(const_cast<char*>(ls.back().c_str()));
+                    }
+                    args.push_back(0);
+                    commands.push_back(args);
+                    args.clear();
+                    break;
+                }
                 else if (*it == "||" ) {
                     if(args.empty()) continue;
                     connectors.push_back("OR");
