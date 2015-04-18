@@ -6,11 +6,14 @@ rshell requires the Boost library for C++ to be installed
 
 If you are on Ubuntu, run `sudo apt-get install libboost-all-dev`
 
-If you are on Mac OS, I'd recomment using Homebrew. Use the command `brew install boost`
+If you are on Mac OS X, I'd recomment using Homebrew. 
+Install Homebrew and use the command `brew install boost`
 
-Download file can be found here: http://www.boost.org/users/download/
+To manually install, the file can be found here: http://www.boost.org/users/download/
 
 ##Build and Run
+hw0 is the current working build of the program
+Any current branch progress is not tested nor confirmed to work as expected
 ```
 $ git clone  https://github.com/kilenaitor/rshell.git
 $ cd rshell
@@ -26,9 +29,12 @@ $ bin/rshell
 - Host name is limited to 128 characters
 - Does not detect triple connectors like `|||` or `&&&`, they're just interpreted as another command
 - Will not prompt for more input if connector is the end. (e.g. `ls &&` just prints ls)
-- Does not support two connectors in a row (e.g. `echo test || || echo test` will fail)
-- Cannot start with a connector or else it will break (e.g. `&& ls -lha` or `; ls -lha`)
 - Connectors cannot be touching other commands or parameters (e.g. `echo "this"|| echo "that"` will not work)
 - Cannot direct output. (e.g. `echo "this" > test.ext` will output 'this > test.txt')
+- Cannot pipe command output
+- cd command does not work
+- Pressing up on the arrow key does not restore the previous command
+- No navigating text input; Enters the literal keys for left, right, up, down, etc.
+- `!*command*` does not execute the previous command
 - No color output
-
+- Does not allow aliases or general settings
