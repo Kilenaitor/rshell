@@ -24,8 +24,14 @@ int main (int argc, char const *argv[])
 {
     //Host name can only be 128 characters. If it's more than that, you need to reevaluate your naming choices
     char host[128];
-    gethostname(host, sizeof(host));
+    int h = gethostname(host, sizeof(host));
+    if(h != 0) {
+        perror("Error retrieving hostname.");
+    }
     char * login = getlogin();
+    if(!login) {
+        perror("Error getting login name.");
+    }
 
     //Input the user puts in
 	string input;
@@ -39,7 +45,10 @@ int main (int argc, char const *argv[])
     while(true)
 	{
         //Terminal prompt display
-        cout << login << "@" << host << " $ ";
+        if(h == 0 || !login)
+            cout << login << "@" << host << " $ ";
+        else
+            cout << " $ ";
         cout.flush(); //Have to flush since no std::endl;
 
         //Grab user input for bash prompt
