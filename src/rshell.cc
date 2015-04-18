@@ -34,7 +34,7 @@ int main (int argc, char const *argv[])
     }
 
     //Input the user puts in
-	string input;
+    string input;
 
     //mmap is used for preserving the variable (pass in this case) through the child processes
     pass = (bool *)mmap(NULL, sizeof *pass, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANON, -1, 0);
@@ -46,7 +46,7 @@ int main (int argc, char const *argv[])
     *pass = false;
 
     while(true)
-	{
+    {
         //Terminal prompt display
         if(h == 0 && login)
             cout << login << "@" << host << " $ ";
@@ -190,11 +190,11 @@ int main (int argc, char const *argv[])
             }
             else { //Parent process
                 int status;
-				if(wait(&status) < 0) {
-					perror("Error during child process");
+                if(wait(&status) < 0) {
+                    perror("Error during child process");
                     *pass = false;
-					exit(1);
-				}
+                    exit(1);
+                }
                 else {
                     //Used to get the exit code of the child process
                     int estat = WEXITSTATUS(status);
