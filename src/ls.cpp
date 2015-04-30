@@ -21,27 +21,62 @@
 #include <cmath>
 #include <string.h>
 #include <sys/stat.h>
+#include <grp.h>
+#include <pwd.h>
 
 using namespace std;
 
 void list_output(vector<char*> &v)
 {
-    char *arg[256];
-    arg[0] = "stat";
-    arg[1] = "-LF";
+	struct passwd *pws;
+	pws = getpwuid(geteuid());
+	
+	struct group *grp;
+	grp = getgrgid(getgid());
+	
+	int width = 0;
+	int total = 0;
+	
+	for(auto x : v) {
+		int tempWidth = 0;
+		struct stat fileStat;
+		if(stat(x, &fileStat) < 0)
+			perror("Failed");
+		
+		total += ceil(fileStat.st_size/512);
+		
+		for(; fileStat.st_size != 0; fileStat.st_size /= 10, tempWidth++);
+		tempWidth > width ? width = tempWidth : width;
+	}
+	
+	cout << "total " << total << endl;
+	
     for(auto x : v) {
-        arg[2] = x;
-        pid_t cpid;
-        int   status = 0;
-
-        cpid = fork();
-        if (cpid == 0) {
-            cout << execvp(arg[0], arg) << endl;
-        }
-        wait(&status);
-        if(status < 0)
-            perror("Abnormal exit of program ls");
-    }
+		struct stat fileStat;
+	    if(stat(x, &fileStat) < 0)  
+			perror("Failed");
+		
+		printf( (S_ISDIR(fileStat.st_mode)) ? "d" : "-");
+	    printf( (fileStat.st_mode & S_IRUSR) ? "r" : "-");
+	    printf( (fileStat.st_mode & S_IWUSR) ? "w" : "-");
+	    printf( (fileStat.st_mode & S_IXUSR) ? "x" : "-");
+	    printf( (fileStat.st_mode & S_IRGRP) ? "r" : "-");
+	    printf( (fileStat.st_mode & S_IWGRP) ? "w" : "-");
+	    printf( (fileStat.st_mode & S_IXGRP) ? "x" : "-");
+	    printf( (fileStat.st_mode & S_IROTH) ? "r" : "-");
+	    printf( (fileStat.st_mode & S_IWOTH) ? "w" : "-");
+	    printf( (fileStat.st_mode & S_IXOTH) ? "x" : "-");
+		printf("  ");
+		printf("%d ",fileStat.st_nlink);
+		printf("%s  ", pws->pw_name);
+		printf("%s ", grp->gr_name);
+		std::cout.width(width);
+		cout << std::right << fileStat.st_size << " ";
+		struct tm * timeinfo = localtime(&fileStat.st_ctime);
+		printf("%s", asctime(timeinfo));
+		
+		cout << x << endl;
+	}
 }
 
 void standard_output(vector<char*> &v, int length)
