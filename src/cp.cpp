@@ -115,11 +115,7 @@ int main(int argc, char **argv)
        cout << "ERROR: Destination file already exists" << endl;
        return 1;
     }
-
-    if(argc == 4) {
-        fast_copy(argv[1], argv[2]);
-    }
-    else {
+    if(argc == 4){
 
         Timer t;
         double eTime;
@@ -141,6 +137,9 @@ int main(int argc, char **argv)
         fast_copy(argv[1], argv[2]);
         t3.elapsedUserTime(eTime3);
         cout << "Third method took: " << eTime3 << " seconds" << endl;
+    }
+    else {
+        fast_copy(argv[1], argv[2]);
     }
 
     return 0;
