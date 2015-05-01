@@ -23,6 +23,9 @@
 #include <sys/stat.h>
 #include <grp.h>
 #include <pwd.h>
+#include <time.h>
+#include <locale.h>
+#include <langinfo.h>
 
 using namespace std;
 
@@ -43,7 +46,7 @@ void list_output(vector<char*> &v)
 		if(stat(x, &fileStat) < 0)
 			perror("Failed");
 		
-		total += ceil(fileStat.st_size/512);
+		total += ceil(fileStat.st_blocks);
 		
 		for(; fileStat.st_size != 0; fileStat.st_size /= 10, tempWidth++);
 		tempWidth > width ? width = tempWidth : width;
@@ -55,8 +58,11 @@ void list_output(vector<char*> &v)
 		struct stat fileStat;
 	    if(stat(x, &fileStat) < 0)  
 			perror("Failed");
+        
+        bool directory = (S_ISDIR(fileStat.st_mode));
+        bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
 		
-		printf( (S_ISDIR(fileStat.st_mode)) ? "d" : "-");
+		printf( directory ? "d" : "-");
 	    printf( (fileStat.st_mode & S_IRUSR) ? "r" : "-");
 	    printf( (fileStat.st_mode & S_IWUSR) ? "w" : "-");
 	    printf( (fileStat.st_mode & S_IXUSR) ? "x" : "-");
@@ -69,13 +75,22 @@ void list_output(vector<char*> &v)
 		printf("  ");
 		printf("%d ",fileStat.st_nlink);
 		printf("%s  ", pws->pw_name);
-		printf("%s ", grp->gr_name);
-		std::cout.width(width);
+		printf("%s  ", grp->gr_name);
+		cout.width(width);
 		cout << std::right << fileStat.st_size << " ";
-		struct tm * timeinfo = localtime(&fileStat.st_ctime);
-		printf("%s", asctime(timeinfo));
+        
+        struct tm *tm;
+        char datestring[256];
+        tm = localtime(&fileStat.st_mtime);
+        strftime(datestring, sizeof(datestring), nl_langinfo(D_T_FMT), tm);
+        printf("%s ", datestring);
 		
-		cout << x << endl;
+        if(directory)
+            cout << "\x1b[36;40m" << x << "\x1b[0m" << endl;
+        else if(executable)
+            cout << "\x1b[1;32;40m" << x << "\x1b[0m" << endl;
+        else
+            cout << x << endl;
 	}
 }
 
