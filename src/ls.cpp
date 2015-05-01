@@ -118,8 +118,8 @@ void standard_output(vector<char*> &v, int length)
         for(unsigned a = i; a < v.size(); a += num_rows) {
             
     		struct stat fileStat;
-    	    if(stat(v.at(a), &fileStat) < 0)  
-    			perror("Failed");
+    	    //if(stat((v.at(a)), &fileStat) < 0)  
+    			//perror("Failed to run stat");
             
             bool directory = (S_ISDIR(fileStat.st_mode));
             bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
