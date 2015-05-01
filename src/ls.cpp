@@ -170,6 +170,8 @@ int main (int argc, char const *argv[])
         exit(1);
     }
     
+    sort(files.begin(), files.end());
+    
     if(!list)
         standard_output(files, ++max_length);
     else
