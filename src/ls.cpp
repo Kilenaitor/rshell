@@ -112,7 +112,7 @@ void standard_output(vector<char*> &v, int length)
     int check_width = v.size()*length;
     int num_rows = ceil((double)check_width/(double)w.ws_col);
     
-    for(unsigned i = 0; i < num_rows; ++i)
+    for(int i = 0; i < num_rows; ++i)
     {
         for(unsigned a = i; a < v.size(); a += num_rows) {
             cout << v.at(a);
