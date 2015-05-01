@@ -53,7 +53,7 @@ void list_output(vector<char*> &v)
 		tempWidth > width ? width = tempWidth : width;
 	}
 	
-	cout << "total " << total << endl;
+	cout << "total " << total/2 << endl;
 	
     for(auto x : v) {
 		struct stat fileStat;
@@ -124,6 +124,10 @@ void standard_output(vector<char*> &v, int length)
     }
 }
 
+bool comparisonFunc(const char *c1, const char *c2) {
+    return strcmp(c1, c2) < 0;
+}
+
 int main (int argc, char const *argv[])
 {
     DIR *dirp;
@@ -171,7 +175,7 @@ int main (int argc, char const *argv[])
         exit(1);
     }
     
-    sort(files.begin(), files.end());
+    sort(files.begin(), files.end(), comparisonFunc);
     
     if(!list)
         standard_output(files, ++max_length);
