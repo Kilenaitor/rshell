@@ -26,6 +26,7 @@
 #include <time.h>
 #include <locale.h>
 #include <langinfo.h>
+#include <algorithm>
 
 using namespace std;
 
