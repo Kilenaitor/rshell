@@ -36,13 +36,11 @@ void list_output(vector<char*> &v, const char* input)
 	int width2 = 0;
 	int total = 0;
 	
-	
 	for(auto x : v) {
 		
 		string full = input;
 		full.append("/");
 		full.append(x);
-		
 		
 		int tempWidth = 0;
 		int tempWidth2 = 0;
@@ -200,6 +198,8 @@ int main (int argc, char const *argv[])
     if(flags.find('R') != string::npos)
         recursive = true;
 	
+	sort(inputs.begin(), inputs.end(), comparisonFunc);
+	
 	if(inputs.size() > 0) {
 	
 		for(auto in : inputs) {
@@ -224,13 +224,24 @@ int main (int argc, char const *argv[])
     
 		    sort(files.begin(), files.end(), comparisonFunc);
 			
-		    if(!list)
+		    if(!list) {
+				if(inputs.size() > 1)
+					cout << in << ":" << endl;
 		        standard_output(files, ++max_length, in);
-		    else
+				if(inputs.size() > 1 && (in != inputs.back()))
+					cout << endl;
+			}
+		    else {
+				if(inputs.size() > 1)
+					cout << in << ":" << endl;
 		        list_output(files, in);
+				if(inputs.size() > 1 && (in != inputs.back()))
+					cout << endl;
+			}
+			
+			files.clear();
     
-		    if(recursive)
-		        cout << "rec" << endl;
+		    cout << "rec" << endl;
     
 		    if(-1 == closedir(dirp)) {
 		        perror("There was an error with closedir(). ");
