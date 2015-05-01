@@ -125,7 +125,7 @@ void standard_output(vector<char*> &v, int length)
 }
 
 bool comparisonFunc(const char *c1, const char *c2) {
-    return strcmp(c1, c2) < 0;
+    return strcasecmp(c1, c2) < 0;
 }
 
 int main (int argc, char const *argv[])
