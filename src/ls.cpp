@@ -31,13 +31,7 @@
 using namespace std;
 
 void list_output(vector<char*> &v, const char* input)
-{
-	struct passwd *pws;
-	pws = getpwuid(geteuid());
-	
-	struct group *grp;
-	grp = getgrgid(getgid());
-	
+{	
 	int width = 0;
 	int width2 = 0;
 	int total = 0;
@@ -75,6 +69,12 @@ void list_output(vector<char*> &v, const char* input)
 		struct stat fileStat;
 	    if(stat(full.c_str(), &fileStat) < 0)  
 			perror("Failed to do filestat");
+		
+		struct passwd *pws;
+		pws = getpwuid(fileStat.st_uid);
+	
+		struct group *grp;
+		grp = getgrgid(fileStat.st_gid);
         
         bool directory = (S_ISDIR(fileStat.st_mode));
         bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
