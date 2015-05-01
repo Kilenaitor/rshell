@@ -112,9 +112,9 @@ void standard_output(vector<char*> &v, int length)
     int check_width = v.size()*length;
     int num_rows = ceil((double)check_width/(double)w.ws_col);
     
-    for(int i = 0; i < num_rows; ++i)
+    for(unsigned i = 0; i < num_rows; ++i)
     {
-        for(int a = i; a < v.size(); a += num_rows) {
+        for(unsigned a = i; a < v.size(); a += num_rows) {
             cout << v.at(a);
             for(int i = strlen(v.at(a)); i < length; ++i)
                 cout << " ";
@@ -131,7 +131,7 @@ int main (int argc, char const *argv[])
     bool all = false;
     bool recursive = false;
     vector<char*> files;
-    int max_length = 9;
+    unsigned max_length = 9;
     
     if(argc == 2) {
         string first = argv[1];
