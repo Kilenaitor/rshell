@@ -175,6 +175,9 @@ int main (int argc, char const *argv[])
     else
         list_output(files);
     
+    if(recursive)
+        cout << "rec" << endl;
+    
     if(-1 == closedir(dirp)) {
         perror("There was an error with closedir(). ");
         exit(1);
