@@ -140,7 +140,7 @@ void standard_output(vector<char*> &v, int length)
             else
                 cout << v.at(a);
             
-            for(int i = strlen(v.at(a)); i < length; ++i)
+            for(int i = strlen(v.at(a)); i < length && a < (v.size() - num_rows); ++i)
                 cout << " ";
         }
         cout << endl;
