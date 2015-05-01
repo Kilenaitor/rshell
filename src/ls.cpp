@@ -116,7 +116,32 @@ void standard_output(vector<char*> &v, int length)
     for(int i = 0; i < num_rows; ++i)
     {
         for(unsigned a = i; a < v.size(); a += num_rows) {
-            cout << v.at(a);
+            
+    		struct stat fileStat;
+    	    if(stat(v.at(a), &fileStat) < 0)  
+    			perror("Failed");
+            
+            bool directory = (S_ISDIR(fileStat.st_mode));
+            bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
+    		bool hidden = ((v.at(a))[0] == '.');
+            
+            if(directory) {
+                if(hidden)
+                    cout << "\x1b[34;47m" << v.at(a) << "\x1b[0m";
+                else
+                    cout << "\x1b[34;40m" << v.at(a) << "\x1b[0m";
+            }
+            else if(executable) {
+                if(hidden)
+                    cout << "\x1b[1;32;47m" << v.at(a) << "\x1b[0m";
+                else
+                    cout << "\x1b[1;32;40m" << v.at(a) << "\x1b[0m";
+            }
+            else if(hidden)
+                cout << "\x1b[30;47m" << v.at(a) << "\x1b[0m";
+            else
+                cout << v.at(a);
+            
             for(int i = strlen(v.at(a)); i < length; ++i)
                 cout << " ";
         }
