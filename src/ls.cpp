@@ -74,7 +74,7 @@ void list_output(vector<char*> &v)
 	    printf( (fileStat.st_mode & S_IWOTH) ? "w" : "-");
 	    printf( (fileStat.st_mode & S_IXOTH) ? "x" : "-");
 		printf("  ");
-		printf("%d ",fileStat.st_nlink);
+        cout << fileStat.st_nlink << " ";
 		printf("%s  ", pws->pw_name);
 		printf("%s  ", grp->gr_name);
 		cout.width(width);
