@@ -61,7 +61,8 @@ void list_output(vector<char*> &v)
         
         bool directory = (S_ISDIR(fileStat.st_mode));
         bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
-		
+		bool hidden = (x[0] == '.');
+        
 		printf( directory ? "d" : "-");
 	    printf( (fileStat.st_mode & S_IRUSR) ? "r" : "-");
 	    printf( (fileStat.st_mode & S_IWUSR) ? "w" : "-");
@@ -85,10 +86,20 @@ void list_output(vector<char*> &v)
         strftime(datestring, sizeof(datestring), nl_langinfo(D_T_FMT), tm);
         printf("%s ", datestring);
 		
-        if(directory)
-            cout << "\x1b[36;40m" << x << "\x1b[0m" << endl;
-        else if(executable)
-            cout << "\x1b[1;32;40m" << x << "\x1b[0m" << endl;
+        if(directory) {
+            if(hidden)
+                cout << "\x1b[34;47m" << x << "\x1b[0m" << endl;
+            else
+                cout << "\x1b[34;40m" << x << "\x1b[0m" << endl;
+        }
+        else if(executable) {
+            if(hidden)
+                cout << "\x1b[1;32;47m" << x << "\x1b[0m" << endl;
+            else
+                cout << "\x1b[1;32;40m" << x << "\x1b[0m" << endl;
+        }
+        else if(hidden)
+            cout << "\x1b[30;47m" << x << "\x1b[0m" << endl;
         else
             cout << x << endl;
 	}
