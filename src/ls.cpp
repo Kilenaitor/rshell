@@ -144,8 +144,8 @@ void standard_output(vector<char*> &v, int length, const char* source)
         for(unsigned a = i; a < v.size(); a += num_rows) {
 			
 			string full = source;
-			full.append("/");
-			full.append(v.at(i));
+            full.append("/");
+			full.append(v.at(a));
             
     		struct stat fileStat;
 		    if(stat(full.c_str(), &fileStat) < 0)  
@@ -170,7 +170,7 @@ void standard_output(vector<char*> &v, int length, const char* source)
             else if(hidden)
                 cout << "\x1b[30;47m" << v.at(a) << "\x1b[0m";
             else
-                cout << v.at(a);
+                cout << "\x1b[0m" << v.at(a);
             
             for(int i = strlen(v.at(a)); i < length && a < (v.size() - num_rows); ++i)
                 cout << " ";
@@ -183,7 +183,7 @@ bool comparisonFunc(const char *c1, const char *c2) {
     return strcasecmp(c1, c2) < 0;
 }
 
-int main (int argc, char const *argv[])
+void execute(int argc, char const *argv[])
 {
     DIR *dirp;
     string direc = ".";
@@ -216,8 +216,15 @@ int main (int argc, char const *argv[])
 		for(auto in : inputs) {
     
 		    if(NULL == (dirp = opendir(const_cast<char*>(in)))) {
-		        perror("There was an error with opendir(). ");
-		        exit(1);
+        		struct stat fileStat;
+    		    if(stat(in, &fileStat) < 0) {
+                    perror("There was an error with spefied file. ");
+                    exit(1);
+                }
+                else {
+                    cout << in << endl;
+                    exit(0);
+                }
 		    }
 			
 		    struct dirent *filespecs;
@@ -249,10 +256,40 @@ int main (int argc, char const *argv[])
 				if(inputs.size() > 1 && (in != inputs.back()))
 					cout << endl;
 			}
+            
+            if(recursive)
+            {
+                for(auto file : files) {
+                    string temp = in;
+                    temp.append("/");
+                    temp.append(file);
+            		struct stat fileStat;
+        		    if(stat(temp.c_str(), &fileStat) < 0) {
+        				perror("Failed to do the filestat");
+                    }
+                
+                    bool directory = (S_ISDIR(fileStat.st_mode));
+                    if(directory)
+                    {
+                        if(strcmp(file, ".") == 0 || strcmp(file, "..") == 0)
+                            continue;
+                        cout << endl;
+                        string out = in;
+                        out.append("/");
+                        out.append(file);
+                        cout << out << ": " << endl;
+                        const char * args[256];
+                        args[0] = argv[0];
+                        args[1] = const_cast<char*>(flags.c_str());
+                        args[2] = out.c_str();
+                        int arg_c = 3;
+                        execute(arg_c, args);
+                    }
+                }
+            
+            }
 			
 			files.clear();
-    
-		    cout << "rec" << endl;
     
 		    if(-1 == closedir(dirp)) {
 		        perror("There was an error with closedir(). ");
@@ -261,10 +298,17 @@ int main (int argc, char const *argv[])
 		}
 	}
 	else {
-		
+        
 	    if(NULL == (dirp = opendir(const_cast<char*>(direc.c_str())))) {
-	        perror("There was an error with opendir(). ");
-	        exit(1);
+    		struct stat fileStat;
+		    if(stat(direc.c_str(), &fileStat) < 0) {
+    	        perror("There was an error with the specified file. ");
+    	        exit(1);
+            }
+            else {
+                cout << direc << endl;
+                exit(0);
+            }
 	    }
 	
 	    struct dirent *filespecs;
@@ -287,13 +331,42 @@ int main (int argc, char const *argv[])
 	    else
 	        list_output(files, direc.c_str());
 
-	    if(recursive)
-	        cout << "rec" << endl;
-
+        if(recursive)
+        {
+            for(auto file : files) {
+        		struct stat fileStat;
+    		    if(stat(file, &fileStat) < 0)  
+    				perror("Failed to do filestat");
+                
+                bool directory = (S_ISDIR(fileStat.st_mode));
+                if(directory)
+                {
+                    if(strcmp(file, ".") == 0 || strcmp(file, "..") == 0)
+                        continue;
+                    cout << file << ": " << endl;
+                    const char * args[256];
+                    args[0] = argv[0];
+                    args[1] = const_cast<char*>(flags.c_str());
+                    args[2] = file;
+                    int arg_c = 3;
+                    execute(arg_c, args);
+                    cout << endl;
+                }
+            }
+            
+        }
+        
+        files.clear();
+        
 	    if(-1 == closedir(dirp)) {
 	        perror("There was an error with closedir(). ");
 	        exit(1);
 	    }
-	}
+	} 
+}
+
+int main (int argc, char const *argv[])
+{
+    execute(argc, argv);
     return 0;
 }
