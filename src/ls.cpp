@@ -34,6 +34,8 @@ void list_output(vector<char*> &v, const char* input)
 {	
 	int width = 0;
 	int width2 = 0;
+    int width3 = 0;
+    int width4 = 0;
 	int total = 0;
 	
 	for(auto x : v) {
@@ -49,13 +51,20 @@ void list_output(vector<char*> &v, const char* input)
 			perror("Failed to run filestat");
 		
 		total += ceil(fileStat.st_blocks);
+        
+		struct passwd *pws;
+		pws = getpwuid(fileStat.st_uid);
+		struct group *grp;
+		grp = getgrgid(fileStat.st_gid);
 		
 		for(; fileStat.st_size != 0; fileStat.st_size /= 10, tempWidth++);
 		for(; fileStat.st_nlink != 0; fileStat.st_nlink /= 10, tempWidth2++);
 		tempWidth > width ? width = tempWidth : width;
 		tempWidth2 > width2 ? width2 = tempWidth2 : width2;
+        strlen(pws->pw_name) > width3 ? width3 = strlen(pws->pw_name) : width3;
+        strlen(grp->gr_name) > width4 ? width4 = strlen(grp->gr_name) : width4;
 	}
-	
+    
 	cout << "total " << total/2 << endl;
 	
     for(auto x : v) {
@@ -91,8 +100,10 @@ void list_output(vector<char*> &v, const char* input)
 		printf("  ");
 		cout.width(width2);
         cout << fileStat.st_nlink << " ";
-		printf("%s  ", pws->pw_name);
-		printf("%s  ", grp->gr_name);
+        cout.width(width3);
+        cout << left << pws->pw_name << " ";
+        cout.width(width4);
+        cout << left << grp->gr_name << " ";
 		cout.width(width);
 		cout << std::right << fileStat.st_size << " ";
         
