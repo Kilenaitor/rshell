@@ -34,8 +34,8 @@ void list_output(vector<char*> &v, const char* input)
 {	
 	int width = 0;
 	int width2 = 0;
-    int width3 = 0;
-    int width4 = 0;
+    unsigned width3 = 0;
+    unsigned width4 = 0;
 	int total = 0;
 	
 	for(auto x : v) {
