@@ -54,8 +54,12 @@ void list_output(vector<char*> &v, const char* input)
         
 		struct passwd *pws;
 		pws = getpwuid(fileStat.st_uid);
+        if(pws < 0)
+            perror("Failed to get user name");
 		struct group *grp;
 		grp = getgrgid(fileStat.st_gid);
+        if(grp < 0)
+            perror("Failed to get gropu name");
 		
 		for(; fileStat.st_size != 0; fileStat.st_size /= 10, tempWidth++);
 		for(; fileStat.st_nlink != 0; fileStat.st_nlink /= 10, tempWidth2++);
@@ -79,9 +83,12 @@ void list_output(vector<char*> &v, const char* input)
 		
 		struct passwd *pws;
 		pws = getpwuid(fileStat.st_uid);
-	
+        if(pws < 0)
+            perror("Failed to get user name");
 		struct group *grp;
 		grp = getgrgid(fileStat.st_gid);
+        if(grp < 0)
+            perror("Failed to get gropu name");
         
         bool directory = (S_ISDIR(fileStat.st_mode));
         bool executable = (fileStat.st_mode > 0) && (S_IEXEC & fileStat.st_mode);
@@ -135,7 +142,9 @@ void list_output(vector<char*> &v, const char* input)
 void standard_output(vector<char*> &v, int length, const char* source)
 {
     struct winsize w;
-    ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+    int test = ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
+    if(test < 0)
+        perror("Failed to get terminal width");
     int check_width = v.size()*length-1;
     int num_rows = ceil((double)check_width/(double)w.ws_col);
     
