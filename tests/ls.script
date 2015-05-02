@@ -1,0 +1,3018 @@
+Script started on Fri May  1 23:49:46 2015
+[?1034h[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell/tests $[00m cd ../
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls
+[34;40mbin[0m       [0mLICENSE   [0mmakefile  [0mREADME.md [34;40msrc[0m       [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -l
+total 12
+drwxr-xr-x  4 Kilenaitor staff  136 Fri May  1 23:48:33 2015 [34;40mbin[0m
+-rw-r--r--  1 Kilenaitor staff 1478 Wed Apr 29 21:51:42 2015 LICENSE
+-rw-r--r--  1 Kilenaitor staff  250 Fri May  1 03:31:05 2015 makefile
+-rw-r--r--  1 Kilenaitor staff 1551 Wed Apr 29 21:51:42 2015 README.md
+drwxr-xr-x  6 Kilenaitor staff  204 Fri May  1 23:46:34 2015 [34;40msrc[0m
+drwxr-xr-x  4 Kilenaitor staff  136 Fri May  1 23:49:46 2015 [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls [K[K[K[K[K[K[K
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bi[K[Kls
+LICENSE   README.md [1m[36mbin[39;49m[0m       makefile  [1m[36msrc[39;49m[0m       [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls [K[K[K[K[K[K[Kls -l
+total 24
+-rw-r--r--  1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@ 1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x  6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear[K[K[K[K[Kclear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -R
+[34;40mbin[0m       [0mLICENSE   [0mmakefile  [0mREADME.md [34;40msrc[0m       [34;40mtests[0m
+bin: 
+[1;32;40mls[0m        [1;32;40mrshell[0m
+
+src: 
+[0mcp.cpp    [0mls.cpp    [0mrshell.cc
+
+tests: 
+[0mexec.script [0mls.script
+
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -R
+LICENSE   README.md [1m[36mbin[39;49m[0m       makefile  [1m[36msrc[39;49m[0m       [1m[36mtests[39;49m[0m
+
+./bin:
+[1m[31mls[39;49m[0m     [1m[31mrshell[39;49m[0m
+
+./src:
+cp.cpp    ls.cpp    rshell.cc
+
+./tests:
+exec.script ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -Ra
+[34;47m.[0m          [34;47m..[0m         [34;47m.git[0m       [30;47m.gitignore[0m [34;40mbin[0m        [0mLICENSE    [0mmakefile   [0mREADME.md  [34;40msrc[0m        [34;40mtests[0m
+.git: 
+[34;47m.[0m              [34;47m..[0m             [0mCOMMIT_EDITMSG [0mconfig         [0mdescription    [0mFETCH_HEAD     [0mHEAD           [34;40mhooks[0m          [0mindex          [34;40minfo[0m           [34;40mlogs[0m           [34;40mobjects[0m        [0mORIG_HEAD      [0mpacked-refs    [34;40mrefs[0m
+
+.git/hooks: 
+[34;47m.[0m                         [1;32;40mapplypatch-msg.sample[0m     [1;32;40mpost-update.sample[0m        [1;32;40mpre-commit.sample[0m         [1;32;40mpre-rebase.sample[0m         [1;32;40mupdate.sample[0m
+[34;47m..[0m                        [1;32;40mcommit-msg.sample[0m         [1;32;40mpre-applypatch.sample[0m     [1;32;40mpre-push.sample[0m           [1;32;40mprepare-commit-msg.sample[0m
+
+.git/info: 
+[34;47m.[0m         [34;47m..[0m        [0mexclude
+
+.git/logs: 
+[34;47m.[0m         [34;47m..[0m        [0mHEAD      [34;40mrefs[0m
+
+.git/logs/refs: 
+[34;47m.[0m         [34;47m..[0m        [34;40mheads[0m     [34;40mremotes[0m
+
+.git/logs/refs/heads: 
+[34;47m.[0m         [34;47m..[0m        [0mmaster
+
+.git/logs/refs/remotes: 
+[34;47m.[0m         [34;47m..[0m        [34;40morigin[0m
+
+.git/logs/refs/remotes/origin: 
+[34;47m.[0m         [34;47m..[0m        [0mHEAD      [0mmaster
+
+.git/objects: 
+[34;47m.[0m         [34;40m0f[0m        [34;40m1f[0m        [34;40m31[0m        [34;40m40[0m        [34;40m52[0m        [34;40m5e[0m        [34;40m69[0m        [34;40m73[0m        [34;40m7c[0m        [34;40m8a[0m        [34;40ma0[0m        [34;40mb2[0m        [34;40mba[0m        [34;40mc2[0m        [34;40mcb[0m        [34;40md2[0m        [34;40me2[0m        [34;40meb[0m        [34;40mf6[0m
+[34;47m..[0m        [34;40m10[0m        [34;40m24[0m        [34;40m32[0m        [34;40m42[0m        [34;40m56[0m        [34;40m5f[0m        [34;40m6a[0m        [34;40m77[0m        [34;40m7d[0m        [34;40m8e[0m        [34;40ma2[0m        [34;40mb3[0m        [34;40mbb[0m        [34;40mc4[0m        [34;40mce[0m        [34;40md7[0m        [34;40me3[0m        [34;40mec[0m        [34;40mf9[0m
+[34;40m06[0m        [34;40m13[0m        [34;40m26[0m        [34;40m33[0m        [34;40m44[0m        [34;40m57[0m        [34;40m63[0m        [34;40m6f[0m        [34;40m79[0m        [34;40m80[0m        [34;40m97[0m        [34;40maa[0m        [34;40mb7[0m        [34;40mbc[0m        [34;40mc6[0m        [34;40mcf[0m        [34;40md9[0m        [34;40me7[0m        [34;40med[0m        [34;40minfo[0m
+[34;40m09[0m        [34;40m16[0m        [34;40m27[0m        [34;40m3f[0m        [34;40m4c[0m        [34;40m59[0m        [34;40m68[0m        [34;40m72[0m        [34;40m7a[0m        [34;40m82[0m        [34;40m9e[0m        [34;40mac[0m        [34;40mb8[0m        [34;40mbd[0m        [34;40mca[0m        [34;40md0[0m        [34;40mdc[0m        [34;40me9[0m        [34;40mf1[0m        [34;40mpack[0m
+
+.git/objects/06: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m66d904bb20accc7822d5503c2e44f045ebf74a
+
+.git/objects/09: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m3dcf9710f2cd82982cfb9d8dd8ea0bdacdc06d
+
+.git/objects/0f: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9d902d11ac7bce28a12ad69f24ff7b8f848ab0
+
+.git/objects/10: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m1c8d0efb4e119a1cb185241d1d0e58ac28533e [0m6b1b471ae987e8537a79704c1cbf29a284a2aa
+
+.git/objects/13: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mb49c88ba71b451dbc80c53b68838d2890f1d7a
+
+.git/objects/16: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m1e0fbf095834918869a44d7d63bc8bb1366da2
+
+.git/objects/1f: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m8c65b18abd2af5d6d1f52fe4452830aa47ba95 [0ma8a0bd822e4ccb9b83cfade81d22ee0007a9d8 [0mb9e457c7e1703f5c633a90c50f5382e02bc1f3
+
+.git/objects/24: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m0962c8eff8b4773944b82ea2e8c89fa2b44e13
+
+.git/objects/26: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m709a01c54e70e10e39dfbd79d25e949ea5a965 [0mb19b22fb3253dd2d4f784ded26eb3728f037d2 [0mdb1d579f906d6982d69eab18ab7a1e64496061
+
+.git/objects/27: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m68dbfa860d120e67c7e82a1a78b7aea5743a07
+
+.git/objects/31: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9ffd0a31b30238e01c2d235e68fa13840bc25e
+
+.git/objects/32: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m523809e2da0ce7907b6ce7a6607af1d532b186
+
+.git/objects/33: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mcf5c1ee5983f43fb5a0eb48abfcbdb2cead95c
+
+.git/objects/3f: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0ma4aab5ca5cf9417ad53782a4371cc6e8ab1d6f
+
+.git/objects/40: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m2097e4c90add98a748c395324af406f3702745
+
+.git/objects/42: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mdd38e2e2db09282a0abd8daa4f1dcd22255ba0
+
+.git/objects/44: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m929ee736e83014e2b5962efbb0ac6ac9f1b814
+
+.git/objects/4c: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0ma7fc9684b327bbd6bfb4c89e774352796adbd2
+
+.git/objects/52: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0md3b0a7512a7f70315b02be93a7b6b5ca1ec49a
+
+.git/objects/56: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m09b3426a0905dd0ef128468d414f79b6e181ce [0m67cd027759a4b29061e39b1970d338f27300ee
+
+.git/objects/57: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m152aeed9c2121ca5b385cafb67fdf218881bc3
+
+.git/objects/59: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mdc5ab5878b981ba1e7f968b696495c15ca0ef5
+
+.git/objects/5e: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m34f1d6e3a2fc654b270aee5dee3d556595eae7
+
+.git/objects/5f: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mcbcae5b5b018b15723dff95b69297dfea21fd0
+
+.git/objects/63: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9e280836ed66898addc4d44a3a71f6cea9aead
+
+.git/objects/68: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m580e8f4ef5f69b25bcc374d8cc7aec022512a5
+
+.git/objects/69: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mfa8f919d08950449f871950fda7714230e5441
+
+.git/objects/6a: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0ma3b8e125c3c3a851228edbc9ede09d1c1c1217
+
+.git/objects/6f: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m07799dafcad716a21c1d187aa91edbd8a3257c
+
+.git/objects/72: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m8dbaadc41f5a03bb0fb9780f649f9115d7c7d9 [0mf19b9947d4ab0a9a45a9d86429dc27c3a47559
+
+.git/objects/73: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m53aa0eb728f6b2cea707e35361f134789cfa60
+
+.git/objects/77: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m34b00d27ea5e56ed353e4e31ec7fe537013d72
+
+.git/objects/79: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mdd5e1036063aa4506b76c1d2e0c233c0394e99
+
+.git/objects/7a: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9240d5c72a759a3a13b51aa766d18985c1c868
+
+.git/objects/7c: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m5bbdd63d5555d35d1ebba20ce222b48b4feee1 [0maf3817fc683c59616101996150963b6a432129
+
+.git/objects/7d: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mb655215809c9a29e041529d6717f56dc74632a
+
+.git/objects/80: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m0e89a6c3852b0bbe812b1c2c1ea77b4e3658ce
+
+.git/objects/82: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m71b56f70a075360e6b4ab4af29beef90c368c9
+
+.git/objects/8a: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m092bb080a7279d66c45a7e03c24c61a38bd450
+
+.git/objects/8e: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mdcf87bb6f000b77c56b3fc614fc03ddc0e1c43
+
+.git/objects/97: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m37300363ca5f4698c0439ee83f451f5e6604e2
+
+.git/objects/9e: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mcd5c80f02890d6ed778c5471c7c9309916d35e
+
+.git/objects/a0: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m3df3fdc1d9b3f5b948a24d44b3cf0cb21cc70c
+
+.git/objects/a2: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m6c63b2c3fef90938412b5d27c201770825c45a
+
+.git/objects/aa: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m544064ae51fb1995b75b3fe857c7b9f6eb48f4
+
+.git/objects/ac: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m4bb259dcf3db83829c291088523bc0e6446250
+
+.git/objects/b2: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mb1be0b9b92f6005f77f6756482e83e6dcdc643
+
+.git/objects/b3: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mb41cd0ba594d0f52f86e1573fb2623a63b036b
+
+.git/objects/b7: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0ma0de5901e44e688c7ed706b97beff6ec1f779e
+
+.git/objects/b8: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m11cdaee38df6847f9928bdd033847bf37a1ed0
+
+.git/objects/ba: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m24694042cf7cfa3cdb137221b3fae0be432c97
+
+.git/objects/bb: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m94f95d64bc73b99d5d0116bb98a41a77b8e297
+
+.git/objects/bc: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0me4b87d045c46bd22106dc2f8fe2ca3920d2f0a
+
+.git/objects/bd: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m93f3d532d2eb08a0eab8699597f71b0cf3480c
+
+.git/objects/c2: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m5ccd9ad829985211cd88cd28f69d10569c7c08
+
+.git/objects/c4: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m617736342d5106f66f9c97448e8a769f881bf3
+
+.git/objects/c6: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m266e067cb85c0d4d66cdd9aa7127b319584a58
+
+.git/objects/ca: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m6f18454da6af4b3bc3dd3bd75bef94b7753e4e
+
+.git/objects/cb: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m82d710c21529918f54ae4ba4d202c21359c8d4
+
+.git/objects/ce: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m24fc29cf0f777194b326c71d64f5eecb79d07e
+
+.git/objects/cf: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9c552c5563c4ce03c973b4323c460fc8a45d05
+
+.git/objects/d0: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m25787eeafbd2a14d5c06f2dab98053abdb9c9e
+
+.git/objects/d2: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mb633a22db54b0ceef95267a55882af11745044
+
+.git/objects/d7: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m1368c15cd6ab7962f1bca7c4625a14621c5eb7
+
+.git/objects/d9: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mf6a2a3316ae6294788d167282d8dd139e2802d
+
+.git/objects/dc: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m1390e752ec350581f064f08ca65d2158783bcd [0maff9ee2e7d146a2561e0953461252d3bb36306
+
+.git/objects/e2: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0ma122a222913fead4c7f026e356102894068ba8
+
+.git/objects/e3: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m0eeb9c73f5e06cae76446638dc3f562b35eb29
+
+.git/objects/e7: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m7dfd31707ffa1f40bd1bcb532e0bdf9cc6e18f
+
+.git/objects/e9: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m22f40a172f13f56ba1690b787b8bae0d112b78 [0mb394d39a5f50476be53815aad4d1e1cf85e151
+
+.git/objects/eb: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0med93db200d359ce2df6cc67b19c8d5820d0386
+
+.git/objects/ec: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m97c67de099b52dd659b840b001cf6bcb555782
+
+.git/objects/ed: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m13e293fb6c91788ff08016029c6b81133d3357
+
+.git/objects/f1: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0mf835a4a10c5ba2d5ec5a68dcebac7b78b6ed34
+
+.git/objects/f6: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m6b29d4d5633d7348c6291fe2f3e0d9c311b3c8
+
+.git/objects/f9: 
+[34;47m.[0m                                      [34;47m..[0m                                     [0m9b005857759f19bc748f1e704de3940982a158 [0mb050127eee5fb5e995a7f93e939399774f51b3
+
+.git/objects/info: 
+[34;47m.[0m         [34;47m..[0m
+
+.git/objects/pack: 
+[34;47m.[0m                                                  [34;47m..[0m                                                 [0mpack-b5c6ce631cbe575b1a534c4897949383621bd7cf.idx  [0mpack-b5c6ce631cbe575b1a534c4897949383621bd7cf.pack
+
+.git/refs: 
+[34;47m.[0m         [34;47m..[0m        [34;40mheads[0m     [34;40mremotes[0m   [34;40mtags[0m
+
+.git/refs/heads: 
+[34;47m.[0m         [34;47m..[0m        [0mmaster
+
+.git/refs/remotes: 
+[34;47m.[0m         [34;47m..[0m        [34;40morigin[0m
+
+.git/refs/remotes/origin: 
+[34;47m.[0m         [34;47m..[0m        [0mHEAD      [0mmaster
+
+.git/refs/tags: 
+[34;47m.[0m         [34;47m..[0m
+
+bin: 
+[34;47m.[0m         [34;47m..[0m        [1;32;40mls[0m        [1;32;40mrshell[0m
+
+src: 
+[34;47m.[0m         [34;47m..[0m        [30;47m.DS_Store[0m [0mcp.cpp    [0mls.cpp    [0mrshell.cc
+
+tests: 
+[34;47m.[0m           [34;47m..[0m          [0mexec.script [0mls.script
+
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -Ra
+[1m[36m.[39;49m[0m          [1m[36m..[39;49m[0m         [1m[36m.git[39;49m[0m       .gitignore LICENSE    README.md  [1m[36mbin[39;49m[0m        makefile   [1m[36msrc[39;49m[0m        [1m[36mtests[39;49m[0m
+
+./.git:
+[1m[36m.[39;49m[0m              [1m[36m..[39;49m[0m             COMMIT_EDITMSG FETCH_HEAD     HEAD           ORIG_HEAD      config         description    [1m[36mhooks[39;49m[0m          index          [1m[36minfo[39;49m[0m           [1m[36mlogs[39;49m[0m           [1m[36mobjects[39;49m[0m        packed-refs    [1m[36mrefs[39;49m[0m
+
+./.git/hooks:
+[1m[36m.[39;49m[0m                         [1m[31mapplypatch-msg.sample[39;49m[0m     [1m[31mpost-update.sample[39;49m[0m        [1m[31mpre-commit.sample[39;49m[0m         [1m[31mpre-rebase.sample[39;49m[0m         [1m[31mupdate.sample[39;49m[0m
+[1m[36m..[39;49m[0m                        [1m[31mcommit-msg.sample[39;49m[0m         [1m[31mpre-applypatch.sample[39;49m[0m     [1m[31mpre-push.sample[39;49m[0m           [1m[31mprepare-commit-msg.sample[39;49m[0m
+
+./.git/info:
+[1m[36m.[39;49m[0m       [1m[36m..[39;49m[0m      exclude
+
+./.git/logs:
+[1m[36m.[39;49m[0m    [1m[36m..[39;49m[0m   HEAD [1m[36mrefs[39;49m[0m
+
+./.git/logs/refs:
+[1m[36m.[39;49m[0m       [1m[36m..[39;49m[0m      [1m[36mheads[39;49m[0m   [1m[36mremotes[39;49m[0m
+
+./.git/logs/refs/heads:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     master
+
+./.git/logs/refs/remotes:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     [1m[36morigin[39;49m[0m
+
+./.git/logs/refs/remotes/origin:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     HEAD   master
+
+./.git/objects:
+[1m[36m.[39;49m[0m    [1m[36m06[39;49m[0m   [1m[36m0f[39;49m[0m   [1m[36m13[39;49m[0m   [1m[36m1f[39;49m[0m   [1m[36m26[39;49m[0m   [1m[36m31[39;49m[0m   [1m[36m33[39;49m[0m   [1m[36m40[39;49m[0m   [1m[36m44[39;49m[0m   [1m[36m52[39;49m[0m   [1m[36m57[39;49m[0m   [1m[36m5e[39;49m[0m   [1m[36m63[39;49m[0m   [1m[36m69[39;49m[0m   [1m[36m6f[39;49m[0m   [1m[36m73[39;49m[0m   [1m[36m79[39;49m[0m   [1m[36m7c[39;49m[0m   [1m[36m80[39;49m[0m   [1m[36m8a[39;49m[0m   [1m[36m97[39;49m[0m   [1m[36ma0[39;49m[0m   [1m[36maa[39;49m[0m   [1m[36mb2[39;49m[0m   [1m[36mb7[39;49m[0m   [1m[36mba[39;49m[0m   [1m[36mbc[39;49m[0m   [1m[36mc2[39;49m[0m   [1m[36mc6[39;49m[0m   [1m[36mcb[39;49m[0m   [1m[36mcf[39;49m[0m   [1m[36md2[39;49m[0m   [1m[36md9[39;49m[0m   [1m[36me2[39;49m[0m   [1m[36me7[39;49m[0m   [1m[36meb[39;49m[0m   [1m[36med[39;49m[0m   [1m[36mf6[39;49m[0m   [1m[36minfo[39;49m[0m
+[1m[36m..[39;49m[0m   [1m[36m09[39;49m[0m   [1m[36m10[39;49m[0m   [1m[36m16[39;49m[0m   [1m[36m24[39;49m[0m   [1m[36m27[39;49m[0m   [1m[36m32[39;49m[0m   [1m[36m3f[39;49m[0m   [1m[36m42[39;49m[0m   [1m[36m4c[39;49m[0m   [1m[36m56[39;49m[0m   [1m[36m59[39;49m[0m   [1m[36m5f[39;49m[0m   [1m[36m68[39;49m[0m   [1m[36m6a[39;49m[0m   [1m[36m72[39;49m[0m   [1m[36m77[39;49m[0m   [1m[36m7a[39;49m[0m   [1m[36m7d[39;49m[0m   [1m[36m82[39;49m[0m   [1m[36m8e[39;49m[0m   [1m[36m9e[39;49m[0m   [1m[36ma2[39;49m[0m   [1m[36mac[39;49m[0m   [1m[36mb3[39;49m[0m   [1m[36mb8[39;49m[0m   [1m[36mbb[39;49m[0m   [1m[36mbd[39;49m[0m   [1m[36mc4[39;49m[0m   [1m[36mca[39;49m[0m   [1m[36mce[39;49m[0m   [1m[36md0[39;49m[0m   [1m[36md7[39;49m[0m   [1m[36mdc[39;49m[0m   [1m[36me3[39;49m[0m   [1m[36me9[39;49m[0m   [1m[36mec[39;49m[0m   [1m[36mf1[39;49m[0m   [1m[36mf9[39;49m[0m   [1m[36mpack[39;49m[0m
+
+./.git/objects/06:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     66d904bb20accc7822d5503c2e44f045ebf74a
+
+./.git/objects/09:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     3dcf9710f2cd82982cfb9d8dd8ea0bdacdc06d
+
+./.git/objects/0f:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9d902d11ac7bce28a12ad69f24ff7b8f848ab0
+
+./.git/objects/10:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     1c8d0efb4e119a1cb185241d1d0e58ac28533e 6b1b471ae987e8537a79704c1cbf29a284a2aa
+
+./.git/objects/13:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     b49c88ba71b451dbc80c53b68838d2890f1d7a
+
+./.git/objects/16:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     1e0fbf095834918869a44d7d63bc8bb1366da2
+
+./.git/objects/1f:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     8c65b18abd2af5d6d1f52fe4452830aa47ba95 a8a0bd822e4ccb9b83cfade81d22ee0007a9d8 b9e457c7e1703f5c633a90c50f5382e02bc1f3
+
+./.git/objects/24:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     0962c8eff8b4773944b82ea2e8c89fa2b44e13
+
+./.git/objects/26:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     709a01c54e70e10e39dfbd79d25e949ea5a965 b19b22fb3253dd2d4f784ded26eb3728f037d2 db1d579f906d6982d69eab18ab7a1e64496061
+
+./.git/objects/27:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     68dbfa860d120e67c7e82a1a78b7aea5743a07
+
+./.git/objects/31:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9ffd0a31b30238e01c2d235e68fa13840bc25e
+
+./.git/objects/32:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     523809e2da0ce7907b6ce7a6607af1d532b186
+
+./.git/objects/33:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     cf5c1ee5983f43fb5a0eb48abfcbdb2cead95c
+
+./.git/objects/3f:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     a4aab5ca5cf9417ad53782a4371cc6e8ab1d6f
+
+./.git/objects/40:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     2097e4c90add98a748c395324af406f3702745
+
+./.git/objects/42:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     dd38e2e2db09282a0abd8daa4f1dcd22255ba0
+
+./.git/objects/44:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     929ee736e83014e2b5962efbb0ac6ac9f1b814
+
+./.git/objects/4c:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     a7fc9684b327bbd6bfb4c89e774352796adbd2
+
+./.git/objects/52:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     d3b0a7512a7f70315b02be93a7b6b5ca1ec49a
+
+./.git/objects/56:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     09b3426a0905dd0ef128468d414f79b6e181ce 67cd027759a4b29061e39b1970d338f27300ee
+
+./.git/objects/57:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     152aeed9c2121ca5b385cafb67fdf218881bc3
+
+./.git/objects/59:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     dc5ab5878b981ba1e7f968b696495c15ca0ef5
+
+./.git/objects/5e:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     34f1d6e3a2fc654b270aee5dee3d556595eae7
+
+./.git/objects/5f:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     cbcae5b5b018b15723dff95b69297dfea21fd0
+
+./.git/objects/63:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9e280836ed66898addc4d44a3a71f6cea9aead
+
+./.git/objects/68:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     580e8f4ef5f69b25bcc374d8cc7aec022512a5
+
+./.git/objects/69:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     fa8f919d08950449f871950fda7714230e5441
+
+./.git/objects/6a:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     a3b8e125c3c3a851228edbc9ede09d1c1c1217
+
+./.git/objects/6f:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     07799dafcad716a21c1d187aa91edbd8a3257c
+
+./.git/objects/72:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     8dbaadc41f5a03bb0fb9780f649f9115d7c7d9 f19b9947d4ab0a9a45a9d86429dc27c3a47559
+
+./.git/objects/73:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     53aa0eb728f6b2cea707e35361f134789cfa60
+
+./.git/objects/77:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     34b00d27ea5e56ed353e4e31ec7fe537013d72
+
+./.git/objects/79:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     dd5e1036063aa4506b76c1d2e0c233c0394e99
+
+./.git/objects/7a:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9240d5c72a759a3a13b51aa766d18985c1c868
+
+./.git/objects/7c:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     5bbdd63d5555d35d1ebba20ce222b48b4feee1 af3817fc683c59616101996150963b6a432129
+
+./.git/objects/7d:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     b655215809c9a29e041529d6717f56dc74632a
+
+./.git/objects/80:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     0e89a6c3852b0bbe812b1c2c1ea77b4e3658ce
+
+./.git/objects/82:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     71b56f70a075360e6b4ab4af29beef90c368c9
+
+./.git/objects/8a:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     092bb080a7279d66c45a7e03c24c61a38bd450
+
+./.git/objects/8e:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     dcf87bb6f000b77c56b3fc614fc03ddc0e1c43
+
+./.git/objects/97:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     37300363ca5f4698c0439ee83f451f5e6604e2
+
+./.git/objects/9e:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     cd5c80f02890d6ed778c5471c7c9309916d35e
+
+./.git/objects/a0:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     3df3fdc1d9b3f5b948a24d44b3cf0cb21cc70c
+
+./.git/objects/a2:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     6c63b2c3fef90938412b5d27c201770825c45a
+
+./.git/objects/aa:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     544064ae51fb1995b75b3fe857c7b9f6eb48f4
+
+./.git/objects/ac:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     4bb259dcf3db83829c291088523bc0e6446250
+
+./.git/objects/b2:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     b1be0b9b92f6005f77f6756482e83e6dcdc643
+
+./.git/objects/b3:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     b41cd0ba594d0f52f86e1573fb2623a63b036b
+
+./.git/objects/b7:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     a0de5901e44e688c7ed706b97beff6ec1f779e
+
+./.git/objects/b8:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     11cdaee38df6847f9928bdd033847bf37a1ed0
+
+./.git/objects/ba:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     24694042cf7cfa3cdb137221b3fae0be432c97
+
+./.git/objects/bb:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     94f95d64bc73b99d5d0116bb98a41a77b8e297
+
+./.git/objects/bc:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     e4b87d045c46bd22106dc2f8fe2ca3920d2f0a
+
+./.git/objects/bd:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     93f3d532d2eb08a0eab8699597f71b0cf3480c
+
+./.git/objects/c2:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     5ccd9ad829985211cd88cd28f69d10569c7c08
+
+./.git/objects/c4:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     617736342d5106f66f9c97448e8a769f881bf3
+
+./.git/objects/c6:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     266e067cb85c0d4d66cdd9aa7127b319584a58
+
+./.git/objects/ca:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     6f18454da6af4b3bc3dd3bd75bef94b7753e4e
+
+./.git/objects/cb:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     82d710c21529918f54ae4ba4d202c21359c8d4
+
+./.git/objects/ce:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     24fc29cf0f777194b326c71d64f5eecb79d07e
+
+./.git/objects/cf:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9c552c5563c4ce03c973b4323c460fc8a45d05
+
+./.git/objects/d0:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     25787eeafbd2a14d5c06f2dab98053abdb9c9e
+
+./.git/objects/d2:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     b633a22db54b0ceef95267a55882af11745044
+
+./.git/objects/d7:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     1368c15cd6ab7962f1bca7c4625a14621c5eb7
+
+./.git/objects/d9:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     f6a2a3316ae6294788d167282d8dd139e2802d
+
+./.git/objects/dc:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     1390e752ec350581f064f08ca65d2158783bcd aff9ee2e7d146a2561e0953461252d3bb36306
+
+./.git/objects/e2:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     a122a222913fead4c7f026e356102894068ba8
+
+./.git/objects/e3:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     0eeb9c73f5e06cae76446638dc3f562b35eb29
+
+./.git/objects/e7:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     7dfd31707ffa1f40bd1bcb532e0bdf9cc6e18f
+
+./.git/objects/e9:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     22f40a172f13f56ba1690b787b8bae0d112b78 b394d39a5f50476be53815aad4d1e1cf85e151
+
+./.git/objects/eb:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     ed93db200d359ce2df6cc67b19c8d5820d0386
+
+./.git/objects/ec:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     97c67de099b52dd659b840b001cf6bcb555782
+
+./.git/objects/ed:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     13e293fb6c91788ff08016029c6b81133d3357
+
+./.git/objects/f1:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     f835a4a10c5ba2d5ec5a68dcebac7b78b6ed34
+
+./.git/objects/f6:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     6b29d4d5633d7348c6291fe2f3e0d9c311b3c8
+
+./.git/objects/f9:
+[1m[36m.[39;49m[0m                                      [1m[36m..[39;49m[0m                                     9b005857759f19bc748f1e704de3940982a158 b050127eee5fb5e995a7f93e939399774f51b3
+
+./.git/objects/info:
+[1m[36m.[39;49m[0m  [1m[36m..[39;49m[0m
+
+./.git/objects/pack:
+[1m[36m.[39;49m[0m                                                  [1m[36m..[39;49m[0m                                                 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.idx  pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.pack
+
+./.git/refs:
+[1m[36m.[39;49m[0m       [1m[36m..[39;49m[0m      [1m[36mheads[39;49m[0m   [1m[36mremotes[39;49m[0m [1m[36mtags[39;49m[0m
+
+./.git/refs/heads:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     master
+
+./.git/refs/remotes:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     [1m[36morigin[39;49m[0m
+
+./.git/refs/remotes/origin:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     HEAD   master
+
+./.git/refs/tags:
+[1m[36m.[39;49m[0m  [1m[36m..[39;49m[0m
+
+./bin:
+[1m[36m.[39;49m[0m      [1m[36m..[39;49m[0m     [1m[31mls[39;49m[0m     [1m[31mrshell[39;49m[0m
+
+./src:
+[1m[36m.[39;49m[0m         [1m[36m..[39;49m[0m        .DS_Store cp.cpp    ls.cpp    rshell.cc
+
+./tests:
+[1m[36m.[39;49m[0m           [1m[36m..[39;49m[0m          exec.script ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin'[K/ls -[K[K -a
+[34;47m.[0m          [34;47m..[0m         [34;47m.git[0m       [30;47m.gitignore[0m [34;40mbin[0m        [0mLICENSE    [0mmakefile   [0mREADME.md  [34;40msrc[0m        [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -a
+[1m[36m.[39;49m[0m          [1m[36m..[39;49m[0m         [1m[36m.git[39;49m[0m       .gitignore LICENSE    README.md  [1m[36mbin[39;49m[0m        makefile   [1m[36msrc[39;49m[0m        [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -la
+total 16
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m.[0m
+drwxr-xr-x  32 Kilenaitor staff 1088 Fri May  1 20:41:33 2015 [34;47m..[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.git[0m
+-rw-r--r--   1 Kilenaitor staff  249 Wed Apr 29 21:51:42 2015 [30;47m.gitignore[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:48:33 2015 [34;40mbin[0m
+-rw-r--r--   1 Kilenaitor staff 1478 Wed Apr 29 21:51:42 2015 LICENSE
+-rw-r--r--   1 Kilenaitor staff  250 Fri May  1 03:31:05 2015 makefile
+-rw-r--r--   1 Kilenaitor staff 1551 Wed Apr 29 21:51:42 2015 README.md
+drwxr-xr-x   6 Kilenaitor staff  204 Fri May  1 23:46:34 2015 [34;40msrc[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:49:46 2015 [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -la
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340 May  1 22:42 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 32 Kilenaitor  staff  1088 May  1 20:41 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249 Apr 29 21:51 .gitignore
+-rw-r--r--   1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--   1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@  1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x   6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls ../CS111/
+[34;40mHomework 1[0m [34;40mHomework 2[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls ../CS111/[C[C[C ../CS111/- ../CS111/R ../CS111/
+[34;40mHomework 1[0m [34;40mHomework 2[0m
+
+../CS111//Homework 1: 
+[0mHomework1.tex              [0mHW1.pdf                    [0mHwBlankTemplate.aux        [0mHwBlankTemplate.tex        [0ms15_hw1.log                [0ms15_hw1.tex                [0mSample Homework.pdf
+[0mHW1.aux                    [0mHW1.synctex.gz             [0mHwBlankTemplate.log        [0mmacros.tex                 [0ms15_hw1.pdf                [0mSample Homework.aux        [0mSample Homework.synctex.gz
+[0mHW1.log                    [0mHW1.tex                    [0mHwBlankTemplate.synctex.gz [0ms15_hw1.aux                [0ms15_hw1.synctex.gz         [0mSample Homework.log        [0mSample Homework.tex
+
+../CS111//Homework 2: 
+[0mHomework 2.aux             [0mHomework 2.pdf             [0mHomework 2.tex             [0mHwBlankTemplate.log        [0mHwBlankTemplate.synctex.gz [0mmacros.tex                 [0ms15_hw2.log                [0ms15_hw2.synctex.gz
+[0mHomework 2.log             [0mHomework 2.synctex.gz      [0mHwBlankTemplate.aux        [0mHwBlankTemplate.pdf        [0mHwBlankTemplate.tex        [0ms15_hw2.aux                [0ms15_hw2.pdf                [0ms15_hw2.tex
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -r[KR ../CS111/
+[1m[36mHomework 1[39;49m[0m [1m[36mHomework 2[39;49m[0m
+
+../CS111//Homework 1:
+HW1.aux                    HW1.synctex.gz             HwBlankTemplate.aux        HwBlankTemplate.tex        Sample Homework.pdf        macros.tex                 s15_hw1.pdf
+HW1.log                    HW1.tex                    HwBlankTemplate.log        Sample Homework.aux        Sample Homework.synctex.gz s15_hw1.aux                s15_hw1.synctex.gz
+HW1.pdf                    Homework1.tex              HwBlankTemplate.synctex.gz Sample Homework.log        Sample Homework.tex        s15_hw1.log                s15_hw1.tex
+
+../CS111//Homework 2:
+Homework 2.aux             Homework 2.pdf             Homework 2.tex             HwBlankTemplate.log        HwBlankTemplate.synctex.gz macros.tex                 s15_hw2.log                s15_hw2.synctex.gz
+Homework 2.log             Homework 2.synctex.gz      HwBlankTemplate.aux        HwBlankTemplate.pdf        HwBlankTemplate.tex        s15_hw2.aux                s15_hw2.pdf                s15_hw2.tex
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls a;sdlkfjasdf;lkj
+There was an error with spefied file. : No such file or directory
+bash: sdlkfjasdf: command not found
+bash: lkj: command not found
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls a;sdkfja;lskdjf
+ls: a: No such file or directory
+bash: sdkfja: command not found
+bash: lskdjf: command not found
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -aaaaaaaaaaaaaaaaaaaaaaaaa 
+[34;47m.[0m          [34;47m..[0m         [34;47m.git[0m       [30;47m.gitignore[0m [34;40mbin[0m        [0mLICENSE    [0mmakefile   [0mREADME.md  [34;40msrc[0m        [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -aaaaaaaaaaaaaaaaaaaaa
+[1m[36m.[39;49m[0m          [1m[36m..[39;49m[0m         [1m[36m.git[39;49m[0m       .gitignore LICENSE    README.md  [1m[36mbin[39;49m[0m        makefile   [1m[36msrc[39;49m[0m        [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -laR
+total 16
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m.[0m
+drwxr-xr-x  32 Kilenaitor staff 1088 Fri May  1 20:41:33 2015 [34;47m..[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.git[0m
+-rw-r--r--   1 Kilenaitor staff  249 Wed Apr 29 21:51:42 2015 [30;47m.gitignore[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:48:33 2015 [34;40mbin[0m
+-rw-r--r--   1 Kilenaitor staff 1478 Wed Apr 29 21:51:42 2015 LICENSE
+-rw-r--r--   1 Kilenaitor staff  250 Fri May  1 03:31:05 2015 makefile
+-rw-r--r--   1 Kilenaitor staff 1551 Wed Apr 29 21:51:42 2015 README.md
+drwxr-xr-x   6 Kilenaitor staff  204 Fri May  1 23:46:34 2015 [34;40msrc[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:49:46 2015 [34;40mtests[0m
+.git: 
+total 32
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff   16 Fri May  1 23:46:21 2015 COMMIT_EDITMSG
+-rw-r--r--   1 Kilenaitor staff  302 Wed Apr 29 21:51:42 2015 config
+-rw-r--r--   1 Kilenaitor staff   73 Wed Apr 29 21:51:40 2015 description
+-rw-r--r--   1 Kilenaitor staff  191 Fri May  1 15:45:18 2015 FETCH_HEAD
+-rw-r--r--   1 Kilenaitor staff   23 Fri May  1 15:45:19 2015 HEAD
+drwxr-xr-x  11 Kilenaitor staff  374 Wed Apr 29 21:51:40 2015 [34;40mhooks[0m
+-rw-r--r--   1 Kilenaitor staff  819 Fri May  1 23:49:20 2015 index
+drwxr-xr-x   3 Kilenaitor staff  102 Wed Apr 29 21:51:40 2015 [34;40minfo[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mlogs[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;40mobjects[0m
+-rw-r--r--   1 Kilenaitor staff   41 Fri May  1 15:45:19 2015 ORIG_HEAD
+-rw-r--r--   1 Kilenaitor staff  326 Wed Apr 29 21:51:42 2015 packed-refs
+drwxr-xr-x   5 Kilenaitor staff  170 Wed Apr 29 21:51:42 2015 [34;40mrefs[0m
+
+.git/hooks: 
+total 40
+drwxr-xr-x  11 Kilenaitor staff  374 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rwxr-xr-x   1 Kilenaitor staff  452 Wed Apr 29 21:51:40 2015 [1;32;40mapplypatch-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  896 Wed Apr 29 21:51:40 2015 [1;32;40mcommit-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  189 Wed Apr 29 21:51:40 2015 [1;32;40mpost-update.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  398 Wed Apr 29 21:51:40 2015 [1;32;40mpre-applypatch.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1642 Wed Apr 29 21:51:40 2015 [1;32;40mpre-commit.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1348 Wed Apr 29 21:51:40 2015 [1;32;40mpre-push.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 4951 Wed Apr 29 21:51:40 2015 [1;32;40mpre-rebase.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1239 Wed Apr 29 21:51:40 2015 [1;32;40mprepare-commit-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 3611 Wed Apr 29 21:51:40 2015 [1;32;40mupdate.sample[0m
+
+.git/info: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff 102 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff 510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff 240 Wed Apr 29 21:51:40 2015 exclude
+
+.git/logs: 
+total 4
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff 3660 Fri May  1 23:46:21 2015 HEAD
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mrefs[0m
+
+.git/logs/refs: 
+total 0
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mheads[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mremotes[0m
+
+.git/logs/refs/heads: 
+total 4
+drwxr-xr-x  3 Kilenaitor staff  102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff 3034 Fri May  1 23:46:21 2015 master
+
+.git/logs/refs/remotes: 
+total 0
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Thu Apr 30 04:36:26 2015 [34;40morigin[0m
+
+.git/logs/refs/remotes/origin: 
+total 8
+drwxr-xr-x  4 Kilenaitor staff  136 Thu Apr 30 04:36:26 2015 [34;47m.[0m
+drwxr-xr-x  3 Kilenaitor staff  102 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  183 Wed Apr 29 21:51:42 2015 HEAD
+-rw-r--r--  1 Kilenaitor staff 2506 Fri May  1 23:46:24 2015 master
+
+.git/objects: 
+total 0
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;40m06[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m09[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m0f[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;40m10[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m13[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:57 2015 [34;40m16[0m
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;40m1f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m24[0m
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;40m26[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m27[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m31[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40m32[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:14 2015 [34;40m33[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m3f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;40m40[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m42[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;40m44[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m4c[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:07 2015 [34;40m52[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;40m56[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40m57[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40m59[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40m5e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:38 2015 [34;40m5f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;40m63[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;40m68[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40m69[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m6a[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:29 2015 [34;40m6f[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:39:49 2015 [34;40m72[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:40 2015 [34;40m73[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m77[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m79[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40m7a[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;40m7c[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40m7d[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m80[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m82[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:35 2015 [34;40m8a[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40m8e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;40m97[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:01 2015 [34;40m9e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40ma0[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40ma2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40maa[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:03 2015 [34;40mac[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;40mb2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb3[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb7[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb8[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:28 2015 [34;40mba[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40mbb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:29 2015 [34;40mbc[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40mbd[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:56 2015 [34;40mc2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mc4[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mc6[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40mca[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:49 2015 [34;40mcb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:20 2015 [34;40mce[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:39 2015 [34;40mcf[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:41:56 2015 [34;40md0[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;40md2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40md7[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40md9[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:17 2015 [34;40mdc[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:38 2015 [34;40me2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40me3[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:11 2015 [34;40me7[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 15:45:18 2015 [34;40me9[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;40meb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:41 2015 [34;40mec[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;40med[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 23:46:21 2015 [34;40mf1[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40mf6[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;40mf9[0m
+drwxr-xr-x   2 Kilenaitor staff   68 Wed Apr 29 21:51:40 2015 [34;40minfo[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mpack[0m
+
+.git/objects/06: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Thu Apr 30 04:36:23 2015 66d904bb20accc7822d5503c2e44f045ebf74a
+
+.git/objects/09: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 15:45:18 2015 3dcf9710f2cd82982cfb9d8dd8ea0bdacdc06d
+
+.git/objects/0f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2278 Fri May  1 15:45:18 2015 9d902d11ac7bce28a12ad69f24ff7b8f848ab0
+
+.git/objects/10: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:55:35 2015 1c8d0efb4e119a1cb185241d1d0e58ac28533e
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 23:46:21 2015 6b1b471ae987e8537a79704c1cbf29a284a2aa
+
+.git/objects/13: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1833 Fri May  1 15:45:18 2015 b49c88ba71b451dbc80c53b68838d2890f1d7a
+
+.git/objects/16: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:57 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  174 Fri May  1 03:31:57 2015 1e0fbf095834918869a44d7d63bc8bb1366da2
+
+.git/objects/1f: 
+total 12
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Thu Apr 30 13:45:27 2015 8c65b18abd2af5d6d1f52fe4452830aa47ba95
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 a8a0bd822e4ccb9b83cfade81d22ee0007a9d8
+-r--r--r--   1 Kilenaitor staff  167 Fri May  1 03:31:46 2015 b9e457c7e1703f5c633a90c50f5382e02bc1f3
+
+.git/objects/24: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1853 Fri May  1 15:45:18 2015 0962c8eff8b4773944b82ea2e8c89fa2b44e13
+
+.git/objects/26: 
+total 12
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 709a01c54e70e10e39dfbd79d25e949ea5a965
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 02:56:38 2015 b19b22fb3253dd2d4f784ded26eb3728f037d2
+-r--r--r--   1 Kilenaitor staff 1379 Thu Apr 30 13:45:27 2015 db1d579f906d6982d69eab18ab7a1e64496061
+
+.git/objects/27: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 15:45:18 2015 68dbfa860d120e67c7e82a1a78b7aea5743a07
+
+.git/objects/31: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 9ffd0a31b30238e01c2d235e68fa13840bc25e
+
+.git/objects/32: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:35:47 2015 523809e2da0ce7907b6ce7a6607af1d532b186
+
+.git/objects/33: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:14 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  900 Thu Apr 30 04:36:14 2015 cf5c1ee5983f43fb5a0eb48abfcbdb2cead95c
+
+.git/objects/3f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  177 Fri May  1 15:45:18 2015 a4aab5ca5cf9417ad53782a4371cc6e8ab1d6f
+
+.git/objects/40: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:42:05 2015 2097e4c90add98a748c395324af406f3702745
+
+.git/objects/42: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 15:45:18 2015 dd38e2e2db09282a0abd8daa4f1dcd22255ba0
+
+.git/objects/44: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  179 Fri May  1 03:55:35 2015 929ee736e83014e2b5962efbb0ac6ac9f1b814
+
+.git/objects/4c: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  177 Fri May  1 15:45:18 2015 a7fc9684b327bbd6bfb4c89e774352796adbd2
+
+.git/objects/52: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:07 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:37:07 2015 d3b0a7512a7f70315b02be93a7b6b5ca1ec49a
+
+.git/objects/56: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:37:07 2015 09b3426a0905dd0ef128468d414f79b6e181ce
+-r--r--r--   1 Kilenaitor staff  168 Fri May  1 23:46:21 2015 67cd027759a4b29061e39b1970d338f27300ee
+
+.git/objects/57: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 18:45:51 2015 152aeed9c2121ca5b385cafb67fdf218881bc3
+
+.git/objects/59: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  168 Fri May  1 03:37:43 2015 dc5ab5878b981ba1e7f968b696495c15ca0ef5
+
+.git/objects/5e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:50:25 2015 34f1d6e3a2fc654b270aee5dee3d556595eae7
+
+.git/objects/5f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:38 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1610 Fri May  1 03:39:38 2015 cbcae5b5b018b15723dff95b69297dfea21fd0
+
+.git/objects/63: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  190 Fri May  1 03:39:49 2015 9e280836ed66898addc4d44a3a71f6cea9aead
+
+.git/objects/68: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Thu Apr 30 13:45:27 2015 580e8f4ef5f69b25bcc374d8cc7aec022512a5
+
+.git/objects/69: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  166 Fri May  1 18:45:51 2015 fa8f919d08950449f871950fda7714230e5441
+
+.git/objects/6a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 a3b8e125c3c3a851228edbc9ede09d1c1c1217
+
+.git/objects/6f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:29 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1837 Fri May  1 03:55:29 2015 07799dafcad716a21c1d187aa91edbd8a3257c
+
+.git/objects/72: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  171 Thu Apr 30 04:36:23 2015 8dbaadc41f5a03bb0fb9780f649f9115d7c7d9
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:39:49 2015 f19b9947d4ab0a9a45a9d86429dc27c3a47559
+
+.git/objects/73: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:40 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2349 Fri May  1 18:45:40 2015 53aa0eb728f6b2cea707e35361f134789cfa60
+
+.git/objects/77: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 34b00d27ea5e56ed353e4e31ec7fe537013d72
+
+.git/objects/79: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 dd5e1036063aa4506b76c1d2e0c233c0394e99
+
+.git/objects/7a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  179 Fri May  1 03:50:25 2015 9240d5c72a759a3a13b51aa766d18985c1c868
+
+.git/objects/7c: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  190 Fri May  1 02:56:38 2015 5bbdd63d5555d35d1ebba20ce222b48b4feee1
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 03:48:35 2015 af3817fc683c59616101996150963b6a432129
+
+.git/objects/7d: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  176 Fri May  1 03:35:47 2015 b655215809c9a29e041529d6717f56dc74632a
+
+.git/objects/80: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1820 Fri May  1 15:45:18 2015 0e89a6c3852b0bbe812b1c2c1ea77b4e3658ce
+
+.git/objects/82: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  169 Fri May  1 15:45:18 2015 71b56f70a075360e6b4ab4af29beef90c368c9
+
+.git/objects/8a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  182 Fri May  1 03:48:35 2015 092bb080a7279d66c45a7e03c24c61a38bd450
+
+.git/objects/8e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 03:43:06 2015 dcf87bb6f000b77c56b3fc614fc03ddc0e1c43
+
+.git/objects/97: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  165 Thu Apr 30 13:45:27 2015 37300363ca5f4698c0439ee83f451f5e6604e2
+
+.git/objects/9e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:01 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1640 Fri May  1 03:43:01 2015 cd5c80f02890d6ed778c5471c7c9309916d35e
+
+.git/objects/a0: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:43:06 2015 3df3fdc1d9b3f5b948a24d44b3cf0cb21cc70c
+
+.git/objects/a2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:50:25 2015 6c63b2c3fef90938412b5d27c201770825c45a
+
+.git/objects/aa: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  176 Fri May  1 15:45:18 2015 544064ae51fb1995b75b3fe857c7b9f6eb48f4
+
+.git/objects/ac: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:03 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1597 Fri May  1 03:37:03 2015 4bb259dcf3db83829c291088523bc0e6446250
+
+.git/objects/b2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:55:35 2015 b1be0b9b92f6005f77f6756482e83e6dcdc643
+
+.git/objects/b3: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2196 Fri May  1 15:45:18 2015 b41cd0ba594d0f52f86e1573fb2623a63b036b
+
+.git/objects/b7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 a0de5901e44e688c7ed706b97beff6ec1f779e
+
+.git/objects/b8: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 11cdaee38df6847f9928bdd033847bf37a1ed0
+
+.git/objects/ba: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:28 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1537 Fri May  1 02:56:28 2015 24694042cf7cfa3cdb137221b3fae0be432c97
+
+.git/objects/bb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:37:43 2015 94f95d64bc73b99d5d0116bb98a41a77b8e297
+
+.git/objects/bc: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:29 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1682 Fri May  1 03:48:29 2015 e4b87d045c46bd22106dc2f8fe2ca3920d2f0a
+
+.git/objects/bd: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 03:43:06 2015 93f3d532d2eb08a0eab8699597f71b0cf3480c
+
+.git/objects/c2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:56 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:31:56 2015 5ccd9ad829985211cd88cd28f69d10569c7c08
+
+.git/objects/c4: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  368 Fri May  1 15:45:18 2015 617736342d5106f66f9c97448e8a769f881bf3
+
+.git/objects/c6: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 266e067cb85c0d4d66cdd9aa7127b319584a58
+
+.git/objects/ca: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:37:43 2015 6f18454da6af4b3bc3dd3bd75bef94b7753e4e
+
+.git/objects/cb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1591 Fri May  1 03:31:49 2015 82d710c21529918f54ae4ba4d202c21359c8d4
+
+.git/objects/ce: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:20 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1685 Fri May  1 03:50:20 2015 24fc29cf0f777194b326c71d64f5eecb79d07e
+
+.git/objects/cf: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:39 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1595 Fri May  1 03:37:39 2015 9c552c5563c4ce03c973b4323c460fc8a45d05
+
+.git/objects/d0: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:41:56 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1631 Fri May  1 03:41:56 2015 25787eeafbd2a14d5c06f2dab98053abdb9c9e
+
+.git/objects/d2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:39:49 2015 b633a22db54b0ceef95267a55882af11745044
+
+.git/objects/d7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:35:47 2015 1368c15cd6ab7962f1bca7c4625a14621c5eb7
+
+.git/objects/d9: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 f6a2a3316ae6294788d167282d8dd139e2802d
+
+.git/objects/dc: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:17 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:31:56 2015 1390e752ec350581f064f08ca65d2158783bcd
+-r--r--r--   1 Kilenaitor staff 2862 Fri May  1 23:46:17 2015 aff9ee2e7d146a2561e0953461252d3bb36306
+
+.git/objects/e2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:38 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 02:56:38 2015 a122a222913fead4c7f026e356102894068ba8
+
+.git/objects/e3: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2193 Fri May  1 15:45:18 2015 0eeb9c73f5e06cae76446638dc3f562b35eb29
+
+.git/objects/e7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:11 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1068 Thu Apr 30 04:36:11 2015 7dfd31707ffa1f40bd1bcb532e0bdf9cc6e18f
+
+.git/objects/e9: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 22f40a172f13f56ba1690b787b8bae0d112b78
+-r--r--r--   1 Kilenaitor staff  170 Fri May  1 03:37:08 2015 b394d39a5f50476be53815aad4d1e1cf85e151
+
+.git/objects/eb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Thu Apr 30 04:36:23 2015 ed93db200d359ce2df6cc67b19c8d5820d0386
+
+.git/objects/ec: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:41 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1593 Fri May  1 03:35:41 2015 97c67de099b52dd659b840b001cf6bcb555782
+
+.git/objects/ed: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  165 Fri May  1 03:42:05 2015 13e293fb6c91788ff08016029c6b81133d3357
+
+.git/objects/f1: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 23:46:21 2015 f835a4a10c5ba2d5ec5a68dcebac7b78b6ed34
+
+.git/objects/f6: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 18:45:51 2015 6b29d4d5633d7348c6291fe2f3e0d9c311b3c8
+
+.git/objects/f9: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:42:05 2015 9b005857759f19bc748f1e704de3940982a158
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:48:35 2015 b050127eee5fb5e995a7f93e939399774f51b3
+
+.git/objects/info: 
+total 0
+drwxr-xr-x   2 Kilenaitor staff   68 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+
+.git/objects/pack: 
+total 44
+drwxr-xr-x   4 Kilenaitor staff   136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff  2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  5664 Wed Apr 29 21:51:42 2015 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.idx
+-r--r--r--   1 Kilenaitor staff 33093 Thu Apr 30 04:36:23 2015 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.pack
+
+.git/refs: 
+total 0
+drwxr-xr-x   5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff 510 Fri May  1 23:49:20 2015 [34;47m..[0m
+drwxr-xr-x   3 Kilenaitor staff 102 Fri May  1 23:46:21 2015 [34;40mheads[0m
+drwxr-xr-x   3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mremotes[0m
+drwxr-xr-x   2 Kilenaitor staff  68 Wed Apr 29 21:51:40 2015 [34;40mtags[0m
+
+.git/refs/heads: 
+total 4
+drwxr-xr-x  3 Kilenaitor staff 102 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  41 Fri May  1 23:46:21 2015 master
+
+.git/refs/remotes: 
+total 0
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Fri May  1 23:46:24 2015 [34;40morigin[0m
+
+.git/refs/remotes/origin: 
+total 8
+drwxr-xr-x  4 Kilenaitor staff 136 Fri May  1 23:46:24 2015 [34;47m.[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  32 Wed Apr 29 21:51:42 2015 HEAD
+-rw-r--r--  1 Kilenaitor staff  41 Fri May  1 23:46:24 2015 master
+
+.git/refs/tags: 
+total 0
+drwxr-xr-x  2 Kilenaitor staff  68 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+
+bin: 
+total 164
+drwxr-xr-x   4 Kilenaitor staff   136 Fri May  1 23:48:33 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff   340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rwxr-xr-x   1 Kilenaitor staff 67072 Fri May  1 23:48:33 2015 [1;32;40mls[0m
+-rwxr-xr-x   1 Kilenaitor staff 96820 Fri May  1 23:28:38 2015 [1;32;40mrshell[0m
+
+src: 
+total 36
+drwxr-xr-x   6 Kilenaitor staff   204 Fri May  1 23:46:34 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff   340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff  6148 Fri May  1 15:45:19 2015 [30;47m.DS_Store[0m
+-rw-r--r--   1 Kilenaitor staff  2993 Wed Apr 29 21:52:41 2015 cp.cpp
+-rw-r--r--   1 Kilenaitor staff 10679 Fri May  1 23:48:31 2015 ls.cpp
+-rw-r--r--   1 Kilenaitor staff  8385 Fri May  1 20:12:45 2015 rshell.cc
+
+tests: 
+total 136
+drwxr-xr-x   4 Kilenaitor staff   136 Fri May  1 23:49:46 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff   340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff 51322 Wed Apr 29 21:51:42 2015 exec.script
+-rw-r--r--   1 Kilenaitor staff 83192 Fri May  1 23:52:00 2015 ls.script
+
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear[K[K[K[K[Kls -laR
+total 32
+drwxr-xr-x  10 Kilenaitor  staff   340 May  1 22:42 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 32 Kilenaitor  staff  1088 May  1 20:41 [1m[36m..[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249 Apr 29 21:51 .gitignore
+-rw-r--r--   1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--   1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@  1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x   6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+
+./.git:
+total 64
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff   340 May  1 22:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff    16 May  1 23:46 COMMIT_EDITMSG
+-rw-r--r--   1 Kilenaitor  staff   191 May  1 15:45 FETCH_HEAD
+-rw-r--r--   1 Kilenaitor  staff    23 May  1 15:45 HEAD
+-rw-r--r--   1 Kilenaitor  staff    41 May  1 15:45 ORIG_HEAD
+-rw-r--r--   1 Kilenaitor  staff   302 Apr 29 21:51 config
+-rw-r--r--   1 Kilenaitor  staff    73 Apr 29 21:51 description
+drwxr-xr-x  11 Kilenaitor  staff   374 Apr 29 21:51 [1m[36mhooks[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   819 May  1 23:49 index
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 29 21:51 [1m[36minfo[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 Apr 29 21:51 [1m[36mlogs[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36mobjects[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   326 Apr 29 21:51 packed-refs
+drwxr-xr-x   5 Kilenaitor  staff   170 Apr 29 21:51 [1m[36mrefs[39;49m[0m
+
+./.git/hooks:
+total 80
+drwxr-xr-x  11 Kilenaitor  staff   374 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m..[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff   452 Apr 29 21:51 [1m[31mapplypatch-msg.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff   896 Apr 29 21:51 [1m[31mcommit-msg.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff   189 Apr 29 21:51 [1m[31mpost-update.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff   398 Apr 29 21:51 [1m[31mpre-applypatch.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  1642 Apr 29 21:51 [1m[31mpre-commit.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  1348 Apr 29 21:51 [1m[31mpre-push.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  4951 Apr 29 21:51 [1m[31mpre-rebase.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  1239 Apr 29 21:51 [1m[31mprepare-commit-msg.sample[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  3611 Apr 29 21:51 [1m[31mupdate.sample[39;49m[0m
+
+./.git/info:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff  510 May  1 23:49 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff  240 Apr 29 21:51 exclude
+
+./.git/logs:
+total 8
+drwxr-xr-x   4 Kilenaitor  staff   136 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff  3660 May  1 23:46 HEAD
+drwxr-xr-x   4 Kilenaitor  staff   136 Apr 29 21:51 [1m[36mrefs[39;49m[0m
+
+./.git/logs/refs:
+total 0
+drwxr-xr-x  4 Kilenaitor  staff  136 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff  136 Apr 29 21:51 [1m[36m..[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36mheads[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36mremotes[39;49m[0m
+
+./.git/logs/refs/heads:
+total 8
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff   136 Apr 29 21:51 [1m[36m..[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff  3034 May  1 23:46 master
+
+./.git/logs/refs/remotes:
+total 0
+drwxr-xr-x  3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff  136 Apr 29 21:51 [1m[36m..[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff  136 Apr 30 04:36 [1m[36morigin[39;49m[0m
+
+./.git/logs/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 Kilenaitor  staff   136 Apr 30 04:36 [1m[36m.[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff   102 Apr 29 21:51 [1m[36m..[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   183 Apr 29 21:51 HEAD
+-rw-r--r--  1 Kilenaitor  staff  2506 May  1 23:46 master
+
+./.git/objects:
+total 0
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff   510 May  1 23:49 [1m[36m..[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m06[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m09[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m0f[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36m10[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m13[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36m16[39;49m[0m
+drwxr-xr-x   5 Kilenaitor  staff   170 May  1 15:45 [1m[36m1f[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m24[39;49m[0m
+drwxr-xr-x   5 Kilenaitor  staff   170 May  1 15:45 [1m[36m26[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m27[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m31[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m32[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m33[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m3f[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:42 [1m[36m40[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m42[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36m44[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m4c[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m52[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36m56[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m57[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m59[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m5e[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36m5f[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36m63[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 13:45 [1m[36m68[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m69[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m6a[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36m6f[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:39 [1m[36m72[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m73[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m77[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m79[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m7a[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:48 [1m[36m7c[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m7d[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m80[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m82[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:48 [1m[36m8a[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m8e[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 13:45 [1m[36m97[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m9e[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36ma0[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36ma2[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36maa[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36mac[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36mb2[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36mb3[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36mb7[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36mb8[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 02:56 [1m[36mba[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36mbb[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:48 [1m[36mbc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36mbd[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36mc2[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36mc4[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36mc6[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36mca[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36mcb[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36mce[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36mcf[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:41 [1m[36md0[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36md2[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36md7[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36md9[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36mdc[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 02:56 [1m[36me2[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36me3[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36me7[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 15:45 [1m[36me9[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36meb[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36mec[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:42 [1m[36med[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 23:46 [1m[36mf1[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36mf6[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:48 [1m[36mf9[39;49m[0m
+drwxr-xr-x   2 Kilenaitor  staff    68 Apr 29 21:51 [1m[36minfo[39;49m[0m
+drwxr-xr-x   4 Kilenaitor  staff   136 Apr 29 21:51 [1m[36mpack[39;49m[0m
+
+./.git/objects/06:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   112 Apr 30 04:36 66d904bb20accc7822d5503c2e44f045ebf74a
+
+./.git/objects/09:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   172 May  1 15:45 3dcf9710f2cd82982cfb9d8dd8ea0bdacdc06d
+
+./.git/objects/0f:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  2278 May  1 15:45 9d902d11ac7bce28a12ad69f24ff7b8f848ab0
+
+./.git/objects/10:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   112 May  1 03:55 1c8d0efb4e119a1cb185241d1d0e58ac28533e
+-r--r--r--   1 Kilenaitor  staff   211 May  1 23:46 6b1b471ae987e8537a79704c1cbf29a284a2aa
+
+./.git/objects/13:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1833 May  1 15:45 b49c88ba71b451dbc80c53b68838d2890f1d7a
+
+./.git/objects/16:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   174 May  1 03:31 1e0fbf095834918869a44d7d63bc8bb1366da2
+
+./.git/objects/1f:
+total 24
+drwxr-xr-x   5 Kilenaitor  staff   170 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 Apr 30 13:45 8c65b18abd2af5d6d1f52fe4452830aa47ba95
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 a8a0bd822e4ccb9b83cfade81d22ee0007a9d8
+-r--r--r--   1 Kilenaitor  staff   167 May  1 03:31 b9e457c7e1703f5c633a90c50f5382e02bc1f3
+
+./.git/objects/24:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1853 May  1 15:45 0962c8eff8b4773944b82ea2e8c89fa2b44e13
+
+./.git/objects/26:
+total 24
+drwxr-xr-x   5 Kilenaitor  staff   170 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 15:45 709a01c54e70e10e39dfbd79d25e949ea5a965
+-r--r--r--   1 Kilenaitor  staff   112 May  1 02:56 b19b22fb3253dd2d4f784ded26eb3728f037d2
+-r--r--r--   1 Kilenaitor  staff  1379 Apr 30 13:45 db1d579f906d6982d69eab18ab7a1e64496061
+
+./.git/objects/27:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   172 May  1 15:45 68dbfa860d120e67c7e82a1a78b7aea5743a07
+
+./.git/objects/31:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 15:45 9ffd0a31b30238e01c2d235e68fa13840bc25e
+
+./.git/objects/32:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:35 523809e2da0ce7907b6ce7a6607af1d532b186
+
+./.git/objects/33:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   900 Apr 30 04:36 cf5c1ee5983f43fb5a0eb48abfcbdb2cead95c
+
+./.git/objects/3f:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   177 May  1 15:45 a4aab5ca5cf9417ad53782a4371cc6e8ab1d6f
+
+./.git/objects/40:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:42 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:42 2097e4c90add98a748c395324af406f3702745
+
+./.git/objects/42:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 15:45 dd38e2e2db09282a0abd8daa4f1dcd22255ba0
+
+./.git/objects/44:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   179 May  1 03:55 929ee736e83014e2b5962efbb0ac6ac9f1b814
+
+./.git/objects/4c:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   177 May  1 15:45 a7fc9684b327bbd6bfb4c89e774352796adbd2
+
+./.git/objects/52:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:37 d3b0a7512a7f70315b02be93a7b6b5ca1ec49a
+
+./.git/objects/56:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   112 May  1 03:37 09b3426a0905dd0ef128468d414f79b6e181ce
+-r--r--r--   1 Kilenaitor  staff   168 May  1 23:46 67cd027759a4b29061e39b1970d338f27300ee
+
+./.git/objects/57:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 18:45 152aeed9c2121ca5b385cafb67fdf218881bc3
+
+./.git/objects/59:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   168 May  1 03:37 dc5ab5878b981ba1e7f968b696495c15ca0ef5
+
+./.git/objects/5e:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:50 34f1d6e3a2fc654b270aee5dee3d556595eae7
+
+./.git/objects/5f:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1610 May  1 03:39 cbcae5b5b018b15723dff95b69297dfea21fd0
+
+./.git/objects/63:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   190 May  1 03:39 9e280836ed66898addc4d44a3a71f6cea9aead
+
+./.git/objects/68:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 13:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   112 Apr 30 13:45 580e8f4ef5f69b25bcc374d8cc7aec022512a5
+
+./.git/objects/69:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   166 May  1 18:45 fa8f919d08950449f871950fda7714230e5441
+
+./.git/objects/6a:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 15:45 a3b8e125c3c3a851228edbc9ede09d1c1c1217
+
+./.git/objects/6f:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1837 May  1 03:55 07799dafcad716a21c1d187aa91edbd8a3257c
+
+./.git/objects/72:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:39 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   171 Apr 30 04:36 8dbaadc41f5a03bb0fb9780f649f9115d7c7d9
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:39 f19b9947d4ab0a9a45a9d86429dc27c3a47559
+
+./.git/objects/73:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  2349 May  1 18:45 53aa0eb728f6b2cea707e35361f134789cfa60
+
+./.git/objects/77:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 15:45 34b00d27ea5e56ed353e4e31ec7fe537013d72
+
+./.git/objects/79:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 dd5e1036063aa4506b76c1d2e0c233c0394e99
+
+./.git/objects/7a:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   179 May  1 03:50 9240d5c72a759a3a13b51aa766d18985c1c868
+
+./.git/objects/7c:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:48 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   190 May  1 02:56 5bbdd63d5555d35d1ebba20ce222b48b4feee1
+-r--r--r--   1 Kilenaitor  staff   211 May  1 03:48 af3817fc683c59616101996150963b6a432129
+
+./.git/objects/7d:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   176 May  1 03:35 b655215809c9a29e041529d6717f56dc74632a
+
+./.git/objects/80:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1820 May  1 15:45 0e89a6c3852b0bbe812b1c2c1ea77b4e3658ce
+
+./.git/objects/82:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   169 May  1 15:45 71b56f70a075360e6b4ab4af29beef90c368c9
+
+./.git/objects/8a:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:48 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   182 May  1 03:48 092bb080a7279d66c45a7e03c24c61a38bd450
+
+./.git/objects/8e:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   211 May  1 03:43 dcf87bb6f000b77c56b3fc614fc03ddc0e1c43
+
+./.git/objects/97:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 13:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   165 Apr 30 13:45 37300363ca5f4698c0439ee83f451f5e6604e2
+
+./.git/objects/9e:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1640 May  1 03:43 cd5c80f02890d6ed778c5471c7c9309916d35e
+
+./.git/objects/a0:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:43 3df3fdc1d9b3f5b948a24d44b3cf0cb21cc70c
+
+./.git/objects/a2:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:50 6c63b2c3fef90938412b5d27c201770825c45a
+
+./.git/objects/aa:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   176 May  1 15:45 544064ae51fb1995b75b3fe857c7b9f6eb48f4
+
+./.git/objects/ac:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1597 May  1 03:37 4bb259dcf3db83829c291088523bc0e6446250
+
+./.git/objects/b2:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:55 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:55 b1be0b9b92f6005f77f6756482e83e6dcdc643
+
+./.git/objects/b3:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  2196 May  1 15:45 b41cd0ba594d0f52f86e1573fb2623a63b036b
+
+./.git/objects/b7:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 a0de5901e44e688c7ed706b97beff6ec1f779e
+
+./.git/objects/b8:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 11cdaee38df6847f9928bdd033847bf37a1ed0
+
+./.git/objects/ba:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 02:56 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1537 May  1 02:56 24694042cf7cfa3cdb137221b3fae0be432c97
+
+./.git/objects/bb:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:37 94f95d64bc73b99d5d0116bb98a41a77b8e297
+
+./.git/objects/bc:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:48 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1682 May  1 03:48 e4b87d045c46bd22106dc2f8fe2ca3920d2f0a
+
+./.git/objects/bd:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:43 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   172 May  1 03:43 93f3d532d2eb08a0eab8699597f71b0cf3480c
+
+./.git/objects/c2:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:31 5ccd9ad829985211cd88cd28f69d10569c7c08
+
+./.git/objects/c4:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   368 May  1 15:45 617736342d5106f66f9c97448e8a769f881bf3
+
+./.git/objects/c6:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 266e067cb85c0d4d66cdd9aa7127b319584a58
+
+./.git/objects/ca:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   112 May  1 03:37 6f18454da6af4b3bc3dd3bd75bef94b7753e4e
+
+./.git/objects/cb:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:31 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1591 May  1 03:31 82d710c21529918f54ae4ba4d202c21359c8d4
+
+./.git/objects/ce:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:50 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1685 May  1 03:50 24fc29cf0f777194b326c71d64f5eecb79d07e
+
+./.git/objects/cf:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:37 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1595 May  1 03:37 9c552c5563c4ce03c973b4323c460fc8a45d05
+
+./.git/objects/d0:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:41 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1631 May  1 03:41 25787eeafbd2a14d5c06f2dab98053abdb9c9e
+
+./.git/objects/d2:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:39 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:39 b633a22db54b0ceef95267a55882af11745044
+
+./.git/objects/d7:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:35 1368c15cd6ab7962f1bca7c4625a14621c5eb7
+
+./.git/objects/d9:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 15:45 f6a2a3316ae6294788d167282d8dd139e2802d
+
+./.git/objects/dc:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 03:31 1390e752ec350581f064f08ca65d2158783bcd
+-r--r--r--   1 Kilenaitor  staff  2862 May  1 23:46 aff9ee2e7d146a2561e0953461252d3bb36306
+
+./.git/objects/e2:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 02:56 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 02:56 a122a222913fead4c7f026e356102894068ba8
+
+./.git/objects/e3:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  2193 May  1 15:45 0eeb9c73f5e06cae76446638dc3f562b35eb29
+
+./.git/objects/e7:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1068 Apr 30 04:36 7dfd31707ffa1f40bd1bcb532e0bdf9cc6e18f
+
+./.git/objects/e9:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 15:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 15:45 22f40a172f13f56ba1690b787b8bae0d112b78
+-r--r--r--   1 Kilenaitor  staff   170 May  1 03:37 b394d39a5f50476be53815aad4d1e1cf85e151
+
+./.git/objects/eb:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 Apr 30 04:36 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 Apr 30 04:36 ed93db200d359ce2df6cc67b19c8d5820d0386
+
+./.git/objects/ec:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:35 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff  1593 May  1 03:35 97c67de099b52dd659b840b001cf6bcb555782
+
+./.git/objects/ed:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 03:42 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   165 May  1 03:42 13e293fb6c91788ff08016029c6b81133d3357
+
+./.git/objects/f1:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   145 May  1 23:46 f835a4a10c5ba2d5ec5a68dcebac7b78b6ed34
+
+./.git/objects/f6:
+total 8
+drwxr-xr-x   3 Kilenaitor  staff   102 May  1 18:45 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   210 May  1 18:45 6b29d4d5633d7348c6291fe2f3e0d9c311b3c8
+
+./.git/objects/f9:
+total 16
+drwxr-xr-x   4 Kilenaitor  staff   136 May  1 03:48 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   113 May  1 03:42 9b005857759f19bc748f1e704de3940982a158
+-r--r--r--   1 Kilenaitor  staff   112 May  1 03:48 b050127eee5fb5e995a7f93e939399774f51b3
+
+./.git/objects/info:
+total 0
+drwxr-xr-x   2 Kilenaitor  staff    68 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff  2720 May  1 23:46 [1m[36m..[39;49m[0m
+
+./.git/objects/pack:
+total 88
+drwxr-xr-x   4 Kilenaitor  staff    136 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  80 Kilenaitor  staff   2720 May  1 23:46 [1m[36m..[39;49m[0m
+-r--r--r--   1 Kilenaitor  staff   5664 Apr 29 21:51 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.idx
+-r--r--r--   1 Kilenaitor  staff  33093 Apr 30 04:36 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.pack
+
+./.git/refs:
+total 0
+drwxr-xr-x   5 Kilenaitor  staff  170 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  15 Kilenaitor  staff  510 May  1 23:49 [1m[36m..[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff  102 May  1 23:46 [1m[36mheads[39;49m[0m
+drwxr-xr-x   3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36mremotes[39;49m[0m
+drwxr-xr-x   2 Kilenaitor  staff   68 Apr 29 21:51 [1m[36mtags[39;49m[0m
+
+./.git/refs/heads:
+total 8
+drwxr-xr-x  3 Kilenaitor  staff  102 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  5 Kilenaitor  staff  170 Apr 29 21:51 [1m[36m..[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   41 May  1 23:46 master
+
+./.git/refs/remotes:
+total 0
+drwxr-xr-x  3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  5 Kilenaitor  staff  170 Apr 29 21:51 [1m[36m..[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff  136 May  1 23:46 [1m[36morigin[39;49m[0m
+
+./.git/refs/remotes/origin:
+total 16
+drwxr-xr-x  4 Kilenaitor  staff  136 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  3 Kilenaitor  staff  102 Apr 29 21:51 [1m[36m..[39;49m[0m
+-rw-r--r--  1 Kilenaitor  staff   32 Apr 29 21:51 HEAD
+-rw-r--r--  1 Kilenaitor  staff   41 May  1 23:46 master
+
+./.git/refs/tags:
+total 0
+drwxr-xr-x  2 Kilenaitor  staff   68 Apr 29 21:51 [1m[36m.[39;49m[0m
+drwxr-xr-x  5 Kilenaitor  staff  170 Apr 29 21:51 [1m[36m..[39;49m[0m
+
+./bin:
+total 328
+drwxr-xr-x   4 Kilenaitor  staff    136 May  1 23:48 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff    340 May  1 22:42 [1m[36m..[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  67072 May  1 23:48 [1m[31mls[39;49m[0m
+-rwxr-xr-x   1 Kilenaitor  staff  96820 May  1 23:28 [1m[31mrshell[39;49m[0m
+
+./src:
+total 72
+drwxr-xr-x   6 Kilenaitor  staff    204 May  1 23:46 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff    340 May  1 22:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   6148 May  1 15:45 .DS_Store
+-rw-r--r--@  1 Kilenaitor  staff   2993 Apr 29 21:52 cp.cpp
+-rw-r--r--@  1 Kilenaitor  staff  10679 May  1 23:48 ls.cpp
+-rw-r--r--@  1 Kilenaitor  staff   8385 May  1 20:12 rshell.cc
+
+./tests:
+total 336
+drwxr-xr-x   4 Kilenaitor  staff     136 May  1 23:49 [1m[36m.[39;49m[0m
+drwxr-xr-x  10 Kilenaitor  staff     340 May  1 22:42 [1m[36m..[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   51322 Apr 29 21:51 exec.script
+-rw-r--r--   1 Kilenaitor  staff  115960 May  1 23:52 ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin /[K[K/ls -a -l -r[KR
+total 16
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m.[0m
+drwxr-xr-x  32 Kilenaitor staff 1088 Fri May  1 20:41:33 2015 [34;47m..[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.git[0m
+-rw-r--r--   1 Kilenaitor staff  249 Wed Apr 29 21:51:42 2015 [30;47m.gitignore[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:48:33 2015 [34;40mbin[0m
+-rw-r--r--   1 Kilenaitor staff 1478 Wed Apr 29 21:51:42 2015 LICENSE
+-rw-r--r--   1 Kilenaitor staff  250 Fri May  1 03:31:05 2015 makefile
+-rw-r--r--   1 Kilenaitor staff 1551 Wed Apr 29 21:51:42 2015 README.md
+drwxr-xr-x   6 Kilenaitor staff  204 Fri May  1 23:46:34 2015 [34;40msrc[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:49:46 2015 [34;40mtests[0m
+.git: 
+total 32
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff   16 Fri May  1 23:46:21 2015 COMMIT_EDITMSG
+-rw-r--r--   1 Kilenaitor staff  302 Wed Apr 29 21:51:42 2015 config
+-rw-r--r--   1 Kilenaitor staff   73 Wed Apr 29 21:51:40 2015 description
+-rw-r--r--   1 Kilenaitor staff  191 Fri May  1 15:45:18 2015 FETCH_HEAD
+-rw-r--r--   1 Kilenaitor staff   23 Fri May  1 15:45:19 2015 HEAD
+drwxr-xr-x  11 Kilenaitor staff  374 Wed Apr 29 21:51:40 2015 [34;40mhooks[0m
+-rw-r--r--   1 Kilenaitor staff  819 Fri May  1 23:49:20 2015 index
+drwxr-xr-x   3 Kilenaitor staff  102 Wed Apr 29 21:51:40 2015 [34;40minfo[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mlogs[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;40mobjects[0m
+-rw-r--r--   1 Kilenaitor staff   41 Fri May  1 15:45:19 2015 ORIG_HEAD
+-rw-r--r--   1 Kilenaitor staff  326 Wed Apr 29 21:51:42 2015 packed-refs
+drwxr-xr-x   5 Kilenaitor staff  170 Wed Apr 29 21:51:42 2015 [34;40mrefs[0m
+
+.git/hooks: 
+total 40
+drwxr-xr-x  11 Kilenaitor staff  374 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rwxr-xr-x   1 Kilenaitor staff  452 Wed Apr 29 21:51:40 2015 [1;32;40mapplypatch-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  896 Wed Apr 29 21:51:40 2015 [1;32;40mcommit-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  189 Wed Apr 29 21:51:40 2015 [1;32;40mpost-update.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff  398 Wed Apr 29 21:51:40 2015 [1;32;40mpre-applypatch.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1642 Wed Apr 29 21:51:40 2015 [1;32;40mpre-commit.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1348 Wed Apr 29 21:51:40 2015 [1;32;40mpre-push.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 4951 Wed Apr 29 21:51:40 2015 [1;32;40mpre-rebase.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 1239 Wed Apr 29 21:51:40 2015 [1;32;40mprepare-commit-msg.sample[0m
+-rwxr-xr-x   1 Kilenaitor staff 3611 Wed Apr 29 21:51:40 2015 [1;32;40mupdate.sample[0m
+
+.git/info: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff 102 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff 510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff 240 Wed Apr 29 21:51:40 2015 exclude
+
+.git/logs: 
+total 4
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff 3660 Fri May  1 23:46:21 2015 HEAD
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mrefs[0m
+
+.git/logs/refs: 
+total 0
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mheads[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mremotes[0m
+
+.git/logs/refs/heads: 
+total 4
+drwxr-xr-x  3 Kilenaitor staff  102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff 3034 Fri May  1 23:46:21 2015 master
+
+.git/logs/refs/remotes: 
+total 0
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Thu Apr 30 04:36:26 2015 [34;40morigin[0m
+
+.git/logs/refs/remotes/origin: 
+total 8
+drwxr-xr-x  4 Kilenaitor staff  136 Thu Apr 30 04:36:26 2015 [34;47m.[0m
+drwxr-xr-x  3 Kilenaitor staff  102 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  183 Wed Apr 29 21:51:42 2015 HEAD
+-rw-r--r--  1 Kilenaitor staff 2506 Fri May  1 23:46:24 2015 master
+
+.git/objects: 
+total 0
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m..[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;40m06[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m09[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m0f[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;40m10[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m13[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:57 2015 [34;40m16[0m
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;40m1f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m24[0m
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;40m26[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m27[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m31[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40m32[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:14 2015 [34;40m33[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m3f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;40m40[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m42[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;40m44[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m4c[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:07 2015 [34;40m52[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;40m56[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40m57[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40m59[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40m5e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:38 2015 [34;40m5f[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;40m63[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;40m68[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40m69[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m6a[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:29 2015 [34;40m6f[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:39:49 2015 [34;40m72[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:40 2015 [34;40m73[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m77[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m79[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40m7a[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;40m7c[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40m7d[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m80[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40m82[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:35 2015 [34;40m8a[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40m8e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;40m97[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:01 2015 [34;40m9e[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40ma0[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;40ma2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40maa[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:03 2015 [34;40mac[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;40mb2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb3[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb7[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mb8[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:28 2015 [34;40mba[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40mbb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:29 2015 [34;40mbc[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;40mbd[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:56 2015 [34;40mc2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mc4[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40mc6[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;40mca[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:49 2015 [34;40mcb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:20 2015 [34;40mce[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:39 2015 [34;40mcf[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:41:56 2015 [34;40md0[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;40md2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;40md7[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40md9[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:17 2015 [34;40mdc[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:38 2015 [34;40me2[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;40me3[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:11 2015 [34;40me7[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 15:45:18 2015 [34;40me9[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;40meb[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:41 2015 [34;40mec[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;40med[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 23:46:21 2015 [34;40mf1[0m
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;40mf6[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;40mf9[0m
+drwxr-xr-x   2 Kilenaitor staff   68 Wed Apr 29 21:51:40 2015 [34;40minfo[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Wed Apr 29 21:51:42 2015 [34;40mpack[0m
+
+.git/objects/06: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Thu Apr 30 04:36:23 2015 66d904bb20accc7822d5503c2e44f045ebf74a
+
+.git/objects/09: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 15:45:18 2015 3dcf9710f2cd82982cfb9d8dd8ea0bdacdc06d
+
+.git/objects/0f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2278 Fri May  1 15:45:18 2015 9d902d11ac7bce28a12ad69f24ff7b8f848ab0
+
+.git/objects/10: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:55:35 2015 1c8d0efb4e119a1cb185241d1d0e58ac28533e
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 23:46:21 2015 6b1b471ae987e8537a79704c1cbf29a284a2aa
+
+.git/objects/13: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1833 Fri May  1 15:45:18 2015 b49c88ba71b451dbc80c53b68838d2890f1d7a
+
+.git/objects/16: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:57 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  174 Fri May  1 03:31:57 2015 1e0fbf095834918869a44d7d63bc8bb1366da2
+
+.git/objects/1f: 
+total 12
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Thu Apr 30 13:45:27 2015 8c65b18abd2af5d6d1f52fe4452830aa47ba95
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 a8a0bd822e4ccb9b83cfade81d22ee0007a9d8
+-r--r--r--   1 Kilenaitor staff  167 Fri May  1 03:31:46 2015 b9e457c7e1703f5c633a90c50f5382e02bc1f3
+
+.git/objects/24: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1853 Fri May  1 15:45:18 2015 0962c8eff8b4773944b82ea2e8c89fa2b44e13
+
+.git/objects/26: 
+total 12
+drwxr-xr-x   5 Kilenaitor staff  170 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 709a01c54e70e10e39dfbd79d25e949ea5a965
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 02:56:38 2015 b19b22fb3253dd2d4f784ded26eb3728f037d2
+-r--r--r--   1 Kilenaitor staff 1379 Thu Apr 30 13:45:27 2015 db1d579f906d6982d69eab18ab7a1e64496061
+
+.git/objects/27: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 15:45:18 2015 68dbfa860d120e67c7e82a1a78b7aea5743a07
+
+.git/objects/31: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 9ffd0a31b30238e01c2d235e68fa13840bc25e
+
+.git/objects/32: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:35:47 2015 523809e2da0ce7907b6ce7a6607af1d532b186
+
+.git/objects/33: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:14 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  900 Thu Apr 30 04:36:14 2015 cf5c1ee5983f43fb5a0eb48abfcbdb2cead95c
+
+.git/objects/3f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  177 Fri May  1 15:45:18 2015 a4aab5ca5cf9417ad53782a4371cc6e8ab1d6f
+
+.git/objects/40: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:42:05 2015 2097e4c90add98a748c395324af406f3702745
+
+.git/objects/42: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 15:45:18 2015 dd38e2e2db09282a0abd8daa4f1dcd22255ba0
+
+.git/objects/44: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  179 Fri May  1 03:55:35 2015 929ee736e83014e2b5962efbb0ac6ac9f1b814
+
+.git/objects/4c: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  177 Fri May  1 15:45:18 2015 a7fc9684b327bbd6bfb4c89e774352796adbd2
+
+.git/objects/52: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:07 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:37:07 2015 d3b0a7512a7f70315b02be93a7b6b5ca1ec49a
+
+.git/objects/56: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:37:07 2015 09b3426a0905dd0ef128468d414f79b6e181ce
+-r--r--r--   1 Kilenaitor staff  168 Fri May  1 23:46:21 2015 67cd027759a4b29061e39b1970d338f27300ee
+
+.git/objects/57: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 18:45:51 2015 152aeed9c2121ca5b385cafb67fdf218881bc3
+
+.git/objects/59: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  168 Fri May  1 03:37:43 2015 dc5ab5878b981ba1e7f968b696495c15ca0ef5
+
+.git/objects/5e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:50:25 2015 34f1d6e3a2fc654b270aee5dee3d556595eae7
+
+.git/objects/5f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:38 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1610 Fri May  1 03:39:38 2015 cbcae5b5b018b15723dff95b69297dfea21fd0
+
+.git/objects/63: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  190 Fri May  1 03:39:49 2015 9e280836ed66898addc4d44a3a71f6cea9aead
+
+.git/objects/68: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Thu Apr 30 13:45:27 2015 580e8f4ef5f69b25bcc374d8cc7aec022512a5
+
+.git/objects/69: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  166 Fri May  1 18:45:51 2015 fa8f919d08950449f871950fda7714230e5441
+
+.git/objects/6a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 a3b8e125c3c3a851228edbc9ede09d1c1c1217
+
+.git/objects/6f: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:29 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1837 Fri May  1 03:55:29 2015 07799dafcad716a21c1d187aa91edbd8a3257c
+
+.git/objects/72: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  171 Thu Apr 30 04:36:23 2015 8dbaadc41f5a03bb0fb9780f649f9115d7c7d9
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:39:49 2015 f19b9947d4ab0a9a45a9d86429dc27c3a47559
+
+.git/objects/73: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:40 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2349 Fri May  1 18:45:40 2015 53aa0eb728f6b2cea707e35361f134789cfa60
+
+.git/objects/77: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 34b00d27ea5e56ed353e4e31ec7fe537013d72
+
+.git/objects/79: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 dd5e1036063aa4506b76c1d2e0c233c0394e99
+
+.git/objects/7a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  179 Fri May  1 03:50:25 2015 9240d5c72a759a3a13b51aa766d18985c1c868
+
+.git/objects/7c: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  190 Fri May  1 02:56:38 2015 5bbdd63d5555d35d1ebba20ce222b48b4feee1
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 03:48:35 2015 af3817fc683c59616101996150963b6a432129
+
+.git/objects/7d: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  176 Fri May  1 03:35:47 2015 b655215809c9a29e041529d6717f56dc74632a
+
+.git/objects/80: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1820 Fri May  1 15:45:18 2015 0e89a6c3852b0bbe812b1c2c1ea77b4e3658ce
+
+.git/objects/82: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  169 Fri May  1 15:45:18 2015 71b56f70a075360e6b4ab4af29beef90c368c9
+
+.git/objects/8a: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  182 Fri May  1 03:48:35 2015 092bb080a7279d66c45a7e03c24c61a38bd450
+
+.git/objects/8e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  211 Fri May  1 03:43:06 2015 dcf87bb6f000b77c56b3fc614fc03ddc0e1c43
+
+.git/objects/97: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 13:45:27 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  165 Thu Apr 30 13:45:27 2015 37300363ca5f4698c0439ee83f451f5e6604e2
+
+.git/objects/9e: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:01 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1640 Fri May  1 03:43:01 2015 cd5c80f02890d6ed778c5471c7c9309916d35e
+
+.git/objects/a0: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:43:06 2015 3df3fdc1d9b3f5b948a24d44b3cf0cb21cc70c
+
+.git/objects/a2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:25 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:50:25 2015 6c63b2c3fef90938412b5d27c201770825c45a
+
+.git/objects/aa: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  176 Fri May  1 15:45:18 2015 544064ae51fb1995b75b3fe857c7b9f6eb48f4
+
+.git/objects/ac: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:03 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1597 Fri May  1 03:37:03 2015 4bb259dcf3db83829c291088523bc0e6446250
+
+.git/objects/b2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:55:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:55:35 2015 b1be0b9b92f6005f77f6756482e83e6dcdc643
+
+.git/objects/b3: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2196 Fri May  1 15:45:18 2015 b41cd0ba594d0f52f86e1573fb2623a63b036b
+
+.git/objects/b7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 a0de5901e44e688c7ed706b97beff6ec1f779e
+
+.git/objects/b8: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 11cdaee38df6847f9928bdd033847bf37a1ed0
+
+.git/objects/ba: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:28 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1537 Fri May  1 02:56:28 2015 24694042cf7cfa3cdb137221b3fae0be432c97
+
+.git/objects/bb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:37:43 2015 94f95d64bc73b99d5d0116bb98a41a77b8e297
+
+.git/objects/bc: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:48:29 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1682 Fri May  1 03:48:29 2015 e4b87d045c46bd22106dc2f8fe2ca3920d2f0a
+
+.git/objects/bd: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:43:06 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  172 Fri May  1 03:43:06 2015 93f3d532d2eb08a0eab8699597f71b0cf3480c
+
+.git/objects/c2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:56 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:31:56 2015 5ccd9ad829985211cd88cd28f69d10569c7c08
+
+.git/objects/c4: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  368 Fri May  1 15:45:18 2015 617736342d5106f66f9c97448e8a769f881bf3
+
+.git/objects/c6: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 266e067cb85c0d4d66cdd9aa7127b319584a58
+
+.git/objects/ca: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:43 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:37:43 2015 6f18454da6af4b3bc3dd3bd75bef94b7753e4e
+
+.git/objects/cb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:31:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1591 Fri May  1 03:31:49 2015 82d710c21529918f54ae4ba4d202c21359c8d4
+
+.git/objects/ce: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:50:20 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1685 Fri May  1 03:50:20 2015 24fc29cf0f777194b326c71d64f5eecb79d07e
+
+.git/objects/cf: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:37:39 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1595 Fri May  1 03:37:39 2015 9c552c5563c4ce03c973b4323c460fc8a45d05
+
+.git/objects/d0: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:41:56 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1631 Fri May  1 03:41:56 2015 25787eeafbd2a14d5c06f2dab98053abdb9c9e
+
+.git/objects/d2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:39:49 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:39:49 2015 b633a22db54b0ceef95267a55882af11745044
+
+.git/objects/d7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:47 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:35:47 2015 1368c15cd6ab7962f1bca7c4625a14621c5eb7
+
+.git/objects/d9: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 15:45:18 2015 f6a2a3316ae6294788d167282d8dd139e2802d
+
+.git/objects/dc: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:46:17 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 03:31:56 2015 1390e752ec350581f064f08ca65d2158783bcd
+-r--r--r--   1 Kilenaitor staff 2862 Fri May  1 23:46:17 2015 aff9ee2e7d146a2561e0953461252d3bb36306
+
+.git/objects/e2: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 02:56:38 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 02:56:38 2015 a122a222913fead4c7f026e356102894068ba8
+
+.git/objects/e3: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 2193 Fri May  1 15:45:18 2015 0eeb9c73f5e06cae76446638dc3f562b35eb29
+
+.git/objects/e7: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:11 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1068 Thu Apr 30 04:36:11 2015 7dfd31707ffa1f40bd1bcb532e0bdf9cc6e18f
+
+.git/objects/e9: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 15:45:18 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 15:45:18 2015 22f40a172f13f56ba1690b787b8bae0d112b78
+-r--r--r--   1 Kilenaitor staff  170 Fri May  1 03:37:08 2015 b394d39a5f50476be53815aad4d1e1cf85e151
+
+.git/objects/eb: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Thu Apr 30 04:36:23 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Thu Apr 30 04:36:23 2015 ed93db200d359ce2df6cc67b19c8d5820d0386
+
+.git/objects/ec: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:35:41 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff 1593 Fri May  1 03:35:41 2015 97c67de099b52dd659b840b001cf6bcb555782
+
+.git/objects/ed: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 03:42:05 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  165 Fri May  1 03:42:05 2015 13e293fb6c91788ff08016029c6b81133d3357
+
+.git/objects/f1: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  145 Fri May  1 23:46:21 2015 f835a4a10c5ba2d5ec5a68dcebac7b78b6ed34
+
+.git/objects/f6: 
+total 4
+drwxr-xr-x   3 Kilenaitor staff  102 Fri May  1 18:45:51 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  210 Fri May  1 18:45:51 2015 6b29d4d5633d7348c6291fe2f3e0d9c311b3c8
+
+.git/objects/f9: 
+total 8
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 03:48:35 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  113 Fri May  1 03:42:05 2015 9b005857759f19bc748f1e704de3940982a158
+-r--r--r--   1 Kilenaitor staff  112 Fri May  1 03:48:35 2015 b050127eee5fb5e995a7f93e939399774f51b3
+
+.git/objects/info: 
+total 0
+drwxr-xr-x   2 Kilenaitor staff   68 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff 2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+
+.git/objects/pack: 
+total 44
+drwxr-xr-x   4 Kilenaitor staff   136 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  80 Kilenaitor staff  2720 Fri May  1 23:46:21 2015 [34;47m..[0m
+-r--r--r--   1 Kilenaitor staff  5664 Wed Apr 29 21:51:42 2015 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.idx
+-r--r--r--   1 Kilenaitor staff 33093 Thu Apr 30 04:36:23 2015 pack-b5c6ce631cbe575b1a534c4897949383621bd7cf.pack
+
+.git/refs: 
+total 0
+drwxr-xr-x   5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  15 Kilenaitor staff 510 Fri May  1 23:49:20 2015 [34;47m..[0m
+drwxr-xr-x   3 Kilenaitor staff 102 Fri May  1 23:46:21 2015 [34;40mheads[0m
+drwxr-xr-x   3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;40mremotes[0m
+drwxr-xr-x   2 Kilenaitor staff  68 Wed Apr 29 21:51:40 2015 [34;40mtags[0m
+
+.git/refs/heads: 
+total 4
+drwxr-xr-x  3 Kilenaitor staff 102 Fri May  1 23:46:21 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  41 Fri May  1 23:46:21 2015 master
+
+.git/refs/remotes: 
+total 0
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+drwxr-xr-x  4 Kilenaitor staff 136 Fri May  1 23:46:24 2015 [34;40morigin[0m
+
+.git/refs/remotes/origin: 
+total 8
+drwxr-xr-x  4 Kilenaitor staff 136 Fri May  1 23:46:24 2015 [34;47m.[0m
+drwxr-xr-x  3 Kilenaitor staff 102 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+-rw-r--r--  1 Kilenaitor staff  32 Wed Apr 29 21:51:42 2015 HEAD
+-rw-r--r--  1 Kilenaitor staff  41 Fri May  1 23:46:24 2015 master
+
+.git/refs/tags: 
+total 0
+drwxr-xr-x  2 Kilenaitor staff  68 Wed Apr 29 21:51:40 2015 [34;47m.[0m
+drwxr-xr-x  5 Kilenaitor staff 170 Wed Apr 29 21:51:42 2015 [34;47m..[0m
+
+bin: 
+total 164
+drwxr-xr-x   4 Kilenaitor staff   136 Fri May  1 23:48:33 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff   340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rwxr-xr-x   1 Kilenaitor staff 67072 Fri May  1 23:48:33 2015 [1;32;40mls[0m
+-rwxr-xr-x   1 Kilenaitor staff 96820 Fri May  1 23:28:38 2015 [1;32;40mrshell[0m
+
+src: 
+total 36
+drwxr-xr-x   6 Kilenaitor staff   204 Fri May  1 23:46:34 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff   340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff  6148 Fri May  1 15:45:19 2015 [30;47m.DS_Store[0m
+-rw-r--r--   1 Kilenaitor staff  2993 Wed Apr 29 21:52:41 2015 cp.cpp
+-rw-r--r--   1 Kilenaitor staff 10679 Fri May  1 23:48:31 2015 ls.cpp
+-rw-r--r--   1 Kilenaitor staff  8385 Fri May  1 20:12:45 2015 rshell.cc
+
+tests: 
+total 208
+drwxr-xr-x   4 Kilenaitor staff    136 Fri May  1 23:49:46 2015 [34;47m.[0m
+drwxr-xr-x  10 Kilenaitor staff    340 Fri May  1 22:42:31 2015 [34;47m..[0m
+-rw-r--r--   1 Kilenaitor staff  51322 Wed Apr 29 21:51:42 2015 exec.script
+-rw-r--r--   1 Kilenaitor staff 156920 Fri May  1 23:52:13 2015 ls.script
+
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin [K[K[K[Kbin [K/ls -l dir[K[K[K/[K./ -r[Ka
+total 16
+drwxr-xr-x  10 Kilenaitor staff  340 Fri May  1 22:42:31 2015 [34;47m.[0m
+drwxr-xr-x  32 Kilenaitor staff 1088 Fri May  1 20:41:33 2015 [34;47m..[0m
+drwxr-xr-x  15 Kilenaitor staff  510 Fri May  1 23:49:20 2015 [34;47m.git[0m
+-rw-r--r--   1 Kilenaitor staff  249 Wed Apr 29 21:51:42 2015 [30;47m.gitignore[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:48:33 2015 [34;40mbin[0m
+-rw-r--r--   1 Kilenaitor staff 1478 Wed Apr 29 21:51:42 2015 LICENSE
+-rw-r--r--   1 Kilenaitor staff  250 Fri May  1 03:31:05 2015 makefile
+-rw-r--r--   1 Kilenaitor staff 1551 Wed Apr 29 21:51:42 2015 README.md
+drwxr-xr-x   6 Kilenaitor staff  204 Fri May  1 23:46:34 2015 [34;40msrc[0m
+drwxr-xr-x   4 Kilenaitor staff  136 Fri May  1 23:49:46 2015 [34;40mtests[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls [K[K[Kbin/ls /sbin/[K[K[K[K[Kusr/
+[34;40mbin[0m        [34;40minclude[0m    [34;40mlib[0m        [34;40mlibexec[0m    [34;40mlocal[0m      [34;40msbin[0m       [34;40mshare[0m      [34;40mstandalone[0m [34;40mtexbin[0m     [34;40mX11[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls /bin/
+[1;32;40m[[0m          [1;32;40mcat[0m        [1;32;40mcp[0m         [1;32;40mdate[0m       [1;32;40mdf[0m         [1;32;40mecho[0m       [1;32;40mexpr[0m       [1;32;40mkill[0m       [1;32;40mlaunchctl[0m  [1;32;40mln[0m         [1;32;40mmkdir[0m      [1;32;40mpax[0m        [1;32;40mpwd[0m        [1;32;40mrm[0m         [1;32;40msh[0m         [1;32;40mstty[0m       [1;32;40mtcsh[0m       [1;32;40munlink[0m     [1;32;40mzsh[0m
+[1;32;40mbash[0m       [1;32;40mchmod[0m      [1;32;40mcsh[0m        [1;32;40mdd[0m         [1;32;40mdomainname[0m [1;32;40med[0m         [1;32;40mhostname[0m   [1;32;40mksh[0m        [1;32;40mlink[0m       [1;32;40mls[0m         [1;32;40mmv[0m         [1;32;40mps[0m         [1;32;40mrcp[0m        [1;32;40mrmdir[0m      [1;32;40msleep[0m      [1;32;40msync[0m       [1;32;40mtest[0m       [1;32;40mwait4path[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ll[K[Kls -l /bin/
+total 5120
+-rwxr-xr-x  2 root  wheel    18480 Sep  9  2014 [1m[31m[[39;49m[0m
+-r-xr-xr-x  1 root  wheel   628640 Oct 26  2014 [1m[31mbash[39;49m[0m
+-rwxr-xr-x  1 root  wheel    19552 Sep  9  2014 [1m[31mcat[39;49m[0m
+-rwxr-xr-x  1 root  wheel    30112 Sep  9  2014 [1m[31mchmod[39;49m[0m
+-rwxr-xr-x  1 root  wheel    24768 Sep  9  2014 [1m[31mcp[39;49m[0m
+-rwxr-xr-x  2 root  wheel   370096 Sep  9  2014 [1m[31mcsh[39;49m[0m
+-rwxr-xr-x  1 root  wheel    24400 Sep  9  2014 [1m[31mdate[39;49m[0m
+-rwxr-xr-x  1 root  wheel    27888 Sep  9  2014 [1m[31mdd[39;49m[0m
+-rwxr-xr-x  1 root  wheel    23472 Sep  9  2014 [1m[31mdf[39;49m[0m
+-r-xr-xr-x  1 root  wheel    14176 Sep  9  2014 [1m[31mdomainname[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14048 Sep  9  2014 [1m[31mecho[39;49m[0m
+-rwxr-xr-x  1 root  wheel    49904 Sep  9  2014 [1m[31med[39;49m[0m
+-rwxr-xr-x  1 root  wheel    19008 Sep  9  2014 [1m[31mexpr[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14208 Sep  9  2014 [1m[31mhostname[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14560 Sep  9  2014 [1m[31mkill[39;49m[0m
+-r-xr-xr-x  1 root  wheel  1394560 Sep  9  2014 [1m[31mksh[39;49m[0m
+-rwxr-xr-x  1 root  wheel    78000 Apr 16 22:56 [1m[31mlaunchctl[39;49m[0m
+-rwxr-xr-x  2 root  wheel    14960 Nov  6 14:32 [1m[31mlink[39;49m[0m
+-rwxr-xr-x  2 root  wheel    14960 Nov  6 14:32 [1m[31mln[39;49m[0m
+-rwxr-xr-x  1 root  wheel    34640 Sep  9  2014 [1m[31mls[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14512 Sep  9  2014 [1m[31mmkdir[39;49m[0m
+-rwxr-xr-x  1 root  wheel    20160 Sep  9  2014 [1m[31mmv[39;49m[0m
+-rwxr-xr-x  1 root  wheel   106816 Sep  9  2014 [1m[31mpax[39;49m[0m
+-rwsr-xr-x  1 root  wheel    46688 Sep  9  2014 [30m[41mps[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14208 Sep  9  2014 [1m[31mpwd[39;49m[0m
+-r-sr-xr-x  1 root  wheel    25216 Sep  9  2014 [30m[41mrcp[39;49m[0m
+-rwxr-xr-x  2 root  wheel    19760 Sep  9  2014 [1m[31mrm[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14080 Sep  9  2014 [1m[31mrmdir[39;49m[0m
+-r-xr-xr-x  1 root  wheel   628704 Oct 26  2014 [1m[31msh[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14016 Sep  9  2014 [1m[31msleep[39;49m[0m
+-rwxr-xr-x  1 root  wheel    28064 Sep  9  2014 [1m[31mstty[39;49m[0m
+-rwxr-xr-x  1 root  wheel    34256 Mar 31 20:06 [1m[31msync[39;49m[0m
+-rwxr-xr-x  2 root  wheel   370096 Sep  9  2014 [1m[31mtcsh[39;49m[0m
+-rwxr-xr-x  2 root  wheel    18480 Sep  9  2014 [1m[31mtest[39;49m[0m
+-rwxr-xr-x  2 root  wheel    19760 Sep  9  2014 [1m[31munlink[39;49m[0m
+-rwxr-xr-x  1 root  wheel    14112 Apr 16 22:56 [1m[31mwait4path[39;49m[0m
+-rwxr-xr-x  1 root  wheel   551232 Sep  9  2014 [1m[31mzsh[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -l /usr/
+total 16
+lrwxr-xr-x     1 root        wheel      8 Dec 19 12:15 [1m[35mX11[39;49m[0m -> /opt/X11
+drwxr-xr-x  1120 root        wheel  38080 Apr 29 21:01 [1m[36mbin[39;49m[0m
+drwxr-xr-x   257 root        wheel   8738 Apr 29 21:02 [1m[36minclude[39;49m[0m
+drwxr-xr-x   274 root        wheel   9316 Apr 29 21:02 [1m[36mlib[39;49m[0m
+drwxr-xr-x   173 root        wheel   5882 Apr 29 21:06 [1m[36mlibexec[39;49m[0m
+drwxrwxr-x    30 Kilenaitor  admin   1020 Mar  2 08:52 [1m[36mlocal[39;49m[0m
+drwxr-xr-x   257 root        wheel   8738 Apr 29 21:02 [1m[36msbin[39;49m[0m
+drwxr-xr-x    47 root        wheel   1598 Oct 27  2014 [1m[36mshare[39;49m[0m
+drwxr-xr-x     4 root        wheel    136 Oct 16  2014 [1m[36mstandalone[39;49m[0m
+lrwxr-xr-x     1 root        wheel     63 Apr 30  2014 [1m[35mtexbin[39;49m[0m -> /Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls -l /usr/
+total 0
+drwxr-xr-x  1120 root       wheel 38080 Wed Apr 29 21:01:59 2015 [34;40mbin[0m
+drwxr-xr-x   257 root       wheel  8738 Wed Apr 29 21:02:04 2015 [34;40minclude[0m
+drwxr-xr-x   274 root       wheel  9316 Wed Apr 29 21:02:04 2015 [34;40mlib[0m
+drwxr-xr-x   173 root       wheel  5882 Wed Apr 29 21:06:09 2015 [34;40mlibexec[0m
+drwxrwxr-x    30 Kilenaitor admin  1020 Mon Mar  2 08:52:42 2015 [34;40mlocal[0m
+drwxr-xr-x   257 root       wheel  8738 Wed Apr 29 21:02:05 2015 [34;40msbin[0m
+drwxr-xr-x    47 root       wheel  1598 Mon Oct 27 23:25:38 2014 [34;40mshare[0m
+drwxr-xr-x     4 root       wheel   136 Thu Oct 16 17:57:47 2014 [34;40mstandalone[0m
+drwxr-xr-x   375 Kilenaitor wheel 12750 Thu Oct 16 19:53:04 2014 [34;40mtexbin[0m
+drwxr-xr-x     9 root       wheel   306 Fri Dec 19 12:17:13 2014 [34;40mX11[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls /etc
+AFP.conf                              [1m[36mdefaults[39;49m[0m                              hosts~orig                            nfs.conf                              php.ini.default-5.2-previous          ssh_config~orig
+afpovertcp.cfg                        dnsextd.conf                          irbrc                                 nonvendor                             php.ini.default-5.2-previous~orig     [1m[31mssh_host_dsa_key[39;49m[0m
+[1m[35maliases[39;49m[0m                               dumpdates                             kern_loader.conf                      notify.conf                           [1m[36mpostfix[39;49m[0m                               ssh_host_dsa_key.pub
+aliases.db                            efax.rc                               krb5.keytab                           ntp-restrict.conf                     [1m[36mppp[39;49m[0m                                   ssh_host_key
+[1m[36mapache2[39;49m[0m                               [1m[36memond.d[39;49m[0m                               [1m[35mlocaltime[39;49m[0m                             ntp.conf                              profile                               ssh_host_key.pub
+appletalk.cfg                         exports                               locate.rc                             ntp_opendirectory.conf                protocols                             ssh_host_rsa_key
+appletalk.nvram.en1                   exportsbak                            [1m[36mmach_init.d[39;49m[0m                           [1m[36mopenldap[39;49m[0m                              [1m[36mracoon[39;49m[0m                                ssh_host_rsa_key.pub
+[1m[36masl[39;49m[0m                                   find.codes                            [1m[36mmach_init_per_login_session.d[39;49m[0m         [1m[36mpam.d[39;49m[0m                                 rc.common                             sshd_config
+asl.conf                              fstab.hd                              [1m[36mmach_init_per_user.d[39;49m[0m                  passwd                                [1m[31mrc.imaging[39;49m[0m                            sshd_config~previous
+authorization.deprecated              ftpd.conf                             mail.rc                               passwd~orig                           rc.netboot                            sudoers
+auto_home                             ftpd.conf.default                     man.conf                              paths                                 [1m[35mresolv.conf[39;49m[0m                           sudoers~orig
+auto_master                           ftpusers                              manpaths                              [1m[36mpaths.d[39;49m[0m                               [1m[36mresolver[39;49m[0m                              sysctl.conf
+autofs.conf                           gettytab                              [1m[36mmanpaths.d[39;49m[0m                            pear.conf-previous                    rmtab                                 syslog.conf
+bashrc                                group                                 master.passwd                         [1m[36mperiodic[39;49m[0m                              rpc                                   ttys
+bootpd.plist                          group~previous                        master.passwd~orig                    [1m[36mpf.anchors[39;49m[0m                            rtadvd.conf                           xtab
+[1m[36mcertificates[39;49m[0m                          hostconfig                            moduli                                pf.conf                               [1m[36msecurity[39;49m[0m                              zshenv
+com.apple.screensharing.agent.launchd hosts                                 moduli~previous                       pf.os                                 services
+csh.cshrc                             hosts.equiv                           nanorc                                php-fpm.conf.default                  shells
+csh.login                             hosts.save                            networks                              php.ini                               smb.conf.old
+csh.logout                            hosts.save.1                          newsyslog.conf                        php.ini-5.2-previous                  [1m[36msnmp[39;49m[0m
+[1m[36mcups[39;49m[0m                                  hosts.save.2                          [1m[36mnewsyslog.d[39;49m[0m                           php.ini.default                       ssh_config
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/ls /etc[K[K[K[K/etc
+[34;40m[0m                                      [34;40mdefaults[0m                              [0mhosts.save.2                          [0mnetworks                              [0mphp-fpm.conf.default                  [0mservices                              [0mzshenv
+[34;40m[0m                                      [0mdnsextd.conf                          [0mhosts~orig                            [0mnewsyslog.conf                        [0mphp.ini                               [0mshells
+Failed to do filestat: No such file or directory
+[34;40m[0m                                      [0mdumpdates                             [0miou!�H                               [34;40mnewsyslog.d[0m                           [0mphp.ini-5.2-previous                  [0msmb.conf.old
+[34;40m[0m                                      [0mefax.rc                               [0mirbrc                                 [0mnfs.conf                              [0mphp.ini.default                       [34;40msnmp[0m
+[34;40m[0m                                      [34;40memond.d[0m                               [0mkern_loader.conf                      [0mnonvendor                             [0mphp.ini.default-5.2-previous          [0mssh_config
+[34;40m[0m                                      [0mexports                               [0mkrb5.keytab                           [0mnotify.conf                           [0mphp.ini.default-5.2-previous~orig     [0mssh_config~orig
+[34;40m[0m                                      [0mexportsbak                            [0mlocaltime                             [0mntp-restrict.conf                     [34;40mpostfix[0m                               [1;32;40mssh_host_dsa_key[0m
+[34;40m[0m                                      [0mfind.codes                            [0mlocate.rc                             [0mntp.conf                              [34;40mppp[0m                                   [0mssh_host_dsa_key.pub
+[34;40m[0m                                      [0mfstab.hd                              [34;40mmach_init.d[0m                           [0mntp_opendirectory.conf                [0mprofile                               [0mssh_host_key
+[34;40m[0m                                      [0mftpd.conf                             [34;40mmach_init_per_login_session.d[0m         [34;40mopenldap[0m                              [0mprotocols                             [0mssh_host_key.pub
+[34;40m[0m                                      [0mftpd.conf.default                     [34;40mmach_init_per_user.d[0m                  [34;40mpam.d[0m                                 [34;40mracoon[0m                                [0mssh_host_rsa_key
+Failed to do filestat: No such file or directory
+[0m�                                    [0mftpusers                              [0mmail.rc                               [0mpasswd                                [0mrc.common                             [0mssh_host_rsa_key.pub
+Failed to do filestat: No such file or directory
+[0m�                                    [0mgettytab                              [0mman.conf                              [0mpasswd~orig                           [1;32;40mrc.imaging[0m                            [0msshd_config
+Failed to do filestat: No such file or directory
+[0m�                                    [0mgroup                                 [0mmanpaths                              [0mpaths                                 [0mrc.netboot                            [0msshd_config~previous
+Failed to do filestat: No such file or directory
+[30;47m.pub[0m                                  [0mgroup~previous                        [34;40mmanpaths.d[0m                            [34;40mpaths.d[0m                               [0mresolv.conf                           [0msudoers
+Failed to do filestat: No such file or directory
+[0m_dsa_key.pub                          [0mhostconfig                            [0mmaster.passwd                         [0mpear.conf-previous                    [34;40mresolver[0m                              [0msudoers~orig
+[0mcsh.cshrc                             [0mhosts                                 [0mmaster.passwd~orig                    [34;40mperiodic[0m                              [0mrmtab                                 [0msysctl.conf
+[0mcsh.login                             [0mhosts.equiv                           [0mmoduli                                [34;40mpf.anchors[0m                            [0mrpc                                   [0msyslog.conf
+[0mcsh.logout                            [0mhosts.save                            [0mmoduli~previous                       [0mpf.conf                               [0mrtadvd.conf                           [0mttys
+[34;40mcups[0m                                  [0mhosts.save.1                          [0mnanorc                                [0mpf.os                                 [34;40msecurity[0m                              [0mxtab
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m echo /et[K[K[K"etc/[K[K[K[K/etc is broken. done'[K[K't know why"
+/etc is broken. don't know why
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -lR
+total 24
+-rw-r--r--  1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@ 1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x  6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+
+./bin:
+total 328
+-rwxr-xr-x  1 Kilenaitor  staff  67072 May  1 23:48 [1m[31mls[39;49m[0m
+-rwxr-xr-x  1 Kilenaitor  staff  96820 May  1 23:28 [1m[31mrshell[39;49m[0m
+
+./src:
+total 56
+-rw-r--r--@ 1 Kilenaitor  staff   2993 Apr 29 21:52 cp.cpp
+-rw-r--r--@ 1 Kilenaitor  staff  10679 May  1 23:48 ls.cpp
+-rw-r--r--@ 1 Kilenaitor  staff   8385 May  1 20:12 rshell.cc
+
+./tests:
+total 448
+-rw-r--r--  1 Kilenaitor  staff   51322 Apr 29 21:51 exec.script
+-rw-r--r--  1 Kilenaitor  staff  175268 May  1 23:53 ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -l -R
+total 24
+-rw-r--r--  1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@ 1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x  6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+
+./bin:
+total 328
+-rwxr-xr-x  1 Kilenaitor  staff  67072 May  1 23:48 [1m[31mls[39;49m[0m
+-rwxr-xr-x  1 Kilenaitor  staff  96820 May  1 23:28 [1m[31mrshell[39;49m[0m
+
+./src:
+total 56
+-rw-r--r--@ 1 Kilenaitor  staff   2993 Apr 29 21:52 cp.cpp
+-rw-r--r--@ 1 Kilenaitor  staff  10679 May  1 23:48 ls.cpp
+-rw-r--r--@ 1 Kilenaitor  staff   8385 May  1 20:12 rshell.cc
+
+./tests:
+total 448
+-rw-r--r--  1 Kilenaitor  staff   51322 Apr 29 21:51 exec.script
+-rw-r--r--  1 Kilenaitor  staff  175268 May  1 23:53 ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -Rl
+total 24
+-rw-r--r--  1 Kilenaitor  staff  1478 Apr 29 21:51 LICENSE
+-rw-r--r--  1 Kilenaitor  staff  1551 Apr 29 21:51 README.md
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:48 [1m[36mbin[39;49m[0m
+-rw-r--r--@ 1 Kilenaitor  staff   250 May  1 03:31 makefile
+drwxr-xr-x  6 Kilenaitor  staff   204 May  1 23:46 [1m[36msrc[39;49m[0m
+drwxr-xr-x  4 Kilenaitor  staff   136 May  1 23:49 [1m[36mtests[39;49m[0m
+
+./bin:
+total 328
+-rwxr-xr-x  1 Kilenaitor  staff  67072 May  1 23:48 [1m[31mls[39;49m[0m
+-rwxr-xr-x  1 Kilenaitor  staff  96820 May  1 23:28 [1m[31mrshell[39;49m[0m
+
+./src:
+total 56
+-rw-r--r--@ 1 Kilenaitor  staff   2993 Apr 29 21:52 cp.cpp
+-rw-r--r--@ 1 Kilenaitor  staff  10679 May  1 23:48 ls.cpp
+-rw-r--r--@ 1 Kilenaitor  staff   8385 May  1 20:12 rshell.cc
+
+./tests:
+total 448
+-rw-r--r--  1 Kilenaitor  staff   51322 Apr 29 21:51 exec.script
+-rw-r--r--  1 Kilenaitor  staff  175268 May  1 23:53 ls.script
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m exit
+exit
+
+Script done on Fri May  1 23:54:05 2015
