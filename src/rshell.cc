@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include "boost/tokenizer.hpp"
 #include "boost/algorithm/string.hpp"
-#include <boost/algorithm/string/trim_all.hpp>
+#include <regex>
 
 using namespace std;
 
@@ -177,7 +177,8 @@ int main (int argc, char const *argv[])
 
         //Grab user input for bash prompt
         getline(cin,input);
-        boost::algorithm::trim_all(input); //Remove trailing and leading space
+        boost::trim(input); //Remove trailing and leading space
+        input = regex_replace(input, std::regex("[ ]+"), " ");
 
         //Setting up a boost tokenizer.
         typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer;
@@ -379,32 +380,6 @@ int main (int argc, char const *argv[])
             args.push_back(0);
             commands.push_back(args);
         }
-        
-/*        for(auto x : in_files) {
-            if(x != 0)
-                cout << x << endl;
-            else
-                cout << "0" << endl;
-        }
-        cout << endl;
-        
-        for(auto x : out_files_r) {
-            if(x != 0)
-                cout << x << endl;
-            else
-                cout << "0" << endl;
-        }
-        cout << endl;
-        
-        for(auto x : out_files_a) {
-            if(x != 0)
-                cout << x << endl;
-            else
-                cout << "0" << endl;
-        }
-        cout << endl;
-        */
-
         
         if(num_pipes > 0) {
 
