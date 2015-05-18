@@ -61,24 +61,24 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
         
         vector<char*> com = commands[curr_index];
         
-        if(in_files.at(com.size()-2) != 0) {
-            int fd0 = open(in_files.at(com.size()-2), O_RDONLY, 0);
+        if(in_files.size() > curr_index && in_files.at(curr_index) != 0) {
+            int fd0 = open(in_files.at(curr_index), O_RDONLY, 0);
             if(-1 == dup2(fd0, STDIN_FILENO)) {
                 perror("Error opening file for writing");
                 return;
             }
             close(fd0);
         }
-        if(out_files_r.at(com.size()-2) != 0) {
-            int fd1 = open(out_files_r.at(com.size()-2), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+        if(out_files_r.size() > curr_index && out_files_r.at(curr_index) != 0) {
+            int fd1 = open(out_files_r.at(curr_index), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
                 return;
             }
             close(fd1);
         }
-        if(out_files_a.at(com.size()-2) != 0) {
-            int fd1 = open(out_files_a.at(com.size()-2), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+        if(out_files_a.size() > curr_index && out_files_a.at(curr_index) != 0) {
+            int fd1 = open(out_files_a.at(curr_index), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
                 return;
@@ -161,6 +161,10 @@ int main (int argc, char const *argv[])
         //int for storing the number of pipes the user has entered
         int num_pipes = 0;
         
+        bool in_add = false;
+        bool out_r_add = false;
+        bool out_a_add = false;
+        
         fflush(0); //Start with clean stdout and stdin and stderror
         
         //Terminal prompt display
@@ -188,6 +192,10 @@ int main (int argc, char const *argv[])
         Put all of these new commands in the commands vector.
         */
         for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it) {
+            in_add = false;
+            out_r_add = false;
+            out_a_add = false;
+            
             if( !it->empty() ) {
                 if(*it == "#" || strncmp(&it->at(0),"#",1) == 0)
                     break;
@@ -200,6 +208,12 @@ int main (int argc, char const *argv[])
                     }
                     args.push_back(0);
                     commands.push_back(args);
+                    if(!in_add)
+                        in_files.push_back(0);
+                    if(!out_r_add)
+                        out_files_r.push_back(0);
+                    if(!out_a_add)
+                        out_files_a.push_back(0);
                     args.clear();
                     break;
                 }
@@ -209,6 +223,12 @@ int main (int argc, char const *argv[])
                     //Adds the connector to the vector and then terminates the current command
                     args.push_back(0);
                     commands.push_back(args);
+                    if(!in_add)
+                        in_files.push_back(0);
+                    if(!out_r_add)
+                        out_files_r.push_back(0);
+                    if(!out_a_add)
+                        out_files_a.push_back(0);
                     args.clear();
                 }
                 else if (*it == "&&") {
@@ -217,6 +237,12 @@ int main (int argc, char const *argv[])
                     //Adds the connector to the vector and then terminates the current command
                     args.push_back(0);
                     commands.push_back(args);
+                    if(!in_add)
+                        in_files.push_back(0);
+                    if(!out_r_add)
+                        out_files_r.push_back(0);
+                    if(!out_a_add)
+                        out_files_a.push_back(0);
                     args.clear();
                 }
                 //Checks to see if the last character (or only character) on the token is a semicolon
@@ -233,6 +259,12 @@ int main (int argc, char const *argv[])
                     }
                     args.push_back(0);
                     commands.push_back(args);
+                    if(!in_add)
+                        in_files.push_back(0);
+                    if(!out_r_add)
+                        out_files_r.push_back(0);
+                    if(!out_a_add)
+                        out_files_a.push_back(0);
                     args.clear();
                 }
                 else if (*it == "|") {
@@ -241,6 +273,12 @@ int main (int argc, char const *argv[])
                     //Adds the connector to the vector and then terminates the current command
                     args.push_back(0);
                     commands.push_back(args);
+                    if(!in_add)
+                        in_files.push_back(0);
+                    if(!out_r_add)
+                        out_files_r.push_back(0);
+                    if(!out_a_add)
+                        out_files_a.push_back(0);
                     args.clear();
                 }
                 else {
@@ -265,10 +303,12 @@ int main (int argc, char const *argv[])
                             ls.push_back(temp);
                             in_files.at(in_files.size()-1) = const_cast<char*>(ls.back().c_str());
                         }
+                        in_add = true;
+                        if(!out_r_add)
+                            out_files_r.push_back(0);
+                        if(!out_a_add)
+                            out_files_a.push_back(0);
                         continue;
-                    }
-                    else {
-                        in_files.push_back(0);
                     }
                     if(*it == ">") {
                         auto tempit = it;
@@ -291,10 +331,12 @@ int main (int argc, char const *argv[])
                             ls.push_back(temp);
                             out_files_r.at(out_files_r.size()-1) = const_cast<char*>(ls.back().c_str());
                         }
+                        out_r_add = true;
+                        if(!in_add)
+                            in_files.push_back(0);
+                        if(!out_a_add)
+                            out_files_a.push_back(0);
                         continue;
-                    }
-                    else {
-                        out_files_r.push_back(0);
                     }
                     if(*it == ">>") {
                         auto tempit = it;
@@ -317,10 +359,12 @@ int main (int argc, char const *argv[])
                             ls.push_back(temp);
                             out_files_a.at(out_files_a.size()-1) = const_cast<char*>(ls.back().c_str());
                         }
+                        out_a_add = true;
+                        if(!in_add)
+                            in_files.push_back(0);
+                        if(!out_r_add)
+                            out_files_r.push_back(0);
                         continue;
-                    }
-                    else {
-                        out_files_a.push_back(0);
                     }
                     //If the current token is not a comment, 'and', 'or', or a semicolon, add the token to the current command
                     ls.push_back(*it);
@@ -328,11 +372,38 @@ int main (int argc, char const *argv[])
                 }
             }
         }
-        if(!args.empty()) {
+
+       if(!args.empty()) {
             connectors.push_back(" ");
             args.push_back(0);
             commands.push_back(args);
         }
+        
+/*        for(auto x : in_files) {
+            if(x != 0)
+                cout << x << endl;
+            else
+                cout << "0" << endl;
+        }
+        cout << endl;
+        
+        for(auto x : out_files_r) {
+            if(x != 0)
+                cout << x << endl;
+            else
+                cout << "0" << endl;
+        }
+        cout << endl;
+        
+        for(auto x : out_files_a) {
+            if(x != 0)
+                cout << x << endl;
+            else
+                cout << "0" << endl;
+        }
+        cout << endl;
+        */
+
         
         if(num_pipes > 0) {
 
@@ -384,8 +455,6 @@ int main (int argc, char const *argv[])
             }
             continue;
         }
-        
-        continue;
 
         //Go through all of the commands
         for(unsigned x = 0; x < commands.size(); x++) {       
@@ -408,24 +477,24 @@ int main (int argc, char const *argv[])
                 break;
             }
             else if(i == 0) { //Child process
-                if(in_files.at(com.size()-2) != 0) {
-                    int fd0 = open(in_files.at(com.size()-2), O_RDONLY, 0);
+                if(in_files.size() > x && in_files.at(x) != 0) {
+                    int fd0 = open(in_files.at(x), O_RDONLY, 0);
                     if(-1 == dup2(fd0, STDIN_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
                     }
                     close(fd0);
                 }
-                if(out_files_r.at(com.size()-2) != 0) {
-                    int fd1 = open(out_files_r.at(com.size()-2), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                if(out_files_r.size() > x && out_files_r.at(x) != 0) {
+                    int fd1 = open(out_files_r.at(x), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
                     if(-1 == dup2(fd1, STDOUT_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
                     }
                     close(fd1);
                 }
-                if(out_files_a.at(com.size()-2) != 0) {
-                    int fd1 = open(out_files_a.at(com.size()-2), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                if(out_files_a.size() > x && out_files_a.at(x) != 0) {
+                    int fd1 = open(out_files_a.at(x), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
                     if(-1 == dup2(fd1, STDOUT_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
