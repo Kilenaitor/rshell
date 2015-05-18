@@ -108,7 +108,10 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
                 perror("Error opening file for writing");
                 return;
             }
-            close(fd0);
+            if(-1 == close(fd0)) {
+                perror("Error closing file");
+                return;
+            }
         }
         if(out_files_r.size() > curr_index && out_files_r.at(curr_index) != 0) {
             int fd1 = open(out_files_r.at(curr_index), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
@@ -120,7 +123,10 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
                 perror("Error opening file for writing");
                 return;
             }
-            close(fd1);
+            if(-1 == close(fd1)) {
+                perror("Error closing file");
+                return;
+            }
         }
         if(out_files_a.size() > curr_index && out_files_a.at(curr_index) != 0) {
             int fd1 = open(out_files_a.at(curr_index), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
@@ -132,7 +138,10 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
                 perror("Error opening file for writing");
                 return;
             }
-            close(fd1);
+            if(-1 == close(fd1)) {
+                perror("Error closing file");
+                return;
+            }
         }
         //Used for skipping the execution of commands in the event that they're conditional
         //based on the connector used by the user.
@@ -445,13 +454,19 @@ int main (int argc, char const *argv[])
             }
             
             for(int dup_pipes = 0; dup_pipes < num_pipes*2; dup_pipes += 2) {
-                pipe(pipes + dup_pipes);
+                if(-1 == pipe(pipes + dup_pipes)) {
+                    perror("Error creating pipe");
+                    break;
+                }
             }
 
             pipe_help(num_pipes, pipes, commands, 0);
             
-            for(int pipe_loop = 0; pipe_loop < pipe_size; pipe_loop++)
-                close(pipes[pipe_loop]);
+            for(int pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++) {
+                if(-1 == close(pipes[pipe_loop])) {
+                    perror("Error closing pipe");
+                }
+            }
             
             delete [] pipes;
             
@@ -505,27 +520,48 @@ int main (int argc, char const *argv[])
             else if(i == 0) { //Child process
                 if(in_files.size() > x && in_files.at(x) != 0) {
                     int fd0 = open(in_files.at(x), O_RDONLY, 0);
+                    if(fd0 < 0) {
+                        perror("Failed to open file");
+                        continue;
+                    }
                     if(-1 == dup2(fd0, STDIN_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
                     }
-                    close(fd0);
+                    if(-1 == close(fd0)) {
+                        perror("Error closing file");
+                        continue;
+                    }
                 }
                 if(out_files_r.size() > x && out_files_r.at(x) != 0) {
                     int fd1 = open(out_files_r.at(x), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                    if(fd1 < 0) {
+                        perror("Failed to open file");
+                        continue;
+                    }
                     if(-1 == dup2(fd1, STDOUT_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
                     }
-                    close(fd1);
+                    if(-1 == close(fd1)) {
+                        perror("Error closing file");
+                        continue;
+                    }
                 }
                 if(out_files_a.size() > x && out_files_a.at(x) != 0) {
                     int fd1 = open(out_files_a.at(x), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                    if(fd1 < 0) {
+                        perror("Failed to open file");
+                        continue;
+                    }
                     if(-1 == dup2(fd1, STDOUT_FILENO)) {
                         perror("Error opening file for writing");
                         continue;
                     }
-                    close(fd1);
+                    if(-1 == close(fd1)) {
+                        perror("Error closing file");
+                        continue;
+                    }
                 }
                 //Used for skipping the execution of commands in the event that they're conditional
                 //based on the connector used by the user.
