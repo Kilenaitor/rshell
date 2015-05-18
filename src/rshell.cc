@@ -83,7 +83,7 @@ void pipe_help(unsigned num_pipes, int pipes[], vector<vector<char*> > &commands
             };
         }
         
-        int write_val = 2 * curr_index + 1;
+        unsigned write_val = 2 * curr_index + 1;
         if(write_val < num_pipes*2) {
             if(-1 == dup2(pipes[write_val], 1)) {
                 perror("Error writing to pipe");
@@ -91,7 +91,7 @@ void pipe_help(unsigned num_pipes, int pipes[], vector<vector<char*> > &commands
             };
         }
         
-        for(int pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++) {
+        for(unsigned pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++) {
             if(-1 == close(pipes[pipe_loop])) {
                 perror("Error closing pipe");
             }
