@@ -51,7 +51,7 @@ void fix_raw_strings(vector<vector<char*> > &commands) {
                     a.at(x) = const_cast<char*>(echo.c_str());
                     num_pipes++;
                     vector<char*> temp_command;
-                    for(int z = 0; z < x; z++) {
+                    for(unsigned z = 0; z < x; z++) {
                         string temp = a.at(z);
                         temp_command.push_back(const_cast<char*>(temp.c_str()));
                         a.erase(a.begin());
@@ -66,7 +66,7 @@ void fix_raw_strings(vector<vector<char*> > &commands) {
     }
 }
 
-void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, unsigned curr_index)
+void pipe_help(unsigned num_pipes, int pipes[], vector<vector<char*> > &commands, unsigned curr_index)
 {
     pid_t i = fork();
     if(i < 0) { //Error
