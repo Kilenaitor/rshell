@@ -111,7 +111,7 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
         }
     }
     else {
-        if(curr_index < num_pipes*2-1) {
+        if(curr_index < num_pipes) {
             pipe_help(num_pipes, pipes, commands, ++curr_index);
         }
     }
