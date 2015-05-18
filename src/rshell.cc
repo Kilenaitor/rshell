@@ -65,7 +65,7 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
             int fd0 = open(in_files.at(com.size()-2), O_RDONLY, 0);
             if(-1 == dup2(fd0, STDIN_FILENO)) {
                 perror("Error opening file for writing");
-                exit(1);
+                return;
             }
             close(fd0);
         }
@@ -73,7 +73,7 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
             int fd1 = open(out_files_r.at(com.size()-2), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
-                exit(1);
+                return;
             }
             close(fd1);
         }
@@ -81,7 +81,7 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
             int fd1 = open(out_files_a.at(com.size()-2), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
-                exit(1);
+                return;
             }
             close(fd1);
         }
