@@ -11,6 +11,8 @@
 #include <vector>
 #include <list>
 #include <iterator>
+#include <fstream>
+#include <fcntl.h>
 #include "boost/tokenizer.hpp"
 #include "boost/algorithm/string.hpp"
 
@@ -19,6 +21,94 @@ using namespace std;
 //Global used to keep track if the previous command executed successfully
 //Used for the || and && connectors to see if they should execute
 static bool *pass;
+
+//ls is a temp list for storing the tokenized value
+list<string> ls;
+//vector for storing a command and its arguments
+vector<char*> args;
+//vector for storing all of the commands that have been chained together
+vector<vector<char*> > commands;
+//vector for storing all of the connectors "AND" and "OR"
+vector<string> connectors;
+//vector for storing files that need to get the output of current command and overwrite/create
+vector<char*> out_files_r;
+//vector for storing files that need to get the output of current command and overwrite/create
+vector<char*> out_files_a;
+//vector for storing files that supply input to the current command
+vector<char*> in_files;
+//int for storing the number of pipes the user has entered
+int num_pipes = 0;
+
+void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int curr_index)
+{
+    if(fork() == 0) {
+        int read_val = 2 * curr_index - 2;
+        if(read_val >= 0)
+            dup2(pipes[read_val], 0);
+        
+        int write_val = 2 * curr_index + 1;
+        if(write_val < num_pipes*2)
+            dup2(pipes[write_val], 1);
+        
+        for(int pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++)
+            close(pipes[pipe_loop]);
+        
+        vector<char*> com = commands[curr_index];
+        
+        if(in_files.at(com.size()-2) != 0) {
+            int fd0 = open(in_files.at(com.size()-2), O_RDONLY, 0);
+            if(-1 == dup2(fd0, STDIN_FILENO)) {
+                perror("Error opening file for writing");
+                exit(1);
+            }
+            close(fd0);
+        }
+        if(out_files_r.at(com.size()-2) != 0) {
+            int fd1 = open(out_files_r.at(com.size()-2), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+            if(-1 == dup2(fd1, STDOUT_FILENO)) {
+                perror("Error opening file for writing");
+                exit(1);
+            }
+            close(fd1);
+        }
+        if(out_files_a.at(com.size()-2) != 0) {
+            int fd1 = open(out_files_a.at(com.size()-2), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+            if(-1 == dup2(fd1, STDOUT_FILENO)) {
+                perror("Error opening file for writing");
+                exit(1);
+            }
+            close(fd1);
+        }
+        //Used for skipping the execution of commands in the event that they're conditional
+        //based on the connector used by the user.
+        if(curr_index > 0 && connectors.size() > 1 && connectors.at(curr_index-1) == "OR" && *pass)
+            exit(0);
+        else if(curr_index > 0 && connectors.size() > 1 && connectors.at(curr_index-1) == "AND" && !*pass)
+            exit(0);
+        else {
+            int result = execvp(com[0], &com[0]);
+            if(result < 0) {
+                *pass = false;
+                //This is just the standard format that bash outputs error notices
+                char result[100];
+                const char *error = "-rshell: ";
+                strcpy(result, error);
+                strcat(result, com[0]);
+                perror(result);
+                //Exiting with 1 since the command failed
+                exit(1);
+            }
+            else {
+                *pass = true;
+                exit(0);
+            }
+        }
+    }
+    else {
+        if(curr_index < num_pipes*2-1)
+            pipe_help(num_pipes, pipes, commands, ++curr_index);
+    }
+}
 
 int main (int argc, char const *argv[])
 {
@@ -47,6 +137,23 @@ int main (int argc, char const *argv[])
 
     while(true)
     {
+        ls.clear();
+        //vector for storing a command and its arguments
+        args.clear();
+        //vector for storing all of the commands that have been chained together
+        commands.clear();
+        //vector for storing all of the connectors "AND" and "OR"
+        connectors.clear();
+        //vector for storing files that need to get the output of current command and overwrite/create
+        out_files_r.clear();
+        //vector for storing files that need to get the output of current command and overwrite/create
+        out_files_a.clear();
+        //vector for storing files that supply input to the current command
+        vector<char*> in_files;
+        //int for storing the number of pipes the user has entered
+        int num_pipes = 0;
+        fflush(0); //Start with clean stdout and stdin and stderror
+        
         //Terminal prompt display
         if(h == 0 && login)
             cout << login << "@" << host << " $ ";
@@ -65,15 +172,6 @@ int main (int argc, char const *argv[])
         string separator3("\"\'"); //Used to count quoted text as a single token rather than delimit them separately
         boost::escaped_list_separator<char> sep(separator1,separator2,separator3);
         tokenizer tok(input, sep);
-
-        //ls is a temp list for storing the tokenized value
-        list<string> ls;
-        //vector for storing a command and its arguments
-        vector<char*> args;
-        //vector for storing all of the commands that have been chained together
-        vector<vector<char*> > commands;
-        //vector for storing all of the connectors "AND" and "OR"
-        vector<string> connectors;
 
         /*
         Check for # and immediatly end parsing since anything after it is a comment.
@@ -128,7 +226,87 @@ int main (int argc, char const *argv[])
                     commands.push_back(args);
                     args.clear();
                 }
+                else if (*it == "|") {
+                    if(args.empty()) continue;
+                    num_pipes++;
+                    //Adds the connector to the vector and then terminates the current command
+                    args.push_back(0);
+                    commands.push_back(args);
+                    args.clear();
+                }
                 else {
+                    if(*it == "<") {
+                        auto tempit = it;
+                        tempit++;
+                        if(tempit == tok.end())
+                            perror("Unexpected newline");
+                        ls.push_back(*tempit);
+                        if (in_files.size() == 0) // Replace the in_file for the command if they are strung together `cat < in.txt < in2.txt < in3.txt` would just be `cat < in3.txt`
+                            in_files.push_back(const_cast<char*>(ls.back().c_str()));
+                        else
+                            in_files.at(in_files.size()-1) = const_cast<char*>(ls.back().c_str());
+                        it++; //Advance to outfile to skip over that in the command processing
+                        if(strncmp(&it->back(), ";", 1) == 0) {
+                            args.push_back(0);
+                            commands.push_back(args);
+                            args.clear();
+                            string temp = it->substr(0, it->size()-1);
+                            ls.push_back(temp);
+                            in_files.at(in_files.size()-1) = const_cast<char*>(ls.back().c_str());
+                        }
+                        continue;
+                    }
+                    else {
+                        in_files.push_back(0);
+                    }
+                    if(*it == ">") {
+                        auto tempit = it;
+                        tempit++;
+                        if(tempit == tok.end())
+                            perror("Unexpected newline");
+                        ls.push_back(*tempit);
+                        if(out_files_r.size() == 0)
+                            out_files_r.push_back(const_cast<char*>(ls.back().c_str()));
+                        else
+                            out_files_r.at(out_files_r.size()-1) = const_cast<char*>(ls.back().c_str());
+                        it++;
+                        if(strncmp(&it->back(), ";", 1) == 0) {
+                            args.push_back(0);
+                            commands.push_back(args);
+                            args.clear();
+                            string temp = it->substr(0, it->size()-1);
+                            ls.push_back(temp);
+                            out_files_r.at(out_files_r.size()-1) = const_cast<char*>(ls.back().c_str());
+                        }
+                        continue;
+                    }
+                    else {
+                        out_files_r.push_back(0);
+                    }
+                    if(*it == ">>") {
+                        auto tempit = it;
+                        tempit++;
+                        if(tempit == tok.end())
+                            perror("Unexpected newline");
+                        ls.push_back(*tempit);
+                        if(out_files_a.size() == 0)
+                            out_files_a.push_back(const_cast<char*>(ls.back().c_str()));
+                        else
+                            out_files_a.at(out_files_a.size()-1) = const_cast<char*>(ls.back().c_str());
+                        it++;
+                        if(strncmp(&it->back(), ";", 1) == 0) {
+                            args.push_back(0);
+                            commands.push_back(args);
+                            args.clear();
+                            string temp = it->substr(0, it->size()-1);
+                            ls.push_back(temp);
+                            out_files_a.at(out_files_a.size()-1) = const_cast<char*>(ls.back().c_str());
+                        }
+                        continue;
+                    }
+                    else {
+                        out_files_a.push_back(0);
+                    }
                     //If the current token is not a comment, 'and', 'or', or a semicolon, add the token to the current command
                     ls.push_back(*it);
                     args.push_back(const_cast<char*>(ls.back().c_str()));
@@ -140,10 +318,32 @@ int main (int argc, char const *argv[])
             args.push_back(0);
             commands.push_back(args);
         }
+        
+        if(num_pipes > 0) {
+
+            int status;
+            
+            int pipe_size = num_pipes * 2;
+            int* pipes = new int[pipe_size];
+            
+            for(int dup_pipes = 0; dup_pipes < num_pipes*2; dup_pipes += 2) {
+                pipe(pipes + dup_pipes);
+            }
+
+            pipe_help(num_pipes, pipes, commands, 0);
+            
+            for(int pipe_loop = 0; pipe_loop < pipe_size; pipe_loop++)
+                close(pipes[pipe_loop]);
+            
+            for(int i = 0; i < num_pipes+1; i++)
+                wait(&status);
+            
+            delete [] pipes;
+            continue;
+        }
 
         //Go through all of the commands
-        for(unsigned x = 0; x < commands.size(); x++) {
-
+        for(unsigned x = 0; x < commands.size(); x++) {       
             //Get the current command
             vector<char*> com = commands.at(x);
             if(com.empty())
@@ -153,7 +353,7 @@ int main (int argc, char const *argv[])
             if(strncmp(com[0], "exit", 4) == 0) {
                 exit(0);
             }
-
+            
             //Main process thread
             pid_t i = fork();
 
@@ -163,6 +363,30 @@ int main (int argc, char const *argv[])
                 break;
             }
             else if(i == 0) { //Child process
+                if(in_files.at(com.size()-2) != 0) {
+                    int fd0 = open(in_files.at(com.size()-2), O_RDONLY, 0);
+                    if(-1 == dup2(fd0, STDIN_FILENO)) {
+                        perror("Error opening file for writing");
+                        continue;
+                    }
+                    close(fd0);
+                }
+                if(out_files_r.at(com.size()-2) != 0) {
+                    int fd1 = open(out_files_r.at(com.size()-2), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                    if(-1 == dup2(fd1, STDOUT_FILENO)) {
+                        perror("Error opening file for writing");
+                        continue;
+                    }
+                    close(fd1);
+                }
+                if(out_files_a.at(com.size()-2) != 0) {
+                    int fd1 = open(out_files_a.at(com.size()-2), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+                    if(-1 == dup2(fd1, STDOUT_FILENO)) {
+                        perror("Error opening file for writing");
+                        continue;
+                    }
+                    close(fd1);
+                }
                 //Used for skipping the execution of commands in the event that they're conditional
                 //based on the connector used by the user.
                 if(x > 0 && connectors.size() > 1 && connectors.at(x-1) == "OR" && *pass)
