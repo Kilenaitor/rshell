@@ -75,20 +75,35 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
     }
     if(i == 0) {
         int read_val = 2 * curr_index - 2;
-        if(read_val >= 0)
-            dup2(pipes[read_val], 0);
+        if(read_val >= 0) {
+            if(-1 == dup2(pipes[read_val], 0)) {
+                perror("Error wrtiting to pipe");
+                return;
+            };
+        }
         
         int write_val = 2 * curr_index + 1;
-        if(write_val < num_pipes*2)
-            dup2(pipes[write_val], 1);
+        if(write_val < num_pipes*2) {
+            if(-1 == dup2(pipes[write_val], 1)) {
+                perror("Error writing to pipe");
+                return;
+            };
+        }
         
-        for(int pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++)
-            close(pipes[pipe_loop]);
+        for(int pipe_loop = 0; pipe_loop < num_pipes*2; pipe_loop++) {
+            if(-1 == close(pipes[pipe_loop])) {
+                perror("Error closing pipe");
+            }
+        }
         
         vector<char*> com = commands[curr_index];
         
         if(in_files.size() > curr_index && in_files.at(curr_index) != 0) {
             int fd0 = open(in_files.at(curr_index), O_RDONLY, 0);
+            if(fd0 < 0) {
+                perror("Error opening file");
+                return;
+            }
             if(-1 == dup2(fd0, STDIN_FILENO)) {
                 perror("Error opening file for writing");
                 return;
@@ -97,6 +112,10 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
         }
         if(out_files_r.size() > curr_index && out_files_r.at(curr_index) != 0) {
             int fd1 = open(out_files_r.at(curr_index), O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+            if(fd1 < 0) {
+                perror("Error opening file");
+                return;
+            }
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
                 return;
@@ -105,6 +124,10 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
         }
         if(out_files_a.size() > curr_index && out_files_a.at(curr_index) != 0) {
             int fd1 = open(out_files_a.at(curr_index), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IRGRP | S_IWGRP | S_IWUSR);
+            if(fd1 < 0) {
+                perror("Error opening file");
+                return;
+            }
             if(-1 == dup2(fd1, STDOUT_FILENO)) {
                 perror("Error opening file for writing");
                 return;
