@@ -15,6 +15,7 @@
 #include <fcntl.h>
 #include "boost/tokenizer.hpp"
 #include "boost/algorithm/string.hpp"
+#include <boost/algorithm/string/trim_all.hpp>
 
 using namespace std;
 
@@ -176,7 +177,7 @@ int main (int argc, char const *argv[])
 
         //Grab user input for bash prompt
         getline(cin,input);
-        boost::trim(input); //Remove trailing and leading space
+        boost::algorithm::trim_all(input); //Remove trailing and leading space
 
         //Setting up a boost tokenizer.
         typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer;
