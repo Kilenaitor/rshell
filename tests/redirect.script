@@ -1,0 +1,330 @@
+Script started on Sun May 17 23:52:00 2015
+[?1034h[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m clear
+[H[2J[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m b[Kvalgrind bin/s[Krshell 
+==43173== Memcheck, a memory error detector
+==43173== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==43173== Using Valgrind-3.11.0.SVN and LibVEX; rerun with -h for copyright info
+==43173== Command: bin/rshell
+==43173== 
+--43173-- bin/rshell:
+--43173-- dSYM directory is missing; consider using --dsymutil=yes
+Kilenaitor@iMac.local $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
+Kilenaitor@iMac.local $ exit
+==43173== 
+==43173== HEAP SUMMARY:
+==43173==     in use at exit: 43,250 bytes in 430 blocks
+==43173==   total heap usage: 786 allocs, 356 frees, 64,956 bytes allocated
+==43173== 
+==43173== LEAK SUMMARY:
+==43173==    definitely lost: 0 bytes in 0 blocks
+==43173==    indirectly lost: 0 bytes in 0 blocks
+==43173==      possibly lost: 0 bytes in 0 blocks
+==43173==    still reachable: 8,463 bytes in 4 blocks
+==43173==         suppressed: 34,787 bytes in 426 blocks
+==43173== Rerun with --leak-check=full to see details of leaked memory
+==43173== 
+==43173== For counts of detected and suppressed errors, rerun with: -v
+==43173== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Woo zero memoy[Kry! :D
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing input rediction from existing file
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ll
+bash: ll: command not found
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m ls -lha
+total 56
+drwxr-xr-x  13 Kilenaitor  staff   442B May 17 23:50 [1m[36m.[39;49m[0m
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 [1m[36m..[39;49m[0m
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 Kilenaitor  staff   249B May 17 05:06 .gitignore
+-rw-r--r--   1 Kilenaitor  staff   1.4K May 17 05:06 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 [1m[36mbin[39;49m[0m
+-rw-r-----   1 Kilenaitor  staff    53B May 17 21:37 existingInputFile
+-rw-r--r--   1 Kilenaitor  staff   250B May 17 05:06 makefile
+-rw-r--r--   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile1
+-rw-r-----   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile2
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 [1m[36msrc[39;49m[0m
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 [1m[36mtests[39;49m[0m
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m0 [01;32m✓ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ cat < exi	stingInputFile
+if this works I get to be done so pleas work o jesus
+Kilenaitor@iMac.local $ 
+Kilenaitor@iMac.local $ 
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testint in[K[K[K[Kg input redirection from non-existn[K file
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ cat < nonExistantFile
+Error opening file for writing: Bad file descriptor
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m testing rection[K[K[K[K[Kdr[Kirection sith spa[K[K[K[K[K[K[K[Kwith spaces
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ cat                <                 existint gInputFile
+if this works I get to be done so pleas work o jesus
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m testing redirectionw[K without a space
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ cat  <existingINputF     nputFile
+-rshell: cat<existingInputFile: No such file or directory
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m It dods[K[Kesn't work for ones wihtout [K[K[K[K[K[Kthout any spaces :/ 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m To be fair, I think it loos[Kks better when it has spaces
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m And since it's my shell, I think it should follow my rules :)
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Anywas[Kys
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing an input with piping
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bi/[Kn/rshell 
+Kilenaitor@iMac.local $ cat < existingInputFile | less
+[?1049h[?1h=if this works I get to be done so pleas work o jesus
+[7m(END) [27m[K[K[?1l>[?1049lKilenaitor@iMac.local $ c ls -l > out.txt
+Kilenaitor@iMac.local $ cat < out.txt | grep d
+-rw-r--r--  1 Kilenaitor  staff  1551 May 17 05:06 README.md
+drwxr-xr-x  4 Kilenaitor  staff   136 May 17 23:49 bin
+drwxr-xr-x  8 Kilenaitor  staff   272 May 17 05:06 src
+drwxr-xr-x  5 Kilenaitor  staff   170 May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Yup [K! That works :D
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing output redr[Kirection to existing file
+bash: Testing: command not found
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls -lha > new_file.txt
+Kilenaitor@iMac.local $ cat new_file.txt
+total 64
+drwxr-xr-x  15 Kilenaitor  staff   510B May 17 23:55 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   249B May 17 05:06 .gitignore
+-rw-r--r--   1 Kilenaitor  staff   1.4K May 17 05:06 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+-rw-r-----   1 Kilenaitor  staff    53B May 17 21:37 existingInputFile
+-rw-r--r--   1 Kilenaitor  staff   250B May 17 05:06 makefile
+-rw-r--r--   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile1
+-rw-r-----   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile2
+-rw-r-----   1 Kilenaitor  staff     0B May 17 23:55 new_file.txt
+-rw-r-----   1 Kilenaitor  staff   616B May 17 23:55 out.txt
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testint[Kg output redirection to on[K[Knon-existant file
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls -lha > old_file.txt            new_file.txt
+Kilenaitor@iMac.local $ ls -l     cat new_file.txt
+total 64
+drwxr-xr-x  15 Kilenaitor  staff   510B May 17 23:55 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   249B May 17 05:06 .gitignore
+-rw-r--r--   1 Kilenaitor  staff   1.4K May 17 05:06 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+-rw-r-----   1 Kilenaitor  staff    53B May 17 21:37 existingInputFile
+-rw-r--r--   1 Kilenaitor  staff   250B May 17 05:06 makefile
+-rw-r--r--   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile1
+-rw-r-----   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile2
+-rw-r-----   1 Kilenaitor  staff     0B May 17 23:56 new_file.txt
+-rw-r-----   1 Kilenaitor  staff   616B May 17 23:55 out.txt
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m I realize I swapped those last two. My bad.
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/[K[K[K[KTesting output redirection to [K[K[K[K appending to an existing file
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ echo "this is appending to a new    n existant file" >> new_file.txt
+Kilenaitor@iMac.local $ cat new_file.txt
+total 64
+drwxr-xr-x  15 Kilenaitor  staff   510B May 17 23:55 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   249B May 17 05:06 .gitignore
+-rw-r--r--   1 Kilenaitor  staff   1.4K May 17 05:06 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+-rw-r-----   1 Kilenaitor  staff    53B May 17 21:37 existingInputFile
+-rw-r--r--   1 Kilenaitor  staff   250B May 17 05:06 makefile
+-rw-r--r--   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile1
+-rw-r-----   1 Kilenaitor  staff    53B May 17 23:52 newOutputFile2
+-rw-r-----   1 Kilenaitor  staff     0B May 17 23:56 new_file.txt
+-rw-r-----   1 Kilenaitor  staff   616B May 17 23:55 out.txt
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+this is appending to an existant file
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m There it is on the bottom!
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing to a new file
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rs
+bash: bin/rs: No such file or directory
+[01;37m127 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ echo "This is an appending test" >> also_new_file.txt
+Kilenaitor@iMac.local $ cat al_ so_new_file.txt
+This is an appending test
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Ypu[K[Kup! That works too.
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m WIth spa[K[K[K[K[K[K[K[KWith spacing:
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ echo "this is a test"            >               spaces.txt
+Kilenaitor@iMac.local $ cat spaces.txt
+this is a test
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Yup that works!
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Like before, it DOESN'T work without spaces
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m binr[K/rshell 
+Kilenaitor@iMac.local $ ca  echo "test"  >s nospace.txt
+test>nospace.txt
+Kilenaitor@iMac.local $ cat nospace.txt
+cat: nospace.txt: No such file or directory
+Kilenaitor@iMac.local $ 
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Checking command with one pipe
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls 0 -lha | grep d
+drwxr-xr-x  17 Kilenaitor  staff   578B May 17 23:57 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing with more than one pipd[Ke
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m binr[K/rshell 
+Kilenaitor@iMac.local $ 
+Kilenaitor@iMac.local $ ls -lha }   | grep d | head -n 1
+drwxr-xr-x  17 Kilenaitor  staff   578B May 17 23:57 .
+Kilenaitor@iMac.local $ ls -lha | grep d | head -n 1 | cat
+drwxr-xr-x  17 Kilenaitor  staff   578B May 17 23:57 .
+Kilenaitor@iMac.local $ ls -lha   | grep d | head -n 2 | ca  grep^[[D^[[D^[[D             p test
+Kilenaitor@iMac.local $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
+Kilenaitor@iMac.local $ cat newOutputFile2
+IF THIS WORKS I GET TO BE DONE SO PLEAS WORK O JESUS
+Kilenaitor@iMac.local $ cat newInputFile1
+cat: newInputFile1: No such file or directory
+Kilenaitor@iMac.local $ cat newOutputFile1
+if this works i get to be done so pleas work o jesus
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Yp[Kup. WOrks with m[K[K[K[K[K[K[K[K[K[K[Korks with more tha [Kn one file.
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Piping with spacing
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls -lha |        |        grep d
+drwxr-xr-x  17 Kilenaitor  staff   578B May 17 23:57 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Doesn't work without spacein[K[K[King
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Testing with redireciton and piping
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls -lha | grep d > test1.txt
+Kilenaitor@iMac.local $ cat test1.txt
+total 88
+drwxr-xr-x  18 Kilenaitor  staff   612B May 18 00:01 .
+drwxr-xr-x+ 20 Kilenaitor  staff   680B May 17 17:31 ..
+drwxr-xr-x  14 Kilenaitor  staff   476B May 17 22:33 .git
+-rw-r--r--   1 Kilenaitor  staff   249B May 17 05:06 .gitignore
+-rw-r--r--   1 Kilenaitor  staff   1.4K May 17 05:06 LICENSE
+-rw-r--r--   1 Kilenaitor  staff   1.5K May 17 05:06 README.md
+-rw-r-----   1 Kilenaitor  staff    26B May 17 23:57 also_new_file.txt
+drwxr-xr-x   4 Kilenaitor  staff   136B May 17 23:49 bin
+-rw-r-----   1 Kilenaitor  staff    53B May 17 21:37 existingInputFile
+-rw-r--r--   1 Kilenaitor  staff   250B May 17 05:06 makefile
+-rw-r--r--   1 Kilenaitor  staff    53B May 17 23:59 newOutputFile1
+-rw-r-----   1 Kilenaitor  staff    53B May 17 23:59 newOutputFile2
+-rw-r-----   1 Kilenaitor  staff   973B May 17 23:56 new_file.txt
+-rw-r-----   1 Kilenaitor  staff   616B May 17 23:55 out.txt
+-rw-r-----   1 Kilenaitor  staff    15B May 17 23:57 spaces.txt
+drwxr-xr-x   8 Kilenaitor  staff   272B May 17 05:06 src
+-rw-r-----   1 Kilenaitor  staff     0B May 18 00:01 test1.txt
+drwxr-xr-x   5 Kilenaitor  staff   170B May 17 23:52 tests
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m OOps. Did that wrong. 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m bin/rshell 
+Kilenaitor@iMac.local $ ls -la ha       cat < input           cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
+Kilenaitor@iMac.local $ ^C
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m130 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Still works as a test case :)
+bash: syntax error near unexpected token `)'
+[01;37m258 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m258 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m258 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m258 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m input,[K[K[K[K[K[KThat covers input, output, and piping too
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Should be all good. 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m Extre[Ka credit not wok[Krking yet. Will do taht soon[K[K[K[K[K[K[K[Khat soon. 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m 
+[01;37m1 [01;31m✗ [01;32mKilenaitor@iMac[01;34m ~/Desktop/rshell $[00m exit
+exit
+
+Script done on Mon May 18 00:02:22 2015

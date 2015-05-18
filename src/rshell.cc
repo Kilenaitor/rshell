@@ -40,6 +40,31 @@ vector<char*> in_files;
 //int for storing the number of pipes the user has entered
 int num_pipes = 0;
 
+void fix_raw_strings(vector<vector<char*> > &commands) {
+    string echo = "echo";
+    int count = 0;
+    for(auto &a : commands) {
+        for(int x = 0; x < a.size()-1; x++) {
+            if(x > 0) {
+                if(strcmp(a.at(x), "<<<") == 0) {
+                    a.at(x) = const_cast<char*>(echo.c_str());
+                    num_pipes++;
+                    vector<char*> temp_command;
+                    for(int z = 0; z < x; z++) {
+                        string temp = a.at(z);
+                        temp_command.push_back(const_cast<char*>(temp.c_str()));
+                        a.erase(a.begin());
+                    }
+                    temp_command.push_back(0);
+                    commands.emplace(commands.begin()+count+1, temp_command);
+                    break;
+                }
+            }
+        }
+        ++count;
+    }
+}
+
 void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int curr_index)
 {
     pid_t i = fork();
@@ -381,6 +406,8 @@ int main (int argc, char const *argv[])
             commands.push_back(args);
         }
         
+        //fix_raw_strings(commands);
+
         if(num_pipes > 0) {
 
             int status;
