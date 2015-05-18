@@ -149,9 +149,10 @@ int main (int argc, char const *argv[])
         //vector for storing files that need to get the output of current command and overwrite/create
         out_files_a.clear();
         //vector for storing files that supply input to the current command
-        vector<char*> in_files;
+        in_files.clear();
         //int for storing the number of pipes the user has entered
         int num_pipes = 0;
+        
         fflush(0); //Start with clean stdout and stdin and stderror
         
         //Terminal prompt display
