@@ -247,8 +247,10 @@ int main (int argc, char const *argv[])
                     if(*it == "<") {
                         auto tempit = it;
                         tempit++;
-                        if(tempit == tok.end())
+                        if(tempit == tok.end()) {
                             perror("Unexpected newline");
+                            continue;
+                        }
                         ls.push_back(*tempit);
                         if (in_files.size() == 0) // Replace the in_file for the command if they are strung together `cat < in.txt < in2.txt < in3.txt` would just be `cat < in3.txt`
                             in_files.push_back(const_cast<char*>(ls.back().c_str()));
@@ -271,8 +273,10 @@ int main (int argc, char const *argv[])
                     if(*it == ">") {
                         auto tempit = it;
                         tempit++;
-                        if(tempit == tok.end())
+                        if(tempit == tok.end()) {
                             perror("Unexpected newline");
+                            continue;
+                        }
                         ls.push_back(*tempit);
                         if(out_files_r.size() == 0)
                             out_files_r.push_back(const_cast<char*>(ls.back().c_str()));
@@ -295,8 +299,10 @@ int main (int argc, char const *argv[])
                     if(*it == ">>") {
                         auto tempit = it;
                         tempit++;
-                        if(tempit == tok.end())
+                        if(tempit == tok.end()) {
                             perror("Unexpected newline");
+                            exit(1);
+                        }
                         ls.push_back(*tempit);
                         if(out_files_a.size() == 0)
                             out_files_a.push_back(const_cast<char*>(ls.back().c_str()));
@@ -378,6 +384,8 @@ int main (int argc, char const *argv[])
             }
             continue;
         }
+        
+        continue;
 
         //Go through all of the commands
         for(unsigned x = 0; x < commands.size(); x++) {       
