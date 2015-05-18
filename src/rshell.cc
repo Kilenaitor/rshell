@@ -333,7 +333,12 @@ int main (int argc, char const *argv[])
             int status;
             
             int pipe_size = num_pipes * 2;
-            int* pipes = new int[pipe_size];
+            try {
+                int* pipes = new int[pipe_size];   
+            }
+            catch (std::bad_alloc& ba) {
+                std::cerr << "bad_alloc caught: " << ba.what() << endl;
+            }
             
             for(int dup_pipes = 0; dup_pipes < num_pipes*2; dup_pipes += 2) {
                 pipe(pipes + dup_pipes);
