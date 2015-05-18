@@ -30,11 +30,33 @@ $ bin/rshell
 - Does not detect triple connectors like `|||` or `&&&`, they're just interpreted as another command
 - Will not prompt for more input if connector is the end. (e.g. `ls &&` just prints ls)
 - Connectors cannot be touching other commands or parameters (e.g. `echo "this"|| echo "that"` will not work)
-- Cannot direct output. (e.g. `echo "this" > test.ext` will output 'this > test.txt')
-- Cannot pipe command output
 - cd command does not work
 - Pressing up on the arrow key does not restore the previous command
 - No navigating text input; Enters the literal keys for left, right, up, down, etc.
 - `!*command*` does not execute the previous command
 - No color output
 - Does not allow aliases or general settings
+- Does not support `<<<` redirection of raw strings
+- Does not support custom file descriptors. e.g `ls 2> file.txt`
+
+
+##Programs
+###cp
+- Copy files from one place to another
+`cp <file1> <file2>`
+###ls
+- List files
+- Three flags
+    - `-l` for listing 
+    - `-a` for showing hidden files
+    - `-R` for recursive search
+- Flags can be combined in any order
+- Colored output
+###mv
+- Move command
+`mv <location1> <location2>`
+###rm
+- Remove command
+`rm <file>`
+- Recursive with `-r`
+`rm -r <directory>`

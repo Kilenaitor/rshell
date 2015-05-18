@@ -16,6 +16,7 @@
 #include "boost/tokenizer.hpp"
 #include "boost/algorithm/string.hpp"
 #include <regex>
+#include <boost/regex.hpp>
 
 using namespace std;
 
@@ -44,7 +45,7 @@ void fix_raw_strings(vector<vector<char*> > &commands) {
     string echo = "echo";
     int count = 0;
     for(auto &a : commands) {
-        for(int x = 0; x < a.size()-1; x++) {
+        for(unsigned x = 0; x < a.size()-1; x++) {
             if(x > 0) {
                 if(strcmp(a.at(x), "<<<") == 0) {
                     a.at(x) = const_cast<char*>(echo.c_str());
@@ -65,7 +66,7 @@ void fix_raw_strings(vector<vector<char*> > &commands) {
     }
 }
 
-void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int curr_index)
+void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, unsigned curr_index)
 {
     pid_t i = fork();
     if(i < 0) { //Error
@@ -235,7 +236,7 @@ int main (int argc, char const *argv[])
         //Grab user input for bash prompt
         getline(cin,input);
         boost::trim(input); //Remove trailing and leading space
-        input = regex_replace(input, std::regex("[ ]+"), " ");
+        input = boost::regex_replace(input, boost::regex("[ ]+"), " ");
 
         //Setting up a boost tokenizer.
         typedef boost::tokenizer<boost::escaped_list_separator<char> > tokenizer;
