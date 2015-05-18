@@ -41,7 +41,13 @@ int num_pipes = 0;
 
 void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int curr_index)
 {
-    if(fork() == 0) {
+    pid_t i = fork();
+    if(i < 0) { //Error
+        perror("Failed to create child process");
+        *pass = false;
+        exit(1);
+    }
+    if(i == 0) {
         int read_val = 2 * curr_index - 2;
         if(read_val >= 0)
             dup2(pipes[read_val], 0);
@@ -105,8 +111,9 @@ void pipe_help(int num_pipes, int pipes[], vector<vector<char*> > &commands, int
         }
     }
     else {
-        if(curr_index < num_pipes*2-1)
+        if(curr_index < num_pipes*2-1) {
             pipe_help(num_pipes, pipes, commands, ++curr_index);
+        }
     }
 }
 
@@ -133,10 +140,11 @@ int main (int argc, char const *argv[])
     }
 
     //Setting the initial value to false since no command has run
-    *pass = false;
 
     while(true)
     {
+        *pass = false;
+        
         ls.clear();
         //vector for storing a command and its arguments
         args.clear();
@@ -336,10 +344,32 @@ int main (int argc, char const *argv[])
             for(int pipe_loop = 0; pipe_loop < pipe_size; pipe_loop++)
                 close(pipes[pipe_loop]);
             
-            for(int i = 0; i < num_pipes+1; i++)
-                wait(&status);
-            
             delete [] pipes;
+            
+            for(int i = 0; i < num_pipes+1; i++) {
+                if(wait(&status) < 0) {
+                    perror("Error during child process");
+                    *pass = false;
+                    exit(1);
+                }
+                else {
+                    //Used to get the exit code of the child process
+                    int estat = WEXITSTATUS(status);
+
+                    if(estat == 0) {
+                        *pass = true;
+                    }
+                    if(estat == 1) {
+                        *pass = false;
+                    }
+
+                    //Check to see if the child terminated by a signal
+                    else if (WIFSIGNALED(status)) {
+                        printf("%ld terminated because it didn't catch signal number %d\n", (long)i, WTERMSIG(status));
+                        *pass = false;
+                    }
+                }
+            }
             continue;
         }
 
