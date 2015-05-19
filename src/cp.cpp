@@ -55,8 +55,13 @@ void med_copy(char* in, char* out)
         }
     }
 
-    close (input_fd);
-    close (output_fd);
+    if(-1 == close (input_fd)) {
+        perror("Error closing input file");
+    }
+    
+    if(-1 == close (output_fd) {
+        perror("Error closing output file");
+    }
 
 }
 

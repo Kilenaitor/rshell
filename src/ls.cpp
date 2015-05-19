@@ -231,6 +231,9 @@ void execute(int argc, char const *argv[])
                     exit(1);
                 }
                 else {
+                    if(dirp == -1)
+                        perror("Error opening directory");
+                    
                     cout << in << endl;
                     exit(0);
                 }
@@ -315,6 +318,9 @@ void execute(int argc, char const *argv[])
     	        exit(1);
             }
             else {
+                if(dirp == -1)
+                    perror("Error opening directory");
+                
                 cout << direc << endl;
                 exit(0);
             }
